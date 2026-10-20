@@ -1,0 +1,197 @@
+# -*- coding: utf-8 -*-
+## Authored by Schema: ../../../schemas/terminology.schema.yaml
+## Reference Workflow: ../../../workflows/reanchor-posts.md
+## Role: Single SSOT for TAG anchoring, shared by the publish assembler (build time)
+##       and reanchor-posts (maintenance time). A tag's stable identity is its KEY
+##       (the `# term:Key` comment), NOT its display text — the display can drift while
+##       the key is stable. Resolution spans terminology.json (tech terms) and
+##       taxonomy.json (genres, AI domains).
+##
+## Split of concerns: this module only ANCHORS/refreshes given tags (annotation). It does
+## NOT SELECT which tags exist (harvest/scope/domain detection) — that stays build-time only.
+
+import re
+
+from infra.utils import log_error
+
+# Machine definition boxes quote other terms in their descriptions; a tag is licensed
+# by the author's prose, not by a neighbour's definition.
+_DEFINITION_BOX = re.compile(
+    r'[\r\n]+>[ \t]*\[!IMPORTANT\]\r?\n'
+    r'(?:>[ \t]*\*\*.*?\*\*[^\r\n]*<!--[ \t]*(?:anchor|term):[^\r\n]*(?:\r?\n)?)+')
+
+
+def prose_of(body):
+    """The body without machine definition boxes: the text a tag must be found in."""
+    return _DEFINITION_BOX.sub('\n', body or "")
+
+
+def clean_tag(tag):
+    """Strips a trailing parenthetical gloss; returns the bare display text."""
+    if not tag:
+        return ""
+    return re.sub(r'\s*[(（].*?[)）]', '', tag).strip()
+
+
+def camel_key(en):
+    """CamelCase key from an English name/slug (mirrors lexicon key generation)."""
+    return "".join(w.capitalize() for w in re.findall(r'[a-zA-Z0-9]+', en or ""))
+
+
+class TagAnchorer:
+    """Resolves tags to their canonical (display, key) against the live SSOTs.
+
+    Two entry points share one resolution core:
+      - anchor_by_display(tag): build time — a tag arrives as display text (no key yet).
+      - reanchor_entry(display, key): maintenance time — an existing anchored tag is
+        refreshed BY KEY (identity), display recomputed, dropped if removed/downgraded.
+    """
+
+    def __init__(self, lexicon):
+        self.lexicon = lexicon
+        # term key -> canonical ZH (reverse of lexicon.keys: ZH -> key); an alias shares
+        # its term's key and must not become the tag's display
+        canonical = getattr(lexicon, "canonical", {})
+        self.term_key_to_zh = {key: zh for zh, key in lexicon.keys.items() if zh not in canonical}
+        # genre key -> canonical display ZH, from taxonomy.json (the genre SSOT, not hardcoded)
+        self.genre_key_to_zh = {}
+        for en, zh in lexicon.taxonomy.get("genres", {}).items():
+            self.genre_key_to_zh[camel_key(en)] = zh
+        # AI domain category key -> display, from taxonomy.json
+        self.domain_key_to_disp = {}
+        for c in lexicon.taxonomy.get("ai_taxonomy", {}).get("categories", []):
+            m = re.search(r'\((.*?)\)', c)
+            self.domain_key_to_disp[camel_key(m.group(1)) if m else camel_key(c)] = clean_tag(c)
+        # The assembler keys a domain tag by the lexicon's own key when the category is a
+        # term (大型語言模型 -> LargeLanguageModel, not Llm); both keys are the domain.
+        self.structural_keys = set(self.genre_key_to_zh) | set(self.domain_key_to_disp)
+        for disp in list(self.domain_key_to_disp.values()):
+            res = lexicon.lookup(disp)
+            if res and res.get("key"):
+                self.structural_keys.add(res["key"])
+
+    def _canonical_term_display(self, zh):
+        """Display rule shared with the legacy assembler: prefer the English primary when
+        the ZH equals it (case-insensitively), else the ZH."""
+        en_list = self.lexicon.zh_to_ens.get(zh, [])
+        en_primary = en_list[0] if en_list else None
+        if en_primary:
+            clean_en = re.sub(r'^[\(（]+|[\)）]+$', '', en_primary.strip())
+            if zh.lower() == clean_en.lower():
+                return clean_en
+        return zh
+
+    def genre_tag(self, scope, default_scope="Technical Note"):
+        """Resolves a genre scope name (e.g. 'Analytical Essay') to (display_zh, key)
+        via the taxonomy genre SSOT, falling back to default_scope. Used at build time so
+        the published genre matches what reanchor would re-derive.
+
+        The fallback is announced. default_scope is itself a real genre, so coercing an
+        unrecognised scope to it silently publishes a genre that reads as a deliberate
+        choice — a report declaring 'Case Study' or a misspelt 'Technical Notes' became
+        a technical note with nothing to show it had not been asked for. Callers cannot
+        detect this themselves, since a valid-looking tag comes back either way, so the
+        resolver reports it rather than each caller pre-validating."""
+        key = camel_key(scope)
+        if key in self.genre_key_to_zh:
+            return (self.genre_key_to_zh[key], key)
+        dkey = camel_key(default_scope)
+        log_error(f"  [GENRE FALLBACK] Scope {scope!r} is not a genre in taxonomy.json "
+                  f"(known: {sorted(self.genre_key_to_zh.values())}); publishing as "
+                  f"{default_scope!r}.")
+        return (self.genre_key_to_zh.get(dkey, default_scope), dkey)
+
+    def anchor_by_display(self, tag, is_genre=False):
+        """Build time: a tech tag display -> (display, key) or None (drop).
+        Mirrors the legacy assembler._anchor_tag semantics for tech terms."""
+        clean = clean_tag(tag).lower()
+        res = self.lexicon.lookup(clean)
+        if res and res.get("status") == "standard" and res.get("level", 1) < 3:
+            zh, key = res["zh"], res.get("key", "")
+            if is_genre:
+                return (zh, key)
+            return (self._canonical_term_display(zh), key)
+        return None
+
+    def is_structural(self, key):
+        """Genre and domain tags classify the post; they are not words of its prose."""
+        return key in self.structural_keys
+
+    def body_form(self, key, prose, exclude_keys=()):
+        """The display a tech tag must carry in this post, or None to drop it.
+
+        GUIDE's rule is that a tag's term appears in the post. The display is therefore
+        the form the prose uses: the canonical zh when present, else the first alias
+        present. None when no form occurs as the term (Lexicon.find_hits, so word
+        boundaries apply) or the post excludes the key.
+        """
+        if key in exclude_keys:
+            return None
+        canonical = self.term_key_to_zh.get(key)
+        if canonical is None:
+            return None
+        if self.lexicon.contains(canonical, prose):
+            return self._canonical_term_display(canonical)
+        for alias, zh in getattr(self.lexicon, "canonical", {}).items():
+            if zh == canonical and self.lexicon.contains(alias, prose):
+                return alias
+        return None
+
+    def fit_to_body(self, entries, prose, exclude_keys=()):
+        """Applies body_form to a `[(display, key)]` set. Returns (kept, dropped_displays)."""
+        kept, dropped = [], []
+        for disp, key in entries or []:
+            if self.is_structural(key):
+                kept.append((disp, key))
+                continue
+            form = self.body_form(key, prose, exclude_keys)
+            if form is None:
+                dropped.append(disp)
+            else:
+                kept.append((form, key))
+        return kept, dropped
+
+    def reanchor_entry(self, display, key):
+        """Maintenance time: refresh an existing (display, key) BY KEY.
+
+        Returns refreshed (display, key), or None to DROP. Genre/domain tags are
+        structural and never dropped (only their display is refreshed); tech tags are
+        dropped when their term was removed (key gone) or downgraded to level >= 3.
+        """
+        if key in self.genre_key_to_zh:
+            return (self.genre_key_to_zh[key], key)          # genre: refresh display, keep
+        if key in self.term_key_to_zh:
+            zh = self.term_key_to_zh[key]
+            if self.lexicon.levels.get(zh, 1) < 3:
+                return (self._canonical_term_display(zh), key)  # tech: refresh display, keep
+            return None                                          # downgraded -> drop
+        if key in self.domain_key_to_disp:
+            return (self.domain_key_to_disp[key], key)        # domain: refresh display, keep
+        return None                                            # removed term -> drop
+
+    def reanchor_entries(self, entries):
+        """Maintenance time: refresh a whole `[(display, key)]` set BY KEY.
+
+        Entries are refreshed or dropped individually, and duplicates that collapse to
+        the same key are merged. This is the decision half of re-anchoring, with no
+        opinion about how the tags are stored — callers that hold a parsed tag list
+        use it directly instead of round-tripping through front matter text.
+        Returns (kept_entries, {"refreshed": n, "dropped": n}).
+        """
+        kept, seen = [], set()
+        refreshed = dropped = 0
+        for disp, key in entries or []:
+            r = self.reanchor_entry(disp, key)
+            if r is None:
+                dropped += 1
+                continue
+            ndisp, nkey = r
+            if nkey in seen:
+                dropped += 1
+                continue
+            seen.add(nkey)
+            if ndisp != disp:
+                refreshed += 1
+            kept.append((ndisp, nkey))
+        return kept, {"refreshed": refreshed, "dropped": dropped}
+

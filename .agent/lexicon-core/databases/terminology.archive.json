@@ -1,0 +1,83 @@
+{
+  "Chaos": {
+    "zh": "遺產腳本模式",
+    "en": [
+      "Chaos"
+    ],
+    "description": "指程式碼庫中零散、未經分層且直接呼叫作業系統路徑的命令式程序化腳本執行模式。",
+    "forbidden": [],
+    "level": 2,
+    "archived_reason": "removed via LexiconManager.remove"
+  },
+  "WhatIs": {
+    "zh": "當前系統契約",
+    "en": [
+      "What Is"
+    ],
+    "description": "代表系統當前真實執行與支援之功能與資料結構的合約狀態。",
+    "forbidden": [],
+    "level": 2,
+    "archived_reason": "removed via LexiconManager.remove"
+  },
+  "Governance": {
+    "zh": "領域驅動模式",
+    "en": [
+      "Governance"
+    ],
+    "description": "指採用領域驅動架構，將邏輯與行為封裝於自描述領域實體中的結構化治理模式。",
+    "forbidden": [],
+    "level": 2,
+    "archived_reason": "removed via LexiconManager.remove"
+  },
+  "Precipitate": {
+    "zh": "知識沉澱工具",
+    "en": [
+      "Precipitate"
+    ],
+    "description": "將知識沉澱到專案文件或知識庫的過程或工具",
+    "forbidden": [],
+    "level": 2,
+    "archived_reason": "removed via LexiconManager.remove"
+  },
+  "Scripts": {
+    "zh": "行為",
+    "en": [
+      "Scripts"
+    ],
+    "description": "在物件導向或領域驅動架構中，物件或實體所具備的方法與邏輯運算。",
+    "forbidden": [],
+    "level": 3,
+    "archived_reason": "removed via LexiconManager.remove"
+  },
+  "SystemValidity": {
+    "zh": "系統有效性",
+    "en": [
+      "System Validity"
+    ],
+    "description": "決策組合在整體層級上可接受的性質；它不能由各局部有效性自動推出，因為局部交會所生的項不在局部評價中。",
+    "forbidden": [],
+    "level": 1,
+    "archived_reason": "removed via LexiconManager.remove"
+  },
+  "LocalValidity": {
+    "zh": "局部有效性",
+    "en": [
+      "Local Validity"
+    ],
+    "description": "一個決策不僅在自身假設內可推出，且其假設、目標與邊界對整體問題仍然合適的性質；它比一致性多一個條件。",
+    "forbidden": [],
+    "level": 1,
+    "archived_reason": "removed via LexiconManager.remove"
+  },
+  "GoodhartSLaw": {
+    "zh": "古德哈特定律",
+    "en": [
+      "Goodhart's Law"
+    ],
+    "description": "指標一旦成為控制目標，原先與真實狀態的統計關係便可能失效。",
+    "forbidden": [],
+    "level": 1,
+    "source_session": "2026-09-23-c",
+    "archived_reason": "② 近義變體：與既有術語「古哈特定律」編輯距離 ≤ 1（疑似變體，應合併或登記為 forbidden）"
+  }
+}

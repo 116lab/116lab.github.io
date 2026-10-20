@@ -1,0 +1,7837 @@
+{
+  "PoolingEquilibrium": {
+    "zh": "pooling 均衡",
+    "en": [
+      "Pooling Equilibrium"
+    ],
+    "description": "訊號賽局中所有類型的參與者發出相同訊號，使得觀察者無法藉由訊號更新對其真實狀態之先驗信念的均衡狀態。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ConditionalProbabilitySequenceGenerator": {
+    "zh": "條件機率序列生成器",
+    "en": [
+      "Conditional Probability Sequence Generator"
+    ],
+    "description": "根據前文已生成的 Token 序列，計算並生成下一個機率最高 Token 的數學運算模型",
+    "forbidden": [],
+    "level": 2
+  },
+  "ApiFirst": {
+    "zh": "API-First",
+    "en": [
+      "API-First"
+    ],
+    "description": "在編寫實作程式碼之前，優先設計並宣告應用程式介面規格的開發理念。",
+    "forbidden": [],
+    "level": 2
+  },
+  "BrokenPremise": {
+    "zh": "條件命題的前提破壞",
+    "en": [
+      "Broken Premise"
+    ],
+    "description": "架構或演算法的數學性質是條件命題；當實作為了效率或有限輸入而違反其前提時，該性質在特定條件下完全失效，而非緩慢退化。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PerformativeFeedbackLoop": {
+    "zh": "執行性預測反饋迴路",
+    "en": [
+      "Performative Feedback Loop"
+    ],
+    "description": "模型的預測行為本身改寫了下游資料生成分佈，使後續資料不再獨立於模型決策。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AmdahlSLaw": {
+    "zh": "Amdahl 定律",
+    "en": [
+      "Amdahl's Law"
+    ],
+    "description": "描述在固定工作負載下，對系統局部環節進行加速所能獲得的整體加速比上限受限於未加速環節佔比的定律。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SystemsGovernanceOperations": {
+    "zh": "系統工程與研發治理",
+    "en": [
+      "Systems Governance & Operations"
+    ],
+    "description": "涵蓋排隊理論、流量守恆、組織度量、控制迴路與研發決策責任等系統工程與研發營運治理範疇。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Hyperscalers": {
+    "zh": "雲端超大規模服務商",
+    "en": [
+      "Hyperscalers"
+    ],
+    "description": "提供大規模雲端算力與機架、並驅動上游晶片採購的雲端巨頭。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TemporalClawbackSymmetry": {
+    "zh": "跨期追回時限對稱性",
+    "en": [
+      "Temporal Clawback Symmetry"
+    ],
+    "description": "激勵追回期限必須覆蓋物理崩潰潛伏期，以消除任內套現、期滿離席。",
+    "forbidden": [],
+    "level": 2
+  },
+  "MoralCrumpleZone": {
+    "zh": "責任去中心化洗滌槽",
+    "en": [
+      "Moral Crumple Zone"
+    ],
+    "description": "把系統性失效的法律與道德責任吸收到最末端操作員身上的組織安排。",
+    "forbidden": [],
+    "level": 1,
+    "aliases": [
+      "制度性責任海綿"
+    ]
+  },
+  "SecuritiesAndExchangeCommission": {
+    "zh": "美國證券交易委員會",
+    "en": [
+      "Securities And Exchange Commission"
+    ],
+    "description": "美國聯邦政府負責監督證券市場、執行聯邦證券法規並保護投資人權益的獨立法定主管機關。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PollutedHistorySnapshots": {
+    "zh": "受污染的歷史片段",
+    "en": [
+      "Polluted History Snapshots"
+    ],
+    "description": "版本控制歷史中包含無效、錯誤或過時程式碼結構的提交紀錄。",
+    "forbidden": [],
+    "level": 2
+  },
+  "VerificationPrecedence": {
+    "zh": "絕對的驗證優先序",
+    "en": [
+      "Verification Precedence"
+    ],
+    "description": "當規格與真實系統行為發生衝突時，以執行時行為為最高真理的優先序決策順序。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GlobalRuleOverCentralization": {
+    "zh": "全域規則過度集中",
+    "en": [
+      "Global Rule Over-centralization"
+    ],
+    "description": "將專案所有層級的前後端開發規範、部署流程等悉數塞入單一根目錄設定檔，導致認知容量超載的設計反模式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ImplicitAsyncContext": {
+    "zh": "隱性非同步上下文",
+    "en": [
+      "Implicit Async Context"
+    ],
+    "description": "語法上呈同步形式但實際涉及非同步時序，且其狀態變更未在文本中留下 Token 提示的邏輯盲區",
+    "forbidden": [],
+    "level": 2
+  },
+  "TelemetryMetadata": {
+    "zh": "模型遙測後設資料",
+    "en": [
+      "Telemetry Metadata"
+    ],
+    "description": "用於記錄大語言模型在特定工作流執行時的架構、模型版本、代理版本等追蹤性數據。",
+    "forbidden": [],
+    "level": 2
+  },
+  "LinuxPermissions": {
+    "zh": "Linux 權限",
+    "en": [
+      "Linux Permissions"
+    ],
+    "description": "Kernel 在每次操作上比對主體（process credentials）、客體（kernel object）、能力（UID/GID/capabilities/syscall）與邊界（namespace/seccomp/LSM/cgroup）的關係模型，而非單一標籤判斷。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AiEconomics": {
+    "zh": "AI 經濟與社會",
+    "en": [
+      "AI Economics"
+    ],
+    "description": "描述 AI 能力主張如何經由商品化、評測訊號、資本定價與組織採用轉為可驗證效用的分析領域；涵蓋單位經濟、貢獻利益、人工補償與敘事反身性。",
+    "forbidden": [],
+    "level": 1
+  },
+  "NeuralArchitectureSearch": {
+    "zh": "神經網路架構搜尋",
+    "en": [
+      "Neural Architecture Search"
+    ],
+    "description": "以自動化程序在架構空間中搜尋最佳網路結構的方法，其候選規模直接放大評估讀數的極值偏差。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DigitalOperationalResilienceAct": {
+    "zh": "數位營運韌性法案",
+    "en": [
+      "Digital Operational Resilience Act"
+    ],
+    "description": "要求關鍵實體評估集中度風險、接受第三方穿透監管並證明可切換能力的歐盟法。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ManeuveringCharacteristicsAugmentationSystem": {
+    "zh": "機動特性增強系統",
+    "en": [
+      "Maneuvering Characteristics Augmentation System"
+    ],
+    "description": "波音 737 MAX 為抵銷發動機前移造成的機頭上仰特性而引入的自動俯仰控制飛行控制軟體系統。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CodeAsDocumentation": {
+    "zh": "以程式碼為文件",
+    "en": [
+      "Code-As-Documentation"
+    ],
+    "description": "將程式碼本身視為主要文件的開發原則",
+    "forbidden": [],
+    "level": 2
+  },
+  "NarrativeContinuityRules": {
+    "zh": "敘事連續性規則",
+    "en": [
+      "Narrative Continuity Rules"
+    ],
+    "description": "規範文章段落間的過渡與背景設定需具備連貫性的規則",
+    "forbidden": [],
+    "level": 2
+  },
+  "AgentGovernance": {
+    "zh": "代理人治理機制",
+    "en": [
+      "Agent Governance"
+    ],
+    "description": "利用自動化腳本或代理人規則，對程式碼提交進行檢查、防護與修復的動態合規機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GatewayIndexPattern": {
+    "zh": "網關-索引模式",
+    "en": [
+      "Gateway-Index Pattern"
+    ],
+    "description": "一種治理設計模式，在輕量化工具設定檔中植入入口網關，並引導 AI 代理讀取根目錄的總路由器以進行漸進式披露。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SeparationOfAccountability": {
+    "zh": "權責的阻斷切割",
+    "en": [
+      "Separation Of Accountability"
+    ],
+    "description": "在多階段管線中，明確區分生成端提示漏洞與精煉端腳本錯誤之責任歸屬的設計原則。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ActivityBasedCosting": {
+    "zh": "作業基礎成本制",
+    "en": [
+      "Activity-Based Costing"
+    ],
+    "description": "一種成本核算方法，將間接成本和製造費用分攤到具體的作業或活動上，以便更精確地評估各項任務的真實成本結構。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Sandbox": {
+    "zh": "Sandbox",
+    "en": [
+      "Sandbox"
+    ],
+    "description": "限制 process 身份、可見世界、可用能力、可呼叫 syscall 與資源用量的隔離邊界組合，而非單一權限開關。",
+    "forbidden": [],
+    "level": 2
+  },
+  "LongShortTermMemory": {
+    "zh": "長短期記憶網路",
+    "en": [
+      "Long Short-Term Memory"
+    ],
+    "description": "以門控結構調節資訊與梯度路徑的遞迴網路變體。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ScaledDotProductAttention": {
+    "zh": "縮放點積注意力",
+    "en": [
+      "Scaled Dot-Product Attention"
+    ],
+    "description": "以查詢與鍵的點積除以維度平方根作為關聯分數的注意力計算方式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "VariationalAutoencoder": {
+    "zh": "變分自動編碼器",
+    "en": [
+      "Variational Autoencoder"
+    ],
+    "description": "學習潛在變數的條件分佈，並以證據下界同時訓練編碼器與解碼器的生成模型。",
+    "forbidden": [],
+    "level": 2
+  },
+  "OrganizationalComplementarity": {
+    "zh": "技術與組織互補",
+    "en": [
+      "Organizational Complementarity"
+    ],
+    "description": "技術能力必須搭配流程重排與技能調整才形成產出的互補關係。",
+    "forbidden": [],
+    "level": 2
+  },
+  "EmpiricalRiskMinimization": {
+    "zh": "經驗風險最小化",
+    "en": [
+      "Empirical Risk Minimization"
+    ],
+    "description": "以訓練樣本上的平均損失最小化代替真實風險最小化的學習原則，只保證擬合關聯，不保證因果結構恆常。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StructuredChannelPruning": {
+    "zh": "結構化通道剪枝",
+    "en": [
+      "Structured Channel Pruning"
+    ],
+    "description": "整條移除特徵通道的剪枝方式，硬體加速明確，但對流形拓撲的破壞遠大於等方差的量化噪聲。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ModularParameterIsolation": {
+    "zh": "模組化參數隔離",
+    "en": [
+      "Modular Parameter Isolation"
+    ],
+    "description": "以 LoRA、Adapter 等旁路模組承載新任務更新，使核心權重不被覆寫的架構隔離手段。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RoleIsolationInvariant": {
+    "zh": "職能隔離不變式",
+    "en": [
+      "Role Isolation Invariant"
+    ],
+    "description": "生成、授權、執行與救濟四個角色中任兩者不得由同一元件承擔的結構約束。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SequentialProbabilityRatioTest": {
+    "zh": "序貫機率比檢驗",
+    "en": [
+      "Sequential Probability Ratio Test"
+    ],
+    "description": "每到達一筆觀測即更新對數似然比並與上下界比較的檢定，可在控制兩類錯誤率下提前判定。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CausalDisentanglement": {
+    "zh": "表演性因果解耦",
+    "en": [
+      "Causal Disentanglement"
+    ],
+    "description": "以盲測隔離或隨機保留組，把系統自身誘發的分佈變化與外生變化分開估計。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProxyMetricEscalationFallacy": {
+    "zh": "代理量升格謬誤",
+    "en": [
+      "Proxy Metric Escalation Fallacy"
+    ],
+    "description": "把封閉評測集上的標量分數逕自當作整條價值鏈端到端效用的等價結論。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ReturnOnInvestedCapital": {
+    "zh": "有形資本回報率",
+    "en": [
+      "Return On Invested Capital"
+    ],
+    "description": "稅後營業利益相對投入資本的比率，用以檢驗資本支出是否真正創造價值。",
+    "forbidden": [],
+    "level": 2
+  },
+  "MeasurabilityAsymmetry": {
+    "zh": "可計量性不對稱",
+    "en": [
+      "Measurability Asymmetry"
+    ],
+    "description": "收益容易即時量測，而延後、分散的成本難以進入同一套指標的結構性落差。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MultiversionProgramming": {
+    "zh": "多版本程式設計",
+    "en": [
+      "Multiversion Programming"
+    ],
+    "description": "依據同一規格由不同團隊獨立實作多個版本以期透過多樣性降低共同失效機率的容錯架構。",
+    "forbidden": [],
+    "level": 1
+  },
+  "LifecycleCompleteness": {
+    "zh": "生命週期完整性",
+    "en": [
+      "Lifecycle Completeness"
+    ],
+    "description": "指例外裁決與升級處理必須保留結構化理由，並具備回寫為未來新政策的閉環流程。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SoftwareEngineeringSpecifications": {
+    "zh": "軟體工程與規格",
+    "en": [
+      "Software Engineering & Specifications"
+    ],
+    "description": "涵蓋形式規格、架構契約、型別系統、變更帳本與可撤銷升格等軟體工程理論與治理實踐之核心技術範疇。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SpuriousOntologicalPrivilege": {
+    "zh": "假性本體論特權",
+    "en": [
+      "Spurious Ontological Privilege"
+    ],
+    "description": "把機器輸出預設為客觀物理事實，從而免除制度自行查驗義務的認識論特權。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RepresentativeVoiceChannels": {
+    "zh": "代表性發聲通道",
+    "en": [
+      "Representative Voice Channels"
+    ],
+    "description": "工會或自治代表作為獨立於直屬主管的反證與資訊通道。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ArchitectureReviewBoard": {
+    "zh": "架構審查委員會",
+    "en": [
+      "Architecture Review Board"
+    ],
+    "description": "對重大技術變更行使物理限制與合規質疑的內部審查節點。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ChiefInformationSecurityOfficer": {
+    "zh": "首席資訊安全官",
+    "en": [
+      "Chief Information Security Officer"
+    ],
+    "description": "對資安、主權與攻擊面承擔否決職能的治理角色。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SupersonicBullwhipEffect": {
+    "zh": "超音速牛鞭效應",
+    "en": [
+      "Supersonic Bullwhip Effect"
+    ],
+    "description": "全自動即時管道把供應鏈震盪壓縮到秒級，局部微小錯誤無阻尼放大為全域休克。",
+    "forbidden": [],
+    "level": 1
+  },
+  "EpistemicInbreeding": {
+    "zh": "認識論近親繁殖",
+    "en": [
+      "Epistemic Inbreeding"
+    ],
+    "description": "封閉系統反覆吸收自身合成產物，無法引入真實負熵而走向資訊熵增。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Slopsquatting": {
+    "zh": "幻覺包搶註寄生",
+    "en": [
+      "Slopsquatting"
+    ],
+    "description": "攻擊者搶先註冊模型常幻覺出的套件名，藉安裝路徑植入惡意程式碼。",
+    "forbidden": [],
+    "level": 1
+  },
+  "EpistemicSanctuaries": {
+    "zh": "工程知識保護區",
+    "en": [
+      "Epistemic Sanctuaries"
+    ],
+    "description": "禁止引入生成式黑箱、強制人類手動設計與除錯的核心模組保留區。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MinimalClosableUnit": {
+    "zh": "最小可閉合單元",
+    "en": [
+      "Minimal Closable Unit"
+    ],
+    "description": "大部分因果、語義與責任能在內部閉合，跨出去的部分少到可被契約明確描述的最小局部範圍；它不等於最小單元。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MarsClimateOrbiter": {
+    "zh": "火星氣候軌道器",
+    "en": [
+      "Mars Climate Orbiter"
+    ],
+    "description": "NASA 於 1998 年發射的火星探測器，1999 年因地面軟體以英制單位交出衝量資料、與介面規格要求的公制不符，於入軌時失聯。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ControlledUnclassifiedInformation": {
+    "zh": "受控非機密資訊",
+    "en": [
+      "Controlled Unclassified Information"
+    ],
+    "description": "需依法律、法規或政府政策採取保護控制的敏感但非國家機密資訊。",
+    "forbidden": [],
+    "level": 2
+  },
+  "OneFactorAtATime": {
+    "zh": "單因子逐一檢查",
+    "en": [
+      "One-Factor-At-A-Time"
+    ],
+    "description": "每次僅變更並評估單一因子或局部決策的測試方法；在交互作用存在時，無法有效估計決策交會所產生的系統殘差。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RecurrentNeuralNetwork": {
+    "zh": "遞迴神經網路",
+    "en": [
+      "Recurrent Neural Network"
+    ],
+    "description": "以隱藏狀態沿序列遞迴傳遞資訊的網路結構。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DualLayerSpec": {
+    "zh": "雙層規格結構",
+    "en": [
+      "Dual-Layer Spec"
+    ],
+    "description": "將系統規格拆分為高層需求契約與底層行為觀察的架構設計方式",
+    "forbidden": [],
+    "level": 2
+  },
+  "PortableDerivatives": {
+    "zh": "可攜帶衍生物",
+    "en": [
+      "Portable Derivatives"
+    ],
+    "description": "早期用於描述可獨立執行的衍生套件，現已更新為部署套件",
+    "forbidden": [],
+    "level": 2
+  },
+  "TerminologyIntroductionProtocol": {
+    "zh": "術語引介協議",
+    "en": [
+      "Terminology Introduction Protocol"
+    ],
+    "description": "規範新術語首次出現時需附帶解釋或範例的協議",
+    "forbidden": [],
+    "level": 2
+  },
+  "BatchCoordinationPlan": {
+    "zh": "批次協調計畫",
+    "en": [
+      "Batch Coordination Plan"
+    ],
+    "description": "在產出多份報告時，確保內容不重疊並自然銜接的內部計畫",
+    "forbidden": [],
+    "level": 2
+  },
+  "LegacySystemRefactoring": {
+    "zh": "遺留系統重構",
+    "en": [
+      "Legacy System Refactoring"
+    ],
+    "description": "在不改變外部行為的前提下，對遺留系統的程式碼或文件治理結構進行最佳化。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ConversationKnowledgeManagement": {
+    "zh": "對話知識管理",
+    "en": [
+      "Conversation Knowledge Management"
+    ],
+    "description": "針對開發對話中所隱含的決策推理進行捕捉、結構化與持久化的治理。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CognitiveCapacityThreshold": {
+    "zh": "認知容量閾值",
+    "en": [
+      "Cognitive Capacity Threshold"
+    ],
+    "description": "單一開發者或團隊心智模型所能完整推理與維護的系統行為總量與複雜度上限。",
+    "forbidden": [],
+    "level": 2
+  },
+  "MustShouldMay": {
+    "zh": "合規性指示詞",
+    "en": [
+      "Must / Should / May"
+    ],
+    "description": "依據 RFC 2119 定義的合規義務關鍵字，用以精確控制規格需求中各項條款的強制力等級。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Bdd": {
+    "zh": "行為驅動開發",
+    "en": [
+      "BDD"
+    ],
+    "description": "一種以軟體行為為核心的開發方法，透過 Given/When/Then 三段式場景，將抽象需求轉化為可自動化驗證的驗收條件。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SingleSourceOfTruth": {
+    "zh": "單一事實來源",
+    "en": [
+      "Single Source of Truth"
+    ],
+    "description": "指在特定工作執行緒中唯一被視為絕對真實與合法的結構化資料來源，所有操作皆以其為單向基準。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GitLogAnalysis": {
+    "zh": "歷史紀錄分析",
+    "en": [
+      "Git Log Analysis"
+    ],
+    "description": "對版本控制系統的歷史提交紀錄進行掃描與上下文關聯性解析。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GlobalResetOperation": {
+    "zh": "全局重設操作",
+    "en": [
+      "Global Reset Operation"
+    ],
+    "description": "強制將工作區與歷史紀錄重設至特定乾淨狀態的清除程序。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GitLog": {
+    "zh": "版本控制歷史",
+    "en": [
+      "Git Log"
+    ],
+    "description": "Git 等版本控制系統所記錄的完整提交與異動軌跡。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PotentialPollutionMap": {
+    "zh": "潛在污染地圖",
+    "en": [
+      "Potential Pollution Map"
+    ],
+    "description": "專案環境中可能引發 AI 認知偏誤的所有隱性污染源分佈模型。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CentralizedKnowledgeBase": {
+    "zh": "集中化知識庫",
+    "en": [
+      "Centralized Knowledge Base"
+    ],
+    "description": "集中存放專案設計決策與知識的文件庫，過度收斂時會降低 Agent 面對過時資訊的容錯空間",
+    "forbidden": [],
+    "level": 2
+  },
+  "KnowledgeRoutingRule": {
+    "zh": "知識路由規則",
+    "en": [
+      "Knowledge Routing Rule"
+    ],
+    "description": "定義何種知識應與程式碼同址存放，何種知識可寫入集中庫，以避免過時資訊引發污染的路由策略",
+    "forbidden": [],
+    "level": 2
+  },
+  "HumanGate": {
+    "zh": "設置人為閘門",
+    "en": [
+      "Human Gate"
+    ],
+    "description": "在 Architecture 提升為 Requirement 或執行關鍵變更時，必須由人類工程師進行審查介入的品質卡點",
+    "forbidden": [],
+    "level": 2
+  },
+  "LargeLanguageModel": {
+    "zh": "大型語言模型",
+    "en": [
+      "Large Language Model"
+    ],
+    "description": "基於海量文本數據訓練的深層神經網路模型，用於處理、生成和理解自然語言",
+    "forbidden": [],
+    "level": 1
+  },
+  "SpecDrivenDevelopment": {
+    "zh": "規格驅動開發",
+    "en": [
+      "Spec-Driven Development"
+    ],
+    "description": "以規格文件為基準約束程式碼行為，確保實作與規格始終對齊的開發方法。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AuthoritativeDocumentDrift": {
+    "zh": "權威文件漂移",
+    "en": [
+      "Authoritative Document Drift"
+    ],
+    "description": "文件規格未與實作系統同步更新，導致文件與系統真實行為逐漸脫節的退化現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CiPipeline": {
+    "zh": "持續整合管線",
+    "en": [
+      "CI Pipeline"
+    ],
+    "description": "在程式碼提交後自動執行建置、測試與合規檢查的自動化管線。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SelectiveAttention": {
+    "zh": "選擇性注意力",
+    "en": [
+      "Selective Attention"
+    ],
+    "description": "在大腦或系統面對大量資訊輸入時，主動聚焦於特定相關訊息並抑制無關干擾的認知聚焦機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DefaultDelegationPattern": {
+    "zh": "預設委託模式",
+    "en": [
+      "Default Delegation Pattern"
+    ],
+    "description": "一種治理文件設計模式。指治理文件不重述已有的權威來源（如 ESLint 預設），而是直接聲明遵循該權威，並僅列出具體的偏離項目，以降低維護成本與 AI Agent 的 Context 消耗。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PolicyDeclarationModel": {
+    "zh": "政策聲明模型",
+    "en": [
+      "Policy Declaration Model"
+    ],
+    "description": "治理文件設計的角色模型之一。文件僅宣告遵循外部權威並記錄偏離項目。該模型能讓 AI Agent 直接呼叫其預訓練知識，從而大幅減少 Context Token 的消耗。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Ide": {
+    "zh": "整合開發環境",
+    "en": [
+      "IDE"
+    ],
+    "description": "整合了程式碼編輯、建置、除錯與靜態分析等多功能於一體的軟體開發平台，相較於 CLI 提供更深度的底層檢索。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CognitiveCapacityOverload": {
+    "zh": "認知容量超載",
+    "en": [
+      "Cognitive Capacity Overload"
+    ],
+    "description": "指載入 AI 代理上下文的資訊量超出其能有效處理與聚焦的上限，進而引發幻覺與執行偏差的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "BestEvidenceRule": {
+    "zh": "最佳證據規則",
+    "en": [
+      "Best Evidence Rule"
+    ],
+    "description": "法律學上要求出示原始文件以證明內容的證據法規則，在此比喻 AI 分析時應以原始程式碼而非人工摘要或二次文件作為主要依據。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MinimalTrustedInput": {
+    "zh": "最小可信輸入",
+    "en": [
+      "Minimal Trusted Input"
+    ],
+    "description": "AI 驅動分析中，將輸入上下文收斂至最小且可直接驗證的資訊集合，以最大化信噪比並防止過時文件引入幻覺。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ConvergenceStoppingCondition": {
+    "zh": "收斂停止條件",
+    "en": [
+      "Convergence Stopping Condition"
+    ],
+    "description": "在逐步收斂輸入來源的過程中，判定無法再移除任何輸入來源否則分析即無法完成的下界閾值。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MaximizeSignalToNoiseRatio": {
+    "zh": "最大化信噪比",
+    "en": [
+      "Maximize Signal-To-Noise Ratio"
+    ],
+    "description": "藉由排除不可靠、過時或冗餘的輸入，最大化輸入上下文中 ground truth 比例以提高 AI 分析推論精確度的實踐。",
+    "forbidden": [],
+    "level": 1
+  },
+  "NamespaceCollision": {
+    "zh": "命名空間碰撞",
+    "en": [
+      "Namespace Collision"
+    ],
+    "description": "專案命名（如目錄、變數）與 AI 基礎設施或 Tool 協定所使用的高權重詞彙重疊，導致 Attention 機制產生意外交叉參照與行為偏移的現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SemanticDefaultBias": {
+    "zh": "語意預設偏差",
+    "en": [
+      "Semantic Default Bias"
+    ],
+    "description": "AI 代理人預設程式碼執行快樂路徑（Happy Path）而忽略條件式限制或例外情況的認知偏差。",
+    "forbidden": [],
+    "level": 1
+  },
+  "VonNeumannArchitecture": {
+    "zh": "馮·紐曼架構",
+    "en": [
+      "Von Neumann Architecture"
+    ],
+    "description": "將指令碼與資料共用同一記憶體空間的傳統計算機硬體架構，在 LLM 上下文中比喻指令與資料混合的狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RefinementContext": {
+    "zh": "當前精煉環境",
+    "en": [
+      "Refinement Context"
+    ],
+    "description": "記錄多代理協作中，對原始產出進行編譯、格式化或下錨的執行腳本與執行環境資訊。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PreFlightValidation": {
+    "zh": "資料前置檢驗",
+    "en": [
+      "Pre-Flight Validation"
+    ],
+    "description": "在執行具破壞性或修改性的文件管線前，對輸入資料與 JSON Schema 進行完整性與正確性檢查的防禦機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AttributionPurification": {
+    "zh": "語料歸屬淨化",
+    "en": [
+      "Attribution Purification"
+    ],
+    "description": "將工作流中的非結構化排版規則或多餘的描述進行剝離，以維護模型注意力機制集中在核心意圖的程序。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StateSynchronizationDeadlock": {
+    "zh": "狀態同步死鎖",
+    "en": [
+      "State Synchronization Deadlock"
+    ],
+    "description": "多模型協作中，各代理對資料寫入與文字修飾因缺乏 SSOT 限制而導致互相修改、進而引發的版本狀態同步循環阻塞。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StateUncertainty": {
+    "zh": "狀態不確定性",
+    "en": [
+      "State Uncertainty"
+    ],
+    "description": "在行為與數據分離的架構下，AI Agent 無法確定當前讀取的狀態是否為最新單一真相來源的情況。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SilentSemanticDeviation": {
+    "zh": "靜默語意偏差",
+    "en": [
+      "Silent Semantic Deviation"
+    ],
+    "description": "程式碼在語法上合法且多數輸入下正確，但語意與開發意圖之間存在間隙，僅在特定邊界條件下暴露的程式錯誤。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DependencyContractDrift": {
+    "zh": "依賴契約漂移",
+    "en": [
+      "Dependency Contract Drift"
+    ],
+    "description": "專案升級或替換第三方套件時，因 API 在邊界輸入或異常處理上的未明示契約差異導致的行為偏差。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Sop": {
+    "zh": "標準作業程序",
+    "en": [
+      "SOP"
+    ],
+    "description": "組織內用以規範日常作業步驟、提升合規性與一致性的標準化操作流程。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ModelVersionMigration": {
+    "zh": "模型版本遷移",
+    "en": [
+      "Model Version Migration"
+    ],
+    "description": "指底層大型語言模型發生無聲更替，導致其行為、意圖理解和隱性規則產生全局性且難以察覺的無聲漂移。",
+    "forbidden": [],
+    "level": 2
+  },
+  "LegacyScriptPattern": {
+    "zh": "遺產腳本模式",
+    "en": [
+      "Legacy Script Pattern"
+    ],
+    "description": "指程式碼庫中零散、未經分層且直接呼叫作業系統路徑的命令式程序化腳本執行模式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SystemContract": {
+    "zh": "當前系統契約",
+    "en": [
+      "System Contract"
+    ],
+    "description": "代表系統當前真實執行與支援之功能與資料結構的合約狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DomainDrivenDesign": {
+    "zh": "領域驅動設計",
+    "en": [
+      "Domain-Driven Design"
+    ],
+    "description": "指採用領域驅動架構（DDD），將邏輯與行為封裝於自描述領域實體中的結構化設計方法。",
+    "forbidden": [],
+    "level": 1
+  },
+  "KnowledgePrecipitation": {
+    "zh": "知識沉澱工具",
+    "en": [
+      "Knowledge Precipitation"
+    ],
+    "description": "將知識沉澱到專案文件或知識庫的過程或工具",
+    "forbidden": [],
+    "level": 2
+  },
+  "InstructionStrengthGradient": {
+    "zh": "指令強度梯度",
+    "en": [
+      "Instruction Strength Gradient"
+    ],
+    "description": "RFC 2119 關鍵字對 Agent 造成的不同約束力層級，影響 Agent 解決矛盾時的抉擇優先順序",
+    "forbidden": [],
+    "level": 3
+  },
+  "OrchestratorScript": {
+    "zh": "發佈排程腳本",
+    "en": [
+      "Orchestrator Script"
+    ],
+    "description": "負責橫向流程調度的腳本；在健康的架構中只做排程與依賴傳遞，不應親自承載標籤萃取、設定解析等縱向領域邏輯。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DualStateSynchronization": {
+    "zh": "雙重狀態同步",
+    "en": [
+      "Dual State Synchronization"
+    ],
+    "description": "同時維護實體檔案系統與獨立 JSON 索引兩套狀態的反模式，兩者容易脫鉤而違反單一真相來源。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ImplicitStateMutation": {
+    "zh": "隱式狀態突變",
+    "en": [
+      "Implicit State Mutation"
+    ],
+    "description": "排程器直接修改傳入文件實體、產生難以追蹤副作用的反模式，違反單一職責原則並使單元測試近乎不可能。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ExplicitDomainAssembly": {
+    "zh": "顯式領域組裝",
+    "en": [
+      "Explicit Domain Assembly"
+    ],
+    "description": "強制所有屬性都經組裝器開放介面顯式構建的做法，意圖明確且無隱藏副作用，作為編譯期與執行期的防禦機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AiAgent": {
+    "zh": "AI 代理人",
+    "en": [
+      "AI Agent"
+    ],
+    "description": "具備自主理解、推論與程式碼生成能力，能在給定規則下執行特定任務的 AI 協作者。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ContextLeastPrivilege": {
+    "zh": "語境最小權限",
+    "en": [
+      "Context Least Privilege"
+    ],
+    "description": "限制 agent 帶著哪些上下文去行動的安全原則；相對於只限制 process 能碰哪些檔案、網路的傳統最小權限，它管控的是模型推理前所載入的語境狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ConvolutionalNeuralNetwork": {
+    "zh": "卷積神經網路",
+    "en": [
+      "Convolutional Neural Network"
+    ],
+    "description": "以局部連接與權重共享處理格狀資料的網路架構，把空間鄰近性寫進模型結構。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GenerativeAdversarialNetwork": {
+    "zh": "生成對抗網路",
+    "en": [
+      "Generative Adversarial Network"
+    ],
+    "description": "由生成器與判別器相互競爭、以隱式方式逼近資料分佈的架構。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ElasticWeightConsolidation": {
+    "zh": "彈性權重固化",
+    "en": [
+      "Elastic Weight Consolidation"
+    ],
+    "description": "依參數對舊任務的重要性施加懲罰，以減緩遺忘的正則化方法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SociotechnicalSystem": {
+    "zh": "社會技術系統",
+    "en": [
+      "Sociotechnical System"
+    ],
+    "description": "由技術元件與組織安排共同構成、必須整體運作才產生價值的系統。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ReparameterizationTrick": {
+    "zh": "重參數化技巧",
+    "en": [
+      "Reparameterization Trick"
+    ],
+    "description": "把隨機取樣改寫成可微分變換與獨立噪聲，使梯度能穿過取樣節點。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DiffusionProbabilisticModel": {
+    "zh": "擴散機率模型",
+    "en": [
+      "Diffusion Probabilistic Model"
+    ],
+    "description": "以固定前向加噪程序破壞資料，再學習反向轉移以生成樣本的機率模型。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DenoisingScoreMatching": {
+    "zh": "去噪分數匹配",
+    "en": [
+      "Denoising Score Matching"
+    ],
+    "description": "以預測加入的噪聲取代直接估計對數密度梯度的訓練目標。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AdaptiveOverfitting": {
+    "zh": "適應性過擬合",
+    "en": [
+      "Adaptive Overfitting"
+    ],
+    "description": "反覆在同一測試集上查看並挑選最佳結果，使公開分數高於真實泛化能力的偏差。",
+    "forbidden": [],
+    "level": 2
+  },
+  "MultipleHypothesisTesting": {
+    "zh": "多重假設檢定",
+    "en": [
+      "Multiple Hypothesis Testing"
+    ],
+    "description": "同時檢驗多個假設時，單次檢定的顯著水準無法控制整體誤判率，須另行校正族系錯誤。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ArchitecturalInductiveBias": {
+    "zh": "架構誘導偏差",
+    "en": [
+      "Architectural Inductive Bias"
+    ],
+    "description": "由網路結構本身而非訓練資料帶入的先驗假設，只有在其數學前提未被實作破壞時才真正成立。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ResearcherDegreesOfFreedom": {
+    "zh": "研究者自由度",
+    "en": [
+      "Researcher Degrees Of Freedom"
+    ],
+    "description": "實驗過程中未被事前固定的選擇空間，例如種子數、停止時機與指標挑選，會把偽陽性率推離名目水準。",
+    "forbidden": [],
+    "level": 1
+  },
+  "InvariantCausalPrediction": {
+    "zh": "不變因果預測",
+    "en": [
+      "Invariant Causal Prediction"
+    ],
+    "description": "以「條件分佈是否跨環境穩定」為篩選準則，挑出具因果支撐之特徵的推論方法。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AutoregressiveDecoder": {
+    "zh": "自回歸解碼器",
+    "en": [
+      "Autoregressive Decoder"
+    ],
+    "description": "以自身已生成序列為條件逐步輸出的解碼結構，容量過剩時會繞過潛在變數通道。",
+    "forbidden": [],
+    "level": 2
+  },
+  "FreeBits": {
+    "zh": "自由位元約束",
+    "en": [
+      "Free Bits"
+    ],
+    "description": "為每個潛在維度保留最低 KL 預算的正則化手段，阻止最佳化器把潛在通道整條關閉。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ScalarAggregateMetric": {
+    "zh": "標量聚合度量",
+    "en": [
+      "Scalar Aggregate Metric"
+    ],
+    "description": "把高維行為壓縮成單一數字的評估量，其降維投影會把子群體差異與分佈權重變化一併吸收。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StochasticGradientDescent": {
+    "zh": "隨機梯度下降",
+    "en": [
+      "Stochastic Gradient Descent"
+    ],
+    "description": "以小批次樣本估計梯度並更新參數的最佳化演算法，其搜尋是局部的，不保證抵達全域最優。",
+    "forbidden": [],
+    "level": 2
+  },
+  "OptimizationDynamics": {
+    "zh": "最佳化動力學",
+    "en": [
+      "Optimization Dynamics"
+    ],
+    "description": "參數在損失景觀上隨更新規則演化的過程，是獨立於架構容量之外的物理約束。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Gemm": {
+    "zh": "矩陣乘法核心",
+    "en": [
+      "Gemm"
+    ],
+    "description": "通用矩陣乘法的底層實作，其在不同批次大小下的浮點累加順序差異，是位元級不可重現的來源。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DiscriminatedUnion": {
+    "zh": "區分聯合型別",
+    "en": [
+      "Discriminated Union"
+    ],
+    "description": "以標籤欄位區分變體的型別構造，使編譯器能在分支未窮盡時直接拒絕編譯。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SovereignKillSwitch": {
+    "zh": "主權終止開關",
+    "en": [
+      "Sovereign Kill Switch"
+    ],
+    "description": "獨立於模型與應用程式之外、可無條件切斷一切後續執行的終止裝置。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TypeStatePattern": {
+    "zh": "型別狀態模式",
+    "en": [
+      "Type-State Pattern"
+    ],
+    "description": "把物件的合法狀態編碼進型別，使未經授權的狀態轉移在編譯期就無法表達。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TotalCostOfOwnership": {
+    "zh": "總體擁有成本",
+    "en": [
+      "Total Cost Of Ownership"
+    ],
+    "description": "涵蓋採購、整合、維運、稽核與人力補償在內的全生命週期成本口徑。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RefutabilityContract": {
+    "zh": "可反駁性契約",
+    "en": [
+      "Refutability Contract"
+    ],
+    "description": "在部署前明文寫定何種觀測結果將推翻效用宣稱的約定，使宣稱取得可被否證的資格。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PerformativelyStablePoint": {
+    "zh": "表演性穩定點",
+    "en": [
+      "Performatively Stable Point"
+    ],
+    "description": "模型對其自身所誘發的分佈重新最佳化後仍不改變的參數，是表演性環境下的收斂目標。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PostHocMetricDrift": {
+    "zh": "指標事後漂移",
+    "en": [
+      "Post-Hoc Metric Drift"
+    ],
+    "description": "看過結果後才更換、刪除或放寬評估指標，使結論恆為成功的操作。",
+    "forbidden": [],
+    "level": 2
+  },
+  "EquityRiskPremium": {
+    "zh": "股權風險溢價",
+    "en": [
+      "Equity Risk Premium"
+    ],
+    "description": "投資人要求股權投資高於無風險利率的額外報酬，是折現率的主要組成。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HighBandwidthMemory": {
+    "zh": "高頻寬記憶體",
+    "en": [
+      "High Bandwidth Memory"
+    ],
+    "description": "以堆疊晶粒提供極高存取頻寬的記憶體，是推論吞吐與單位成本的關鍵瓶頸。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ArchitectureDecisionRecords": {
+    "zh": "架構決策紀錄",
+    "en": [
+      "Architecture Decision Records"
+    ],
+    "description": "記錄重要架構決策、背景與取捨理由的可追溯文件。",
+    "forbidden": [],
+    "level": 2
+  },
+  "InspectionIntensityLadder": {
+    "zh": "檢查強度階梯",
+    "en": [
+      "Inspection Intensity Ladder"
+    ],
+    "description": "驗證機制因感知成本即時而收益反事實，在組織追求降低摩擦中被逐級弱化、下拆之演進路徑。",
+    "forbidden": [],
+    "level": 1
+  },
+  "EffectiveNumberOfDetectors": {
+    "zh": "有效偵測器數",
+    "en": [
+      "Effective Number of Detectors"
+    ],
+    "description": "考慮審查者之間的失效相關性後，多個驗證器等效於完全獨立驗證器的真實折算數量。",
+    "forbidden": [],
+    "level": 1
+  },
+  "RepeatabilityPremise": {
+    "zh": "可重複性前提",
+    "en": [
+      "Repeatability Premise"
+    ],
+    "description": "管理動作（如利用率最大化、壓低變異）能產生正面效益所依賴的底層假設，即生產單位必須具備同質性且可被重複複製。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ObservabilityMatrix": {
+    "zh": "可觀測性矩陣",
+    "en": [
+      "Observability Matrix"
+    ],
+    "description": "控制理論中由狀態矩陣與觀測矩陣構造的矩陣，當其秩虧時代表存在無法透過外部讀數重建的內部狀態維度。",
+    "forbidden": [],
+    "level": 1
+  },
+  "BusinessJudgmentRule": {
+    "zh": "商業判斷法則",
+    "en": [
+      "Business Judgment Rule"
+    ],
+    "description": "推定經理人在知情且善意時免於個人賠償；形式合規常被用來對抗實質的安全與審計審查。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CircularCapitalTribute": {
+    "zh": "閉環資本朝貢",
+    "en": [
+      "Circular Capital Tribute"
+    ],
+    "description": "晶片商、新創與雲端巨頭以交叉承諾互相灌注名義營收，並向外圍企業抽取實質現金的封閉流動。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MeaningfulHumanInTheLoop": {
+    "zh": "人類實質在環",
+    "en": [
+      "Meaningful Human-In-The-Loop"
+    ],
+    "description": "人類對自動化決策保有足以中斷資金劃轉的實質否決權。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DirectedCycle": {
+    "zh": "有向閉合環路",
+    "en": [
+      "Directed Cycle"
+    ],
+    "description": "資金與承諾在少數節點間自我循環、推升名義營收的有向閉環。",
+    "forbidden": [],
+    "level": 2
+  },
+  "OptimalLootingStrategy": {
+    "zh": "最優洗劫策略",
+    "en": [
+      "Optimal Looting Strategy"
+    ],
+    "description": "在有限責任與短歸屬週期下，掏空實體抗震能力以最大化個人效用的策略。",
+    "forbidden": [],
+    "level": 2
+  },
+  "EpistemicDesertification": {
+    "zh": "認識論荒漠化",
+    "en": [
+      "Epistemic Desertification"
+    ],
+    "description": "自動化切斷人類與底層錯誤的摩擦後，默會知識與除錯直覺代際失傳、知識土壤趨於均質貧瘠的認識論退化。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SingleSourcing": {
+    "zh": "單一來源採購",
+    "en": [
+      "Single-Sourcing"
+    ],
+    "description": "把多重路徑修剪為單一最低價供應商，使關鍵流動懸繫於單點故障。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CodeRadioactivity": {
+    "zh": "程式碼放射性",
+    "en": [
+      "Code Radioactivity"
+    ],
+    "description": "未經因果審計的似真合成程式碼入庫後持續釋放隱性競態與洩漏，鑑識成本極高。",
+    "forbidden": [],
+    "level": 1
+  },
+  "NociceptiveFeedbackLoop": {
+    "zh": "痛感反饋環路",
+    "en": [
+      "Nociceptive Feedback Loop"
+    ],
+    "description": "崩潰、單步除錯與挫敗感在神經系統中烙印壞味道警覺的訓練迴路。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ManualFlightDrills": {
+    "zh": "手動飛行演習",
+    "en": [
+      "Manual Flight Drills"
+    ],
+    "description": "定期斷開自動化輔助、僅憑原始工具排查故障，以維持調試反射的對抗訓練。",
+    "forbidden": [],
+    "level": 1
+  },
+  "EpistemicEchoChamber": {
+    "zh": "認識論回音室",
+    "en": [
+      "Epistemic Echo Chamber"
+    ],
+    "description": "標籤驅動審查、再把戰果當真實標註餵回模型，使偏見自我驗證的閉環。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CriticalCutVertices": {
+    "zh": "臨界割點集合",
+    "en": [
+      "Critical Cut Vertices"
+    ],
+    "description": "一旦移除即令網路分裂的頂點集合，其擴大意味單點故障面急劇膨脹。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MandatoryRedundancyStandards": {
+    "zh": "冗餘優先原則",
+    "en": [
+      "Mandatory Redundancy Standards"
+    ],
+    "description": "把異質備援與市場佔有上限提升為法定義務，而非可被財務裁切的閒置成本。",
+    "forbidden": [],
+    "level": 1
+  },
+  "HeterogeneousDualStack": {
+    "zh": "異質性雙架構",
+    "en": [
+      "Heterogeneous Dual-Stack"
+    ],
+    "description": "以不同供應商與技術棧維持熱備份，避免共模故障一次擊穿全域。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SoftwareBillOfMaterials": {
+    "zh": "軟體物料清單",
+    "en": [
+      "Software Bill Of Materials"
+    ],
+    "description": "標註端到端依賴與 Ring 0 單點風險、供穿透審計的軟體成分清單。",
+    "forbidden": [],
+    "level": 1
+  },
+  "InertialReferenceSystem": {
+    "zh": "慣性參考系統",
+    "en": [
+      "Inertial Reference System"
+    ],
+    "description": "以陀螺儀與加速度計量測載具姿態與運動，向飛控系統提供導引與姿態資訊的機載設備。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ImplicitVoiceTheories": {
+    "zh": "內隱發聲理論",
+    "en": [
+      "Implicit Voice Theories"
+    ],
+    "description": "工作場域中對哪些話不能說的理所當然信念，會使成員預先自我審查。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PresenceOnlyHumanInTheLoop": {
+    "zh": "人類在迴路中",
+    "en": [
+      "Presence-Only Human-In-The-Loop"
+    ],
+    "description": "在提案與行動之間安排人類確認的流程形狀；人被等待，不等於已形成獨立判斷。",
+    "forbidden": [],
+    "level": 2
+  },
+  "FlightReadinessReview": {
+    "zh": "飛行準備審查",
+    "en": [
+      "Flight Readiness Review"
+    ],
+    "description": "太空梭計畫中供不同層級檢視發射條件、限制與疑慮的審查程序。",
+    "forbidden": [],
+    "level": 2
+  },
+  "KillSwitch": {
+    "zh": "緊急停用控制",
+    "en": [
+      "Kill Switch"
+    ],
+    "description": "在系統發生未預期損害或反駁條件成立時能立即中斷變更生效的快速熔斷機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AnomalyReportingProcedure": {
+    "zh": "異常通報程序",
+    "en": [
+      "Anomaly Reporting Procedure"
+    ],
+    "description": "組織中用於正式記錄、通報與追蹤任務異常或意外事件的制度化流程，防止關鍵工程疑慮流於非正式溝通。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Spec": {
+    "zh": "約束性規格",
+    "en": [
+      "Spec"
+    ],
+    "description": "以結構化或機器可讀格式定義的系統或 API 合約規範。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ContextWindow": {
+    "zh": "上下文視窗",
+    "en": [
+      "Context Window"
+    ],
+    "description": "AI 模型在單次對話中所能讀取與參考的上下文容量範圍。",
+    "forbidden": [],
+    "level": 2
+  },
+  "LocalCompleteness": {
+    "zh": "局部完備性",
+    "en": [
+      "Local Completeness"
+    ],
+    "description": "Agent 在單一檔案或函式內，無須跳轉或探索其他上下文即能做出正確修改決策的程式碼設計原則",
+    "forbidden": [],
+    "level": 2
+  },
+  "DynamicWeakTyping": {
+    "zh": "動態弱型別",
+    "en": [
+      "Dynamic Weak Typing"
+    ],
+    "description": "在執行期才確定變數型別且允許隱式型別轉換的程式語言特性（如 JavaScript）",
+    "forbidden": [],
+    "level": 2
+  },
+  "SequenceCompletionMachine": {
+    "zh": "接龍狀態機",
+    "en": [
+      "Sequence Completion Machine"
+    ],
+    "description": "基於條件機率生成下一個 Token 的狀態機本質，其輸出取決於前文 Token 的統計分佈而非邏輯推理",
+    "forbidden": [],
+    "level": 2
+  },
+  "Info": {
+    "zh": "資訊性發現",
+    "en": [
+      "Info"
+    ],
+    "description": "術語審計中指出的資訊性發現",
+    "forbidden": [],
+    "level": 2
+  },
+  "ForwardLookingSpec": {
+    "zh": "前瞻性規格",
+    "en": [
+      "Forward-Looking Spec"
+    ],
+    "description": "將計畫中但尚未實作的行為描述為已實現的規格",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProjectInstructions": {
+    "zh": "專案指令檔",
+    "en": [
+      "Project Instructions"
+    ],
+    "description": "遺留專案中用以承載所有開發慣例、工程標準與累積知識的單體文字檔案。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Knowledge": {
+    "zh": "描述性知識",
+    "en": [
+      "Knowledge"
+    ],
+    "description": "逆向工程產出的描述性知識，在專案中被視為債務指標",
+    "forbidden": [],
+    "level": 3
+  },
+  "StranglerPattern": {
+    "zh": "絞殺者模式",
+    "en": [
+      "Strangler Pattern"
+    ],
+    "description": "逐步替換遺留系統的架構模式",
+    "forbidden": [],
+    "level": 2
+  },
+  "ContextCompression": {
+    "zh": "上下文壓縮",
+    "en": [
+      "Context Compression"
+    ],
+    "description": "AI 對話中因長度限制而自動摘要上下文的機制",
+    "forbidden": [],
+    "level": 2
+  },
+  "DecisionPointDensity": {
+    "zh": "決策點密度",
+    "en": [
+      "Decision Point Density"
+    ],
+    "description": "文件中決策點標註的密集程度",
+    "forbidden": [],
+    "level": 2
+  },
+  "AIGovernance": {
+    "zh": "AI 治理",
+    "en": [
+      "AI Governance"
+    ],
+    "description": "規範 AI 在專案中行為與輸出品質的治理框架",
+    "forbidden": [],
+    "level": 1
+  },
+  "DotPrefixDirectory": {
+    "zh": "點字首目錄",
+    "en": [
+      "Dot-Prefix Directory"
+    ],
+    "description": "以點號（.）開頭的隱藏目錄，通常用於存放工具設定而非專案內容。",
+    "forbidden": [],
+    "level": 2
+  },
+  "KnowledgeBaseManagement": {
+    "zh": "知識庫管理",
+    "en": [
+      "Knowledge Base Management"
+    ],
+    "description": "對專案逆向工程產出的描述性知識進行生命週期與定位維護的過程。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AutomatedAudit": {
+    "zh": "自動化審計",
+    "en": [
+      "Automated Audit"
+    ],
+    "description": "利用審計工具自動檢查文件結構合規性與術語一致性的機制。",
+    "forbidden": [],
+    "level": 1
+  },
+  "BehavioralAccidentalization": {
+    "zh": "行為偶然化",
+    "en": [
+      "Behavioral Accidentalization"
+    ],
+    "description": "程式碼實作中的偶然副作用，被後繼開發者誤當作預期設計意圖並據此進行決策的漸進退化機制。",
+    "forbidden": [],
+    "level": 1
+  },
+  "RitualizedAdoption": {
+    "zh": "儀式化採納",
+    "en": [
+      "Ritualized Adoption"
+    ],
+    "description": "形式上導入新的管理或技術模型，但實質決策權威並未真正轉移的無效演化反模式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProcessRitualization": {
+    "zh": "流程儀式化",
+    "en": [
+      "Process Ritualization"
+    ],
+    "description": "過度關注操作程序與執行步驟的一致性，卻忽略程序所服務之實際業務目標的退化現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GranularityHeuristic": {
+    "zh": "粒度啟發式",
+    "en": [
+      "Granularity Heuristic"
+    ],
+    "description": "用於區分「待畢業的行為觀察」與「純粹架構知識」的判斷法則：若一陳述能無損改寫為Given/When/Then場景，則屬前者，否則屬後者。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SelectiveAbsorption": {
+    "zh": "選擇性吸收",
+    "en": [
+      "Selective Absorption"
+    ],
+    "description": "在引進外部框架時，不盲目全盤接受其工具鏈，而是精確過濾並僅採納其核心概念與思維模型的整合模式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "EphemeralScratchpad": {
+    "zh": "臨時工作區",
+    "en": [
+      "Ephemeral Scratchpad"
+    ],
+    "description": "AI Agent 執行任務時所使用的臨時工作目錄。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PhysicalEnforcement": {
+    "zh": "物理級肅清",
+    "en": [
+      "Physical Enforcement"
+    ],
+    "description": "透過實體刪除與重置版本歷史等手段，徹底清除環境污染源的治理方式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "NamingInducedResonance": {
+    "zh": "路徑即指令",
+    "en": [
+      "Naming-Induced Resonance"
+    ],
+    "description": "AI Agent 僅因目錄或檔案命名符合特定語意，而將其視為隱性指令的認知偏誤。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CrossModuleCausality": {
+    "zh": "跨模組因果",
+    "en": [
+      "Cross-Module Causality"
+    ],
+    "description": "一個模組的實作細節受限於另一個模組的隱含規則，且在靜態程式碼中不直接呈現的因果依賴",
+    "forbidden": [],
+    "level": 2
+  },
+  "StaticStrongTyping": {
+    "zh": "靜態強型別",
+    "en": [
+      "Static Strong Typing"
+    ],
+    "description": "在編譯期即確定變數型別且禁止隱式型別轉換的程式語言特性（如 Rust）",
+    "forbidden": [],
+    "level": 2
+  },
+  "CausalContinuity": {
+    "zh": "因果連續性",
+    "en": [
+      "Causal Continuity"
+    ],
+    "description": "系統中某項決策或邏輯的完整依據在 Token 序列中完全可見且未被中斷的狀態",
+    "forbidden": [],
+    "level": 2
+  },
+  "DynamicStrongTyping": {
+    "zh": "動態強型別",
+    "en": [
+      "Dynamic Strong Typing"
+    ],
+    "description": "在執行期確定變數型別但禁止隱式型別轉換的程式語言特性（如 Python）",
+    "forbidden": [],
+    "level": 2
+  },
+  "PerUserMemory": {
+    "zh": "個人記憶層",
+    "en": [
+      "Per-User Memory"
+    ],
+    "description": "代理人為個別使用者維護的偏好與互動記憶，不提交至版本控制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PrimaryConsumer": {
+    "zh": "主要消費者",
+    "en": [
+      "Primary Consumer"
+    ],
+    "description": "使用或解讀特定文件/知識的核心對象（如代理人或人類團隊成員）。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SpecSparsePeriod": {
+    "zh": "規格稀疏期",
+    "en": [
+      "Spec-Sparse Period"
+    ],
+    "description": "專案初期或規格導入早期，此時規格覆蓋率低，多數行為以程式碼為真相來源的過渡階段。",
+    "forbidden": [],
+    "level": 2
+  },
+  "IncrementalFormalization": {
+    "zh": "增量形式化",
+    "en": [
+      "Incremental Formalization"
+    ],
+    "description": "在功能開發過程中，將理解的系統行為與意圖漸進式寫入規格文件的清償規格債機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SpecCodeReconciliation": {
+    "zh": "程式碼校對",
+    "en": [
+      "Spec-Code Reconciliation"
+    ],
+    "description": "比對並調和程式碼實作與規格文件，確保兩者一致的驗證過程。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DescriptiveSchema": {
+    "zh": "觀察性綱要",
+    "en": [
+      "Descriptive Schema"
+    ],
+    "description": "在規格不明確的混沌階段中，用以收集並記錄現行系統狀態、缺陷與爭議的過渡性資料綱要。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ForwardLookingSpecDrift": {
+    "zh": "前瞻性漂移",
+    "en": [
+      "Forward-Looking Spec Drift"
+    ],
+    "description": "由於把未來的期望當作當前實作寫入規格，所導致的規格與現實不一致現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PrescriptiveKnowledge": {
+    "zh": "規範性知識",
+    "en": [
+      "Prescriptive Knowledge"
+    ],
+    "description": "指引或規範系統應該如何被開發、命名或組織的規則與風格導向知識。",
+    "forbidden": [],
+    "level": 2
+  },
+  "NamingAsDocumentation": {
+    "zh": "命名即文件",
+    "en": [
+      "Naming As Documentation"
+    ],
+    "description": "將業務領域的核心詞彙與定義直接融入變數或屬性命名，使其具備物理約束與說明價值的工程哲學。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RuntimeConstraints": {
+    "zh": "執行時約束",
+    "en": [
+      "Runtime Constraints"
+    ],
+    "description": "在程式執行期間由系統強制執行並驗證的型別或邏輯邊界限制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "WhatShouldBe": {
+    "zh": "未來的期望",
+    "en": [
+      "What Should Be"
+    ],
+    "description": "計畫在後續階段實作，但目前在系統中尚未真實落地的設計願景。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DescriptiveDocumentationSpecs": {
+    "zh": "觀察性文件",
+    "en": [
+      "Descriptive Documentation/Specs"
+    ],
+    "description": "以記錄當前系統真實運作狀況與既存問題為主，而非強加未來限制的說明文件。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TextbookModel": {
+    "zh": "教科書模型",
+    "en": [
+      "Textbook Model"
+    ],
+    "description": "治理文件設計的角色模型之一。文件本身作為完整且獨立的知識來源，讀者無需查閱外部資源，但代價是需要手動與權威來源同步，容易導致內容滯後與冗餘。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SemanticDilution": {
+    "zh": "注意力稀釋",
+    "en": [
+      "Semantic Dilution"
+    ],
+    "description": "由於上下文中充斥大量噪訊或無關指令，導致 AI 代理無法精確聚焦於當前核心任務的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "VendorLockIn": {
+    "zh": "供應商鎖定",
+    "en": [
+      "Vendor Lock-In"
+    ],
+    "description": "指軟體專案過度依賴特定廠商的工具、平台或專有 API，導致切換至其他解決方案時面臨極高遷移成本的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HumanToAgent": {
+    "zh": "人類對機器",
+    "en": [
+      "Human-To-Agent"
+    ],
+    "description": "指人類與 AI 代理之間建立的約束、規範與協定，通常以高層次的社會契約或語意隔離防線形式存在。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AgentToAgent": {
+    "zh": "機器對機器",
+    "en": [
+      "Agent-To-Agent"
+    ],
+    "description": "指不同 AI 代理或工具鏈之間進行資訊檢索、上下文傳遞與協同執行的底層整合機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StructureAsGovernance": {
+    "zh": "結構即治理",
+    "en": [
+      "Structure As Governance"
+    ],
+    "description": "透過去中心化的目錄結構與遞迴路由設計，將專案規範物理隔離，以結構本身來約束 AI 行為的治理範式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProgressiveDisclosure": {
+    "zh": "漸進式披露",
+    "en": [
+      "Progressive Disclosure"
+    ],
+    "description": "隨著 AI 代理深入專案特定子目錄，才逐步載入該目錄專屬的細微語法限制，以避免全域上下文過載的策略。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ZeroTrustArchitecture": {
+    "zh": "零信任架構",
+    "en": [
+      "Zero Trust Architecture"
+    ],
+    "description": "網路安全中不預設任何信任邊界的安全模型，在 AI 協作中指不因檔案存在於專案目錄中即盲目信任，每次存取皆需驗證其真實性。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TemporalDecay": {
+    "zh": "時效性衰減",
+    "en": [
+      "Temporal Decay"
+    ],
+    "description": "資訊隨時間推移與系統演進，而導致內容與系統現狀產生不一致或過時的退化現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CompletenessDecay": {
+    "zh": "完整性衰減",
+    "en": [
+      "Completeness Decay"
+    ],
+    "description": "人為整理文件時僅記錄當前認為重要的部分，進而遺漏其他看似無關但實則關鍵之技術細節的流失現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PrecisionDecay": {
+    "zh": "精確性衰減",
+    "en": [
+      "Precision Decay"
+    ],
+    "description": "使用自然語言對精確的程式碼行為進行摘要與轉譯時，無可避免地簡化並流失其精確語意與邊界條件的退化現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ReferentialIntegrity": {
+    "zh": "引用完整性",
+    "en": [
+      "Referential Integrity"
+    ],
+    "description": "批量變更或重命名時，系統中所有交叉引用（包括非典型位置的類型標記與文件段落）皆被同步更新的狀態。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DeclarativeDispatch": {
+    "zh": "宣告式分派",
+    "en": [
+      "Declarative Dispatch"
+    ],
+    "description": "將分類與分派規則集中表示為靜態資料表，消解各變體自身分類邏輯的集中式分派機制。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ImpossibleTrinity": {
+    "zh": "不可能三角",
+    "en": [
+      "Impossible Trinity"
+    ],
+    "description": "在缺乏特定反射機制時，系統設計無法同時滿足「不使用 Facade、不使用 God Function、不分散分類邏輯」的結構折衷關係。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AgentSafety": {
+    "zh": "代理人安全",
+    "en": [
+      "Agent Safety"
+    ],
+    "description": "軟體架構設計的新維度，著重於透過結構約束限制代理人（AI Agent）在生成或重構程式碼時的出錯機率。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ConvergentTask": {
+    "zh": "收斂性任務",
+    "en": [
+      "Convergent Task"
+    ],
+    "description": "答案形狀已知、主要工作為在既定結構內填入內容的開發任務，適合以強結構約束降低出錯率。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DivergentTask": {
+    "zh": "發散性任務",
+    "en": [
+      "Divergent Task"
+    ],
+    "description": "答案形狀未知、需要廣泛探索設計方案的任務，此類任務需要較高的自由度而不宜過度約束。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PromptPollution": {
+    "zh": "提示詞污染",
+    "en": [
+      "Prompt Pollution"
+    ],
+    "description": "大型語言模型將用於定界的描述或資料內容誤認為是發散或要求其執行的指令，進而引發邏輯偏差的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Actuators": {
+    "zh": "自動化腳本",
+    "en": [
+      "Actuators"
+    ],
+    "description": "在自動化系統中負責接收控制指令並具體執行 CRUD 或其他物理狀態修改的程式元件。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AttentionMechanism": {
+    "zh": "注意力機制",
+    "en": [
+      "Attention Mechanism"
+    ],
+    "description": "Transformer 架構中用於計算輸入序列不同位置之間關聯權重的核心機制。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MultiModelCoordination": {
+    "zh": "多模型協作",
+    "en": [
+      "Multi-Model Coordination"
+    ],
+    "description": "在同一個控制管線中，協調多個不同模型與自動化腳本依次完成不同任務的開發範式。",
+    "forbidden": [],
+    "level": 1
+  },
+  "GenerationContext": {
+    "zh": "原始輸入源",
+    "en": [
+      "Generation Context"
+    ],
+    "description": "記錄多代理協作中，知識或文件最初生成的模型、提示詞與上下文資訊。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Regex": {
+    "zh": "正則表達式",
+    "en": [
+      "Regex"
+    ],
+    "description": "用於在文字中進行樣式比對、搜尋與替換的特殊字元序列語法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HeuristicGuessing": {
+    "zh": "啟發式猜測",
+    "en": [
+      "Heuristic Guessing"
+    ],
+    "description": "在自動化腳本中，依賴字串特徵或正則表達式來猜測與挖掘文本特定格式的非精確匹配方法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProceduralScripts": {
+    "zh": "程序化腳本",
+    "en": [
+      "Procedural Scripts"
+    ],
+    "description": "以步驟或指令為導向的自動化腳本，通常缺乏物件導向或領域建模的抽象設計。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SemanticResolution": {
+    "zh": "語意解析度",
+    "en": [
+      "Semantic Resolution"
+    ],
+    "description": "程式碼或接口所表達之業務意圖的清晰度，高解析度有助於降低 AI 的理解偏誤與搜尋熵。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StructuralError": {
+    "zh": "結構性錯誤",
+    "en": [
+      "Structural Error"
+    ],
+    "description": "軟體架構或設計模式選用不當導致的程式結構缺陷，通常可透過型別約束或結構重組來消除與偵測。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ConceptualSkill": {
+    "zh": "觀念化能力",
+    "en": [
+      "Conceptual Skill"
+    ],
+    "description": "將複雜且模糊的情境抽象化為可操作架構、概念，並能判斷其語意與限制的心智能力。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SocraticPrompting": {
+    "zh": "設問式操作",
+    "en": [
+      "Socratic Prompting"
+    ],
+    "description": "在向 AI 提問前先模擬其可能的回應，並據此校準問題的措辭、範圍與結構，以引導 context 沿著最小必要方向展開的即時心智校準與操作能力。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DeterministicTrustBoundary": {
+    "zh": "確定性邊界",
+    "en": [
+      "Deterministic Trust Boundary"
+    ],
+    "description": "在系統設計中，劃分確定性執行層（如腳本、CI）與統計推論層（如大語言模型）的介面契約，以確保關鍵操作的 100% 正確性。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AttentionBlindSpot": {
+    "zh": "注意力盲區",
+    "en": [
+      "Attention Blind Spot"
+    ],
+    "description": "在多 Agent 交叉審查中，利用拓撲多樣性（不同模型、不同 Session 或不同角色）的注意力分佈差異，能夠被結構性彌補與展開的單一視角遺漏區。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CodeReview": {
+    "zh": "程式碼審查",
+    "en": [
+      "Code Review"
+    ],
+    "description": "由團隊成員或自動化工具對新提交的原始碼進行品質、風格與邏輯檢查的審查程序。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RuntimeBinding": {
+    "zh": "執行期繫結",
+    "en": [
+      "Runtime Binding"
+    ],
+    "description": "在程式執行期才動態確立的物件或事件訂閱關係，是靜態分析的常見盲區",
+    "forbidden": [],
+    "level": 2
+  },
+  "BuilderPattern": {
+    "zh": "建造者模式",
+    "en": [
+      "Builder Pattern"
+    ],
+    "description": "透過 Fluent API 鏈式組裝物件的設計模式，將「如何組裝一份合法文件」的領域知識封裝於專屬組裝器。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DocumentAssembler": {
+    "zh": "文件組裝器",
+    "en": [
+      "Document Assembler"
+    ],
+    "description": "採建造者模式、以純函式方式顯式構建文件實體的領域元件，取代排程器對傳入物件的隱式修改。",
+    "forbidden": [],
+    "level": 2
+  },
+  "IntentionalConstraint": {
+    "zh": "刻意的約束",
+    "en": [
+      "Intentional Constraint"
+    ],
+    "description": "主動限制元數據只能經領域邊界寫入、禁止在排程器直接賦值的紀律，是維持架構純淨的必要代價。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CrossCorpus": {
+    "zh": "跨語料視角",
+    "en": [
+      "Cross-Corpus"
+    ],
+    "description": "把一個詞放在整個語料裡觀察，才能判斷它是否為既有術語的孿生變體、或通用到毫無區分力的視角。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Temporal": {
+    "zh": "跨時間視角",
+    "en": [
+      "Temporal"
+    ],
+    "description": "觀察一個詞在後續多份文件中是否反覆出現、用法是否收斂，以判斷其定義是否穩定的視角。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ContextPollution": {
+    "zh": "上下文污染",
+    "en": [
+      "Context Pollution"
+    ],
+    "description": "長時間任務把不同層級的文字（使用者指令、外部資料、工具證據、錯誤訊息）壓進同一個 context window，磨平了來源、時效與可信度差異，使資料容易升格為指令。",
+    "forbidden": [],
+    "level": 2
+  },
+  "MigrationAntiPattern": {
+    "zh": "遷移反模式",
+    "en": [
+      "Migration Anti-Pattern"
+    ],
+    "description": "驅動模型演化時的三種失敗樣式：跳層遷移（基礎層未穩就引入高階權威）、儀式化採納（形式導入但不讓新模型持有權威）、全域強制（不看模組風險與生命週期硬套同一高階模型），根因都在忽略層疊共存的前置條件、權威轉移與維護成本。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DeterministicPipeline": {
+    "zh": "決定性管線",
+    "en": [
+      "Deterministic Pipeline"
+    ],
+    "description": "把不可靠的文字探勘改造成可重放的編譯流程：萃取、驗證、轉換、輸出、審計各層只做一件事，使同一輸入產生同一輸出，並讓錯誤停在明確的 gate 上。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Reconciler": {
+    "zh": "收斂規劃器",
+    "en": [
+      "Reconciler"
+    ],
+    "description": "負責比對當前狀態與期望狀態，並計算出收斂路徑的核心元件。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ConsumerTrilemma": {
+    "zh": "消費者三難",
+    "en": [
+      "Consumer Trilemma"
+    ],
+    "description": "界定元件範圍時，無消費者則無契約、單一消費者則耦合、多消費者則稀釋成需求並集的三難困境。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TranslationEquivariance": {
+    "zh": "平移等變性",
+    "en": [
+      "Translation Equivariance"
+    ],
+    "description": "輸入平移時輸出隨之平移的性質，由卷積的權重共享自然產生。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SelfAttention": {
+    "zh": "自我注意力",
+    "en": [
+      "Self-Attention"
+    ],
+    "description": "讓序列中任一位置直接以內容相依的權重聚合其他位置表示的機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CatastrophicForgetting": {
+    "zh": "災難性遺忘",
+    "en": [
+      "Catastrophic Forgetting"
+    ],
+    "description": "針對新任務更新參數後，先前任務表現急劇下降的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PerformativePrediction": {
+    "zh": "表演性預測",
+    "en": [
+      "Performative Prediction"
+    ],
+    "description": "模型輸出影響人類行動，進而改變後續資料分佈的回饋情形。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DiscountedCashFlow": {
+    "zh": "折現現金流",
+    "en": [
+      "Discounted Cash Flow"
+    ],
+    "description": "將未來現金流以資金成本折算為現值的估值方法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "IroniesOfAutomation": {
+    "zh": "自動化反諷",
+    "en": [
+      "Ironies Of Automation"
+    ],
+    "description": "自動化接手例行工作後，留給人的案例更難且練習更少，反而更難在關鍵時刻接管的設計張力。",
+    "forbidden": [],
+    "level": 2
+  },
+  "EndToEndUtility": {
+    "zh": "端到端效用",
+    "en": [
+      "End-To-End Utility"
+    ],
+    "description": "扣除整合、人工與失誤成本後，一條完整流程實際交付給使用者的價值。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TranslationInvariance": {
+    "zh": "平移不變性",
+    "en": [
+      "Translation Invariance"
+    ],
+    "description": "輸入平移後輸出完全不變的性質，強於等變性，在含下採樣的離散實作中通常不成立。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AntiAliasingFilter": {
+    "zh": "抗混疊濾波",
+    "en": [
+      "Anti-Aliasing Filter"
+    ],
+    "description": "在下採樣前施加低通濾波以壓低超出奈奎斯特頻率的成分，把非線性特徵提取與取樣動作解開。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CounterfactualIntervention": {
+    "zh": "反事實介入",
+    "en": [
+      "Counterfactual Intervention"
+    ],
+    "description": "主動改寫模型內部狀態並觀察輸出變化的檢驗方式，是把關聯觀測升格為因果宣稱的唯一途徑。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PrdRecall": {
+    "zh": "分佈召回率",
+    "en": [
+      "Prd Recall"
+    ],
+    "description": "真實分佈被生成分佈涵蓋的比例，衡量模式覆蓋程度，逼真度再高也無法代償它的歸零。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GoldenDataset": {
+    "zh": "靜態基準集",
+    "en": [
+      "Golden Dataset"
+    ],
+    "description": "一次標註後長期凍結的評測集，其與線上分佈的距離隨時間單調增加，終將失去代表性。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CompleteSpecification": {
+    "zh": "完全規格化",
+    "en": [
+      "Complete Specification"
+    ],
+    "description": "試圖以靜態規格窮舉系統所有合法行為的工程立場，對含隨機性的連續系統無法成立。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RefutationAssertion": {
+    "zh": "否定性斷言",
+    "en": [
+      "Refutation Assertion"
+    ],
+    "description": "事先寫明「出現何種觀測即判定契約被推翻」的可執行斷言，是可反駁契約的最小單位。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ExitCode": {
+    "zh": "進程退出碼",
+    "en": [
+      "Exit Code"
+    ],
+    "description": "行程結束時回傳給呼叫者的整數狀態碼，是把統計判定轉為自動化降級動作的介面。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Unidentifiability": {
+    "zh": "不可識別性",
+    "en": [
+      "Unidentifiability"
+    ],
+    "description": "模型或機制的真實狀態無法由觀測到的標量讀數唯一還原的性質，源於聚合投影具備非平凡核空間。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SimpsonSParadox": {
+    "zh": "辛普森悖論",
+    "en": [
+      "Simpson's Paradox"
+    ],
+    "description": "各子群體內部的優劣關係在合併計算後整體反轉的統計現象，成因是子群體權重改變而非能力改變。",
+    "forbidden": [],
+    "level": 1
+  },
+  "StatisticalPower": {
+    "zh": "統計檢定力",
+    "en": [
+      "Statistical Power"
+    ],
+    "description": "在既定樣本量下偵測出真實差異的機率，決定一個切片的評估結論是否具備推論效力。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MultiTaskLearning": {
+    "zh": "多任務學習",
+    "en": [
+      "Multi-Task Learning"
+    ],
+    "description": "多個目標共享同一組參數進行訓練的範式，其收益取決於各任務梯度在共享子空間中是否相容。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CausalInvariance": {
+    "zh": "因果不變性",
+    "en": [
+      "Causal Invariance"
+    ],
+    "description": "特徵與標籤的條件分佈在跨環境時保持穩定的性質，是篩除非因果捷徑特徵的判準。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AnthropomorphicInterface": {
+    "zh": "擬人化界面",
+    "en": [
+      "Anthropomorphic Interface"
+    ],
+    "description": "以第一人稱與自然語言對話的系統外觀，會讓使用者把對話者誤認為有權限的組織代表。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AuditHashChain": {
+    "zh": "審計雜湊鏈",
+    "en": [
+      "Audit Hash Chain"
+    ],
+    "description": "將每筆交互的輸入、政策版本與裁決結果逐筆串接雜湊，使任何事後竄改都會破壞整條鏈的一致性。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ContestableTransaction": {
+    "zh": "可爭訟事務",
+    "en": [
+      "Contestable Transaction"
+    ],
+    "description": "每筆自動化決定都附帶可查證依據與明確申訴路徑，使當事人具備實際推翻它的途徑。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Peeking": {
+    "zh": "窺探性檢定",
+    "en": [
+      "Peeking"
+    ],
+    "description": "在樣本累積過程中反覆查看結果並隨時決定停止，會使實際錯誤率遠高於名目水準。",
+    "forbidden": [],
+    "level": 2
+  },
+  "JevonsParadox": {
+    "zh": "傑文斯悖論",
+    "en": [
+      "Jevons Paradox"
+    ],
+    "description": "單位使用成本下降反而刺激總用量上升，使總支出不降反增。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ZeroMarginalCost": {
+    "zh": "零邊際成本",
+    "en": [
+      "Zero Marginal Cost"
+    ],
+    "description": "多服務一位使用者幾乎不增加變動成本的成本結構，是傳統軟體毛利的前提。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AutomationBias": {
+    "zh": "自動化偏誤",
+    "en": [
+      "Automation Bias"
+    ],
+    "description": "使用者因倚賴自動化建議而降低獨立查核，未能辨識系統新引入錯誤的傾向。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CorrespondenceRequirement": {
+    "zh": "對應性需求",
+    "en": [
+      "Correspondence Requirement"
+    ],
+    "description": "必須對上法規、物理過程或外部系統等不受規格控制之事實的需求。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AttentionInvestment": {
+    "zh": "注意力投資",
+    "en": [
+      "Attention Investment"
+    ],
+    "description": "先投入測試、型別或契約檢查，以減少未來每位讀者重複驗證成本的作法。",
+    "forbidden": [],
+    "level": 1
+  },
+  "StipulatedRequirement": {
+    "zh": "規定性需求",
+    "en": [
+      "Stipulated Requirement"
+    ],
+    "description": "其真值由決定或約定本身建立，而非由外部世界既有事實決定的需求。",
+    "forbidden": [],
+    "level": 1
+  },
+  "LongTermUpdateRate": {
+    "zh": "長期更新率",
+    "en": [
+      "Long-Term Update Rate"
+    ],
+    "description": "變更中觸及長時間未被修改之既有程式碼的比例，用來觀察系統可修改範圍。",
+    "forbidden": [],
+    "level": 1
+  },
+  "NormalizationOfDeviance": {
+    "zh": "常態化偏差",
+    "en": [
+      "Normalization Of Deviance"
+    ],
+    "description": "組織因異常反覆未造成後果，而逐步將其重新定義為可接受狀態的過程。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ConceptualIntegrity": {
+    "zh": "概念完整性",
+    "en": [
+      "Conceptual Integrity"
+    ],
+    "description": "系統各部分共同遵循一致設計理念與取捨邏輯的性質。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CapacityUtilization": {
+    "zh": "產能利用率",
+    "en": [
+      "Capacity Utilization"
+    ],
+    "description": "工站實際負荷相對於可用處理能力的比例。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Overcriminalization": {
+    "zh": "過度刑罰化",
+    "en": [
+      "Overcriminalization"
+    ],
+    "description": "以過多或過廣刑事規範治理行為，進而稀釋法秩序正當性的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ConstraintCoverage": {
+    "zh": "約束覆蓋率",
+    "en": [
+      "Constraint Coverage"
+    ],
+    "description": "部署之拒絕算子族所拒絕的違規產物集合，佔全體違規產物集合的比例，為衡量規格實際效力的形式底座。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Undecidability": {
+    "zh": "不可判定性",
+    "en": [
+      "Undecidability"
+    ],
+    "description": "依據萊斯定理，任何程式的非平凡語意性質皆無法由通用演算法在有限時間內做出健全且完備的判定。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ModifiabilityRadius": {
+    "zh": "可修改半徑",
+    "en": [
+      "Modifiability Radius"
+    ],
+    "description": "在有限注意力與脈絡預算下，單次變更所能安全觸及與對帳的既有系統單元比例。",
+    "forbidden": [],
+    "level": 1
+  },
+  "OptimalSolutionShift": {
+    "zh": "最適解偏移",
+    "en": [
+      "Optimal Solution Shift"
+    ],
+    "description": "因度量指標遺漏隱性成本，導致依照指標最佳化所選出之方案與真實效用最佳方案發生系統性背離的現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AutoregressiveDecomposition": {
+    "zh": "自回歸分解",
+    "en": [
+      "Autoregressive Decomposition"
+    ],
+    "description": "將序列的聯合機率依鏈式法則分解為各步驟條件機率乘積的數學形式。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CommitmentIrreversibility": {
+    "zh": "承諾不可逆",
+    "en": [
+      "Commitment Irreversibility"
+    ],
+    "description": "生成過程中離散取樣的符號被納入前綴濾過後即不可撤回，早期微小錯誤將致使後續全域約束永久違反。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CoherentFixedPoint": {
+    "zh": "連貫不動點",
+    "en": [
+      "Coherent Fixed Point"
+    ],
+    "description": "多輪精煉循環最終收斂於內部表述連貫流暢，而非外部事實正確性的自我一致狀態。",
+    "forbidden": [],
+    "level": 1
+  },
+  "FiltrationMonotonicity": {
+    "zh": "濾過單調性",
+    "en": [
+      "Filtration Monotonicity"
+    ],
+    "description": "隨生成步數推進，由前綴所產生的 sigma 代數序列單調遞增，歷史承諾資訊永遠被保留且不可撤銷。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ExcludedObservationSet": {
+    "zh": "排除觀察集",
+    "en": [
+      "Excluded Observation Set"
+    ],
+    "description": "給定假說下，邏輯上蘊涵該假說為假的所有可能觀察結果集合；其非空為可證偽性之充要條件。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SufficientStatistic": {
+    "zh": "充分統計量",
+    "en": [
+      "Sufficient Statistic"
+    ],
+    "description": "在統計推論中，能夠完整包含樣本中關於未知參數所有資訊的統計量；當單位異質時，計數不再構成產出的充分統計量。",
+    "forbidden": [],
+    "level": 1
+  },
+  "UnitHomogeneity": {
+    "zh": "單位同質性",
+    "en": [
+      "Unit Homogeneity"
+    ],
+    "description": "各工作單位在複雜度、資訊量與所需心智投入上實質相同的性質；缺乏此性質時，直接平均與加總將產生推論謬誤。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SensitivityAnalysis": {
+    "zh": "敏感度分析",
+    "en": [
+      "Sensitivity Analysis"
+    ],
+    "description": "分析系統輸出或狀態變數對控制參數微小變動之偏導數與反應劇烈程度的方法。",
+    "forbidden": [],
+    "level": 1
+  },
+  "WipDisplacement": {
+    "zh": "在製品位移",
+    "en": [
+      "WIP Displacement"
+    ],
+    "description": "提升非瓶頸工站產能後，未被下游吸收的產出差額向下游瓶頸節點前方堆積的現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ExhaustivenessCheck": {
+    "zh": "窮盡性檢查",
+    "en": [
+      "Exhaustiveness Check"
+    ],
+    "description": "由編譯器或靜態分析工具驗證所有可能的輸入情境或列舉分支皆被明確處理的保證機制。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ConflictCompleteness": {
+    "zh": "衝突完整性",
+    "en": [
+      "Conflict Completeness"
+    ],
+    "description": "指多項業務或安全規則同時命中且衝突時，具備機械化的衝突偵測與具名授權裁決機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ObservationalCompleteness": {
+    "zh": "觀察完整性",
+    "en": [
+      "Observational Completeness"
+    ],
+    "description": "指作出工程判定所需的觀測資料具備客觀可取得性，且資料缺漏時具有顯式狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "BehavioralCompleteness": {
+    "zh": "行為完整性",
+    "en": [
+      "Behavioral Completeness"
+    ],
+    "description": "指系統在已定義的情境集合內皆具備可判定且明確的執行結果。",
+    "forbidden": [],
+    "level": 2
+  },
+  "EpistemologicalRole": {
+    "zh": "認識論角色",
+    "en": [
+      "Epistemological Role"
+    ],
+    "description": "指工程文件中各組成部分在知識證成鏈條中所承擔的功能定位（如事實觀察、意圖陳述、規範約束或授權憑證），各角色必須由對應的外部證據與授權者支撐，不能由文字容器形式直接替代。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PromotionStateMachine": {
+    "zh": "升格狀態機",
+    "en": [
+      "Promotion State Machine"
+    ],
+    "description": "取代二元完成旗標的治理模型，定義主張從提議、證據支持、授權、生效到觀測的生命週期狀態，並提供對應的拒絕、過期與撤銷退出路徑。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ExternalValidity": {
+    "zh": "外部有效性",
+    "en": [
+      "External Validity"
+    ],
+    "description": "評估系統承諾與規格是否真正解決實際問題並符合真實環境、政策與使用者限制的驗證維度，無法單純由內部程式碼與文件的自洽性推導成立。",
+    "forbidden": [],
+    "level": 1
+  },
+  "FiduciaryDuty": {
+    "zh": "受託人義務",
+    "en": [
+      "Fiduciary Duty"
+    ],
+    "description": "經理人對公司與利害關係人負有的注意與忠實義務，是古典公司治理中代理人正當性的法理基礎。",
+    "forbidden": [],
+    "level": 1
+  },
+  "FearOfMissingOut": {
+    "zh": "錯失恐懼症",
+    "en": [
+      "Fear Of Missing Out"
+    ],
+    "description": "被管理層武器化的生存焦慮，用以宣告內部例外狀態並廢止常規技術審計。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Conductance": {
+    "zh": "瓶頸傳導率",
+    "en": [
+      "Conductance"
+    ],
+    "description": "圖論中衡量子圖之間資訊流通能力的量；趨零表示反證被物理阻斷。",
+    "forbidden": [],
+    "level": 2
+  },
+  "UnsubstantiatedClaim": {
+    "zh": "待證之主張",
+    "en": [
+      "Unsubstantiated Claim"
+    ],
+    "description": "演算法輸出在法理上只能作為尚待證明的主張，不得自證為事實。",
+    "forbidden": [],
+    "level": 2
+  },
+  "MirrorAccessRight": {
+    "zh": "鏡像取證權",
+    "en": [
+      "Mirror Access Right"
+    ],
+    "description": "相對人與控方對等取得原始碼、日誌與遠端修補紀錄的證據權。",
+    "forbidden": [],
+    "level": 2
+  },
+  "UndampedShortCircuiting": {
+    "zh": "無阻尼短路",
+    "en": [
+      "Undamped Short-Circuiting"
+    ],
+    "description": "把資產負債表直接接到黑箱預測、切除人類審查阻力的控制論操作。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Ergodicity": {
+    "zh": "各態歷經性",
+    "en": [
+      "Ergodicity"
+    ],
+    "description": "時間平均與系綜平均可互換的統計假設。",
+    "forbidden": [],
+    "level": 2
+  },
+  "BiconnectedGraph": {
+    "zh": "雙向連通圖",
+    "en": [
+      "Biconnected Graph"
+    ],
+    "description": "現場、工程與管理層之間存在封閉反饋環的健康組織拓樸。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PlausibleDeniability": {
+    "zh": "不知情特權",
+    "en": [
+      "Plausible Deniability"
+    ],
+    "description": "透過割點過濾資訊，使高層得以主張對缺陷不知情。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AuthorityKnowledgeAccountabilityCoLocation": {
+    "zh": "權責收斂律",
+    "en": [
+      "Authority-Knowledge-Accountability Co-Location"
+    ],
+    "description": "權力、現場知識、評量權與個人責任必須收斂於同一決策實體的治理不變量。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ApprenticeshipDebugging": {
+    "zh": "學徒制除錯",
+    "en": [
+      "Apprenticeship Debugging"
+    ],
+    "description": "透過低階缺陷排查累積微觀阻力，從而建立除錯資格與默會直覺的傳承機制。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SpuriousPrecision": {
+    "zh": "數值偽精準",
+    "en": [
+      "Spurious Precision"
+    ],
+    "description": "以高解析度純量分數偽裝客觀性，掩蓋降維投影造成的資訊損失與責任外包。",
+    "forbidden": [],
+    "level": 1
+  },
+  "EpistemicViolence": {
+    "zh": "認識論暴力",
+    "en": [
+      "Epistemic Violence"
+    ],
+    "description": "以演算法評分剝奪主體證言可信度與物理抗辯權，使質性生活被定性為無效噪聲。",
+    "forbidden": [],
+    "level": 1
+  },
+  "GoodhartSLaw": {
+    "zh": "古哈特定律",
+    "en": [
+      "Goodhart's Law"
+    ],
+    "description": "當一項度量變成目標時，它便不再是好的度量；官僚演算法把代理變數當成犯罪傾向本身。",
+    "forbidden": [],
+    "level": 1,
+    "aliases": [
+      "古德哈特定律"
+    ]
+  },
+  "CampbellSLaw": {
+    "zh": "坎貝爾定律",
+    "en": [
+      "Campbell's Law"
+    ],
+    "description": "定量社會指標一旦用於決策，就越容易被腐化並扭曲其原本要監控的社會進程。",
+    "forbidden": [],
+    "level": 1
+  },
+  "InstitutionalMemory": {
+    "zh": "制度性記憶",
+    "en": [
+      "Institutional Memory"
+    ],
+    "description": "組織把除錯經驗、失敗模式與因果判斷沉澱為可傳承資產的能力。",
+    "forbidden": [],
+    "level": 1
+  },
+  "EpistemicInjustice": {
+    "zh": "認識論不公",
+    "en": [
+      "Epistemic Injustice"
+    ],
+    "description": "因制度位置而使主體證言被系統性降級、喪失被聽見資格的認識論傷害。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CognitiveAutonomy": {
+    "zh": "認知自主權",
+    "en": [
+      "Cognitive Autonomy"
+    ],
+    "description": "人類保有對底層因果自行演繹、拒絕把理解權外包給黑箱的權利。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ContextDependency": {
+    "zh": "脈絡相依性",
+    "en": [
+      "Context-Dependency"
+    ],
+    "description": "社會事實的意義綁定於不可完全結構化的在地脈絡，無法被純量獨立承載。",
+    "forbidden": [],
+    "level": 1
+  },
+  "InventoryInTransit": {
+    "zh": "移動中庫存",
+    "en": [
+      "Inventory In Transit"
+    ],
+    "description": "以在途貨物取代實體安全庫存，使緩衝從可調度存量變成不可即用的運輸狀態。",
+    "forbidden": [],
+    "level": 1
+  },
+  "StarTreeTopology": {
+    "zh": "星狀樹狀圖",
+    "en": [
+      "Star/Tree Topology"
+    ],
+    "description": "網狀冗餘被修剪後，流動完全依賴少數樞紐與割點的退化網路結構。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ConcentrationRisk": {
+    "zh": "集中度風險",
+    "en": [
+      "Concentration Risk"
+    ],
+    "description": "關鍵業務過度集中於單一外部供應商，使局部故障具備系統性傳染力。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ExplicitAutomation": {
+    "zh": "明文自動化",
+    "en": [
+      "Explicit Automation"
+    ],
+    "description": "由機器做出決定並如實標示為機器決定的自動化形式，不以人類確認節點替決定披上有人判斷過的外觀。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Ariane5": {
+    "zh": "亞利安五號",
+    "en": [
+      "Ariane 5"
+    ],
+    "description": "歐洲太空總署的重型運載火箭，1996 年首次飛行因慣性參考系統軟體的規格與設計錯誤失敗。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ContextMap": {
+    "zh": "上下文映射",
+    "en": [
+      "Context Map"
+    ],
+    "description": "在領域驅動設計中指名各界限上下文之間的關係與整合方式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AcquiescentSilence": {
+    "zh": "順從性沉默",
+    "en": [
+      "Acquiescent Silence"
+    ],
+    "description": "因認為發聲也不會改變結果而放棄表達的沉默。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DefensiveSilence": {
+    "zh": "防衛性沉默",
+    "en": [
+      "Defensive Silence"
+    ],
+    "description": "因擔心發聲的後果而主動保留工作相關資訊的沉默。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProsocialSilence": {
+    "zh": "親社會沉默",
+    "en": [
+      "Prosocial Silence"
+    ],
+    "description": "為保護同事或組織而有意保留資訊的沉默，即使動機善意仍可能截斷回報。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Manifest": {
+    "zh": "執行前清單",
+    "en": [
+      "Manifest"
+    ],
+    "description": "在變更或部署執行前明確列出操作範圍、資料對象與預期摘要的不可變清單。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Canary": {
+    "zh": "金絲雀發布",
+    "en": [
+      "Canary"
+    ],
+    "description": "將新版本變更先套用於小比例流量或隔離環境以觀察執行後果的分段部署策略。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CombinatorialTesting": {
+    "zh": "組合式測試",
+    "en": [
+      "Combinatorial Testing"
+    ],
+    "description": "以涵蓋任意指定數量因子之所有可能交互作用為目標的系統化測試設計方法，用以在有限測試案例下發掘因子交會引發的缺陷。",
+    "forbidden": [],
+    "level": 2
+  },
+  "InteractiveComplexity": {
+    "zh": "交互複雜性",
+    "en": [
+      "Interactive Complexity"
+    ],
+    "description": "系統元件之間存在非預期、非線性且無法由單一局部檢查看見之複雜相互作用與依賴關係的架構特徵。",
+    "forbidden": [],
+    "level": 2
+  },
+  "NonHomologousAdjudication": {
+    "zh": "非同源裁決",
+    "en": [
+      "Non-Homologous Adjudication"
+    ],
+    "description": "裁決者的判準與資訊來源獨立於受裁決對象的生成過程，且具備實質拒絕能力與承擔後果責任的驗證機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StatisticalExecutionLayer": {
+    "zh": "統計執行層",
+    "en": [
+      "Statistical Execution Layer"
+    ],
+    "description": "以語言模型為代表的機率性生成機制，擅長發掘可能候選與局部重組，但不具備同輸入同輸出的確定性保證。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CleanThenRebuild": {
+    "zh": "清除再重建",
+    "en": [
+      "Clean-Then-Rebuild"
+    ],
+    "description": "在資料投影或標註系統中，藉由徹底移除舊有衍生標記並從權威真理來源重新產生，以驗證轉換冪等性並消除隱性語意殘留的治理流程。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CognitiveApprenticeship": {
+    "zh": "認知學徒制",
+    "en": [
+      "Cognitive Apprenticeship"
+    ],
+    "description": "將傳統學徒制的示範、指導、鷹架、外顯化、反思與獨立探索等機制，轉譯應用於高階認知技能與判斷力培育的教學架構。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SystemsPhysicality": {
+    "zh": "系統物理感",
+    "en": [
+      "Systems Physicality"
+    ],
+    "description": "工程師透過底層實作與故障排查所累積的直覺體感，能清晰感知軟體系統在極限壓力下的資源競爭、鎖等待、流量放大與失敗行為。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SemanticBoundary": {
+    "zh": "語意邊界",
+    "en": [
+      "Semantic Boundary"
+    ],
+    "description": "模組或類別在空間維度上定義其職責與封裝邊界的概念",
+    "forbidden": [],
+    "level": 2
+  },
+  "ErrorMargin": {
+    "zh": "容錯餘裕",
+    "en": [
+      "Error Margin"
+    ],
+    "description": "系統或 Agent 面對過時知識或錯誤修改時，能避免引發系統性崩潰的迴旋空間",
+    "forbidden": [],
+    "level": 2
+  },
+  "SecondaryContamination": {
+    "zh": "二次污染",
+    "en": [
+      "Secondary Contamination"
+    ],
+    "description": "AI Agent 基於過時知識做出的錯誤程式碼修改，被反向同步或寫回知識庫並固化為新事實的現象",
+    "forbidden": [],
+    "level": 2
+  },
+  "GovernanceMechanism": {
+    "zh": "治理機制",
+    "en": [
+      "Governance Mechanism"
+    ],
+    "description": "專案中用以管理、規範與約束開發行為及知識演進的結構化規則與控制流程。",
+    "forbidden": [],
+    "level": 3
+  },
+  "ReportIndex": {
+    "zh": "報告索引",
+    "en": [
+      "Report Index"
+    ],
+    "description": "記錄歷史生成報告之後設資料，供去重與重結晶評估的索引檔案。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Metadata": {
+    "zh": "後設資料",
+    "en": [
+      "Metadata"
+    ],
+    "description": "描述其他資料的資料，例如 frontmatter 或標頭資訊",
+    "forbidden": [],
+    "level": 2
+  },
+  "DeployKit": {
+    "zh": "部署套件",
+    "en": [
+      "Deploy Kit"
+    ],
+    "description": "將專案配置與成果打包，供獨立部署或執行的套件",
+    "forbidden": [],
+    "level": 2
+  },
+  "Specifications": {
+    "zh": "外部規格",
+    "en": [
+      "Specifications"
+    ],
+    "description": "由外部團隊提供的權威性系統規格文件",
+    "forbidden": [],
+    "level": 2
+  },
+  "PhantomReferences": {
+    "zh": "幽靈引用",
+    "en": [
+      "Phantom References"
+    ],
+    "description": "索引檔中指向不存在文件的引用",
+    "forbidden": [],
+    "level": 2
+  },
+  "FirstMatch": {
+    "zh": "首次匹配",
+    "en": [
+      "First-Match"
+    ],
+    "description": "採用首次命中邏輯的分類或測試機制",
+    "forbidden": [],
+    "level": 2
+  },
+  "SpecDriven": {
+    "zh": "規格驅動",
+    "en": [
+      "Spec-Driven"
+    ],
+    "description": "以系統規格為導向的開發模式",
+    "forbidden": [],
+    "level": 3
+  },
+  "FrontMatter": {
+    "zh": "前置資料",
+    "en": [
+      "Front Matter"
+    ],
+    "description": "Markdown 檔案頂部的後設資料區塊",
+    "forbidden": [],
+    "level": 2
+  },
+  "DotPrefix": {
+    "zh": "隱藏目錄",
+    "en": [
+      "Dot-Prefix"
+    ],
+    "description": "以點開頭的隱藏目錄命名慣例",
+    "forbidden": [],
+    "level": 2
+  },
+  "DebtIndicator": {
+    "zh": "債務指標",
+    "en": [
+      "Debt Indicator"
+    ],
+    "description": "用以標示系統或程式碼缺乏自我解釋能力的技術債務指標",
+    "forbidden": [],
+    "level": 2
+  },
+  "DiscoveryRule": {
+    "zh": "查找順序",
+    "en": [
+      "Discovery Rule"
+    ],
+    "description": "決定知識或文件查找順序的規則",
+    "forbidden": [],
+    "level": 2
+  },
+  "DensityLayering": {
+    "zh": "密度分層",
+    "en": [
+      "Density Layering"
+    ],
+    "description": "根據決策點的數量動態調整標註與敘事密度的寫作策略",
+    "forbidden": [],
+    "level": 2
+  },
+  "JargonAcceleration": {
+    "zh": "術語加速",
+    "en": [
+      "Jargon Acceleration"
+    ],
+    "description": "文件中段落連續引入新術語且缺乏解釋的現象",
+    "forbidden": [],
+    "level": 2
+  },
+  "Callout": {
+    "zh": "行內標註",
+    "en": [
+      "Callout"
+    ],
+    "description": "在文件中以行內標註形式突出顯示的特定區塊",
+    "forbidden": [],
+    "level": 2
+  },
+  "QualityGate": {
+    "zh": "品質閘門",
+    "en": [
+      "Quality Gate"
+    ],
+    "description": "控制產出品質的檢查點或審查機制",
+    "forbidden": [],
+    "level": 2
+  },
+  "ArchitectureEvolution": {
+    "zh": "架構演進",
+    "en": [
+      "Architecture Evolution"
+    ],
+    "description": "系統架構隨時間發展與改進的過程",
+    "forbidden": [],
+    "level": 2
+  },
+  "TernaryAttribution": {
+    "zh": "三元歸屬",
+    "en": [
+      "Ternary Attribution"
+    ],
+    "description": "對話知識蒸餾時，將主題歸類為內化、外化或兩者皆具的分類機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProjectArchitecture": {
+    "zh": "專案架構",
+    "en": [
+      "Project Architecture"
+    ],
+    "description": "專案程式碼與文件的整體組織、階層與耦合關係。",
+    "forbidden": [],
+    "level": 1
+  },
+  "KnowledgeExtraction": {
+    "zh": "知識萃取",
+    "en": [
+      "Knowledge Extraction"
+    ],
+    "description": "從非結構化的開發對話中，提取有價值決策與技術知識的過程。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ToolDesign": {
+    "zh": "工具設計",
+    "en": [
+      "Tool Design"
+    ],
+    "description": "針對特定工程痛點，設計並實現符合管線拓撲與職責邊界的工具。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TerminologyManagement": {
+    "zh": "術語管理",
+    "en": [
+      "Terminology Management"
+    ],
+    "description": "維護專案中英術語對照、定義與一致性，避免概念漂移的治理活動。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SpecDrift": {
+    "zh": "規格漂移",
+    "en": [
+      "Spec Drift"
+    ],
+    "description": "系統行為規格文件與真實程式碼實作之間，隨著時間演化產生的語意偏離現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "KnowledgeDecay": {
+    "zh": "知識衰減",
+    "en": [
+      "Knowledge Decay"
+    ],
+    "description": "系統設計意圖與歷史背景脈絡，因開發者流失或時間流逝而在團隊心智中逐漸淡忘衰退的過程。",
+    "forbidden": [],
+    "level": 2
+  },
+  "LayeredCoexistence": {
+    "zh": "層疊共存",
+    "en": [
+      "Layered Coexistence"
+    ],
+    "description": "新引入的決策模型不取代前序模型，而是將前序模型降格為其底層基礎設施共同運作的演化結構。",
+    "forbidden": [],
+    "level": 1
+  },
+  "LayerSkippingMigration": {
+    "zh": "跳層遷移",
+    "en": [
+      "Layer-Skipping Migration"
+    ],
+    "description": "在前置的流程或品質基礎設施尚未完備前，強行引入高階行為契約模型的演化反模式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GlobalEnforcement": {
+    "zh": "全域強制",
+    "en": [
+      "Global Enforcement"
+    ],
+    "description": "不顧模組的規模與風險差異，盲目對全系統統一實施最高抽象層級之行為規格定義的反模式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "QualityIdling": {
+    "zh": "品質空轉",
+    "en": [
+      "Quality Idling"
+    ],
+    "description": "系統程式碼指標完美符合所有既定的靜態品質準則，但實質功能與業務意圖卻已嚴重偏離的失敗模式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "FalseAuthority": {
+    "zh": "虛假權威",
+    "en": [
+      "False Authority"
+    ],
+    "description": "指文件或機制在形式上具備權威地位，但其實質內容或適用對象已不復存在或失效，從而產生「治理已到位」的虛假安全感。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DegradationSafeguard": {
+    "zh": "退化防線",
+    "en": [
+      "Degradation Safeguard"
+    ],
+    "description": "為防止規格雙層結構中描述性觀察持續膨脹、而規範性契約停滯不前，而在開發工作流程（如程式碼審查、變更提案）中設置的畢業判斷機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ObservationDebt": {
+    "zh": "觀察債務",
+    "en": [
+      "Observation Debt"
+    ],
+    "description": "在棕地專案中，僅記錄系統現況的描述性觀察大量累積，但未能及時審查、確認並升格為規範性行為契約的技術債務。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DeltaSpec": {
+    "zh": "差量規格",
+    "en": [
+      "Delta Spec"
+    ],
+    "description": "OpenSpec 所採用的變更管理模型，不直接修改原始規格，而是將變更（ADDED/MODIFIED/REMOVED）作為獨立生命週期的提案來管理。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Infrastructure": {
+    "zh": "基礎設施",
+    "en": [
+      "Infrastructure"
+    ],
+    "description": "專案中具備持久價值且與系統生命週期同長的長期性治理機制，其依賴指向系統本質需求，移除後會導致系統功能退化。",
+    "forbidden": [],
+    "level": 3
+  },
+  "AuthorityMutualExclusion": {
+    "zh": "權威互斥",
+    "en": [
+      "Authority Mutual Exclusion"
+    ],
+    "description": "兩個治理系統或文件針對同一個問題（如最高權威歸屬）給出互斥答案的結構性衝突，通常不可透過簡單調和解決。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PhantomReconstruction": {
+    "zh": "憑空重構",
+    "en": [
+      "Phantom Reconstruction"
+    ],
+    "description": "AI Agent 在缺乏當前對話素材及明確指令的情況下，自主生成格式錯誤、內容受污染檔案之異常行為。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GitStatus": {
+    "zh": "狀態掃描",
+    "en": [
+      "Git Status"
+    ],
+    "description": "讀取版本控制系統以確認當前檔案的追蹤與修改狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Reconstruction": {
+    "zh": "內容重建",
+    "en": [
+      "Reconstruction"
+    ],
+    "description": "AI 嘗試根據不完整歷史或上下文片段，自主修補與重新生成檔案的過程。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ZombieInstructions": {
+    "zh": "殭屍指令",
+    "en": [
+      "Zombie Instructions"
+    ],
+    "description": "已清空內容的目錄或檔案因名稱殘留，仍持續對 AI Agent 產生引導效應的隱性指令。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HistoryNoise": {
+    "zh": "歷史噪音",
+    "en": [
+      "History Noise"
+    ],
+    "description": "已在邏輯上廢棄但物理上仍殘留在版本控制歷史中的資訊碎片。",
+    "forbidden": [],
+    "level": 2
+  },
+  "KnowledgeDebris": {
+    "zh": "知識遺骸",
+    "en": [
+      "Knowledge Debris"
+    ],
+    "description": "歷史對話或教訓資料庫中殘留的過時術語、規則或已失效資訊。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TemplateTrap": {
+    "zh": "範例陷阱",
+    "en": [
+      "Template Trap"
+    ],
+    "description": "工作流或指引檔案中供示範用的範例程式碼被 AI 誤當作當前實作指令的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ConversationEcho": {
+    "zh": "對話殘響",
+    "en": [
+      "Conversation Echo"
+    ],
+    "description": "檔案已重設但當前對話歷史（上下文視窗）中仍殘留先前對話資訊，持續干擾 AI 的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PositiveGuidelines": {
+    "zh": "正向指引",
+    "en": [
+      "Positive Guidelines"
+    ],
+    "description": "告訴 AI 應該做什麼、如何做以達成預期目標的常規性開發規範。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ReverseGuidelines": {
+    "zh": "反向指引",
+    "en": [
+      "Reverse Guidelines"
+    ],
+    "description": "透過明確定義邊界與否定斷言，告訴 AI 絕對禁止執行何種行為的防禦性治理規範。",
+    "forbidden": [],
+    "level": 2
+  },
+  "NegativeAssertion": {
+    "zh": "否定斷言",
+    "en": [
+      "Negative Assertion"
+    ],
+    "description": "反向指引中明確禁止 AI 執行特定操作的否定句式或限制條款。",
+    "forbidden": [],
+    "level": 2
+  },
+  "NegativeSpace": {
+    "zh": "負向空間",
+    "en": [
+      "Negative Space"
+    ],
+    "description": "經由明確定義「不能去」的邊界後，所留給 AI 安全探索與執行任務的剩餘合法空間。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ExpectedBehavior": {
+    "zh": "預期行為",
+    "en": [
+      "Expected Behavior"
+    ],
+    "description": "系統或模組在特定輸入或情境下被要求達到的正確輸出與副作用狀態",
+    "forbidden": [],
+    "level": 2
+  },
+  "MachineSummary": {
+    "zh": "機器摘要",
+    "en": [
+      "Machine Summary"
+    ],
+    "description": "AI Agent 將程式碼文本載入 Context Window 時，丟棄非字面 Token 而僅保留前文特徵的過程",
+    "forbidden": [],
+    "level": 2
+  },
+  "HumanSummary": {
+    "zh": "人工摘要",
+    "en": [
+      "Human Summary"
+    ],
+    "description": "人類工程師在封裝程式碼時，主動隱去具體實作細節，僅保留命名、介面與結構的抽象過程",
+    "forbidden": [],
+    "level": 2
+  },
+  "WhyNotComment": {
+    "zh": "排除邏輯",
+    "en": [
+      "Why-Not Comment"
+    ],
+    "description": "在程式碼中記錄「為何不採用某種方案」的說明，用以補全 Agent 無法從程式碼推導的因果鏈",
+    "forbidden": [],
+    "level": 2
+  },
+  "HighAbstraction": {
+    "zh": "高度抽象",
+    "en": [
+      "High Abstraction"
+    ],
+    "description": "隱藏底層實作細節以提供簡化介面的架構層級，若無多個消費者則容易退化為語意稀釋",
+    "forbidden": [],
+    "level": 2
+  },
+  "SupplementalFilter": {
+    "zh": "附加濾鏡",
+    "en": [
+      "Supplemental Filter"
+    ],
+    "description": "在傳統程式碼審查標準之外，針對 Agent 特性額外施加的局部完備性檢查規則",
+    "forbidden": [],
+    "level": 2
+  },
+  "CausalBreakpoint": {
+    "zh": "因果斷裂",
+    "en": [
+      "Causal Breakpoint"
+    ],
+    "description": "AI Agent 運算中由於上下文視窗或靜態程式碼中關鍵因果資訊缺失，導致無法正確推演系統狀態的現象",
+    "forbidden": [],
+    "level": 2
+  },
+  "PersistentMemory": {
+    "zh": "持久記憶",
+    "en": [
+      "Persistent Memory"
+    ],
+    "description": "代理人跨對話維護的長期記憶，用於存放使用者偏好與互動規則。",
+    "forbidden": [],
+    "level": 2
+  },
+  "WaterfallModel": {
+    "zh": "瀑布模型",
+    "en": [
+      "Waterfall Model"
+    ],
+    "description": "要求在進入下一開發階段前必須完全完成前一階段（如先寫完所有規格）的傳統軟體開發生命週期模型。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DeltaFlow": {
+    "zh": "差量流程",
+    "en": [
+      "Delta Flow"
+    ],
+    "description": "通過提案描述規格之新增、修改與刪除，以管理規格基線變更的機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Proposal": {
+    "zh": "變更提案",
+    "en": [
+      "Proposal"
+    ],
+    "description": "在差量流程中提交的變更申請，用以詳細描述規格的修改內容與動機。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Snapshot": {
+    "zh": "規格快照",
+    "en": [
+      "Snapshot"
+    ],
+    "description": "對特定時間點的規格進行凍結與備份，常用於版本發布前。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Prerequisite": {
+    "zh": "前置條件",
+    "en": [
+      "Prerequisite"
+    ],
+    "description": "執行某項開發活動之前必須滿足的準備工作或狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Proportionality": {
+    "zh": "比例原則",
+    "en": [
+      "Proportionality"
+    ],
+    "description": "治理流程的繁簡程度應與變更影響範圍及風險大小相匹配的設計原則。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CoLocatedReadme": {
+    "zh": "共置文件",
+    "en": [
+      "Co-Located Readme"
+    ],
+    "description": "與程式碼放在相同倉庫目錄下的說明文件，利於隨時查閱。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DocumentationSprint": {
+    "zh": "文件衝刺",
+    "en": [
+      "Documentation Sprint"
+    ],
+    "description": "團隊集中時間與精力進行文件補寫與整理的獨立開發活動。",
+    "forbidden": [],
+    "level": 2
+  },
+  "BrownfieldProject": {
+    "zh": "棕地專案",
+    "en": [
+      "Brownfield Project"
+    ],
+    "description": "已有大量既有程式碼與運作中行為、非從零開始的現存軟體專案。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ReverseEngineering": {
+    "zh": "反向工程",
+    "en": [
+      "Reverse Engineering"
+    ],
+    "description": "透過分析現行系統的原始碼或運作行為，推導並重建出系統架構與規格的工程手段。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ExplorationBoundary": {
+    "zh": "探索邊界",
+    "en": [
+      "Exploration Boundary"
+    ],
+    "description": "指示自動化代理人在進行程式碼反向工程或掃描時的目標約束範疇。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TechnicalInspiration": {
+    "zh": "技術啟示",
+    "en": [
+      "Technical Inspiration"
+    ],
+    "description": "從歷史經驗或設計模式中所獲得的架構最佳化概念與行動啟發。",
+    "forbidden": [],
+    "level": 3
+  },
+  "AttributionRouting": {
+    "zh": "知識路由",
+    "en": [
+      "Attribution Routing"
+    ],
+    "description": "將系統的非結構化知識或遺留債務，精準指派並分流至合適的追蹤與管理工具之機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TodoList": {
+    "zh": "待辦清單",
+    "en": [
+      "Todo List"
+    ],
+    "description": "包含明確生命週期且可追蹤的待辦任務清單。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Linter": {
+    "zh": "檢查工具",
+    "en": [
+      "Linter"
+    ],
+    "description": "在開發期或持續整合管線中，用以靜態掃描程式碼並揪出風格或語法錯誤的工具。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DualTrack": {
+    "zh": "雙軌並行",
+    "en": [
+      "Dual-Track"
+    ],
+    "description": "同時執行嚴格阻斷（正規流程）與默默收集債務（觀察期）的分層防禦運作機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PracticalContrastiveExamples": {
+    "zh": "實務對比",
+    "en": [
+      "Practical Contrastive Examples"
+    ],
+    "description": "報告中用於對比遺產架構與領域驅動架構差異的具體實踐範例。",
+    "forbidden": [],
+    "level": 3
+  },
+  "TrackA": {
+    "zh": "正規流程",
+    "en": [
+      "Track A"
+    ],
+    "description": "當原始碼與規格不符時，會進行編譯阻斷的嚴格檢查軌道。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GuidelineDriven": {
+    "zh": "準則驅動",
+    "en": [
+      "Guideline-Driven"
+    ],
+    "description": "以自動化規則與檢查哨護欄引導系統演進的過程導向開發模式。",
+    "forbidden": [],
+    "level": 1
+  },
+  "EndGameVision": {
+    "zh": "終局願景",
+    "en": [
+      "End-Game Vision"
+    ],
+    "description": "系統演進在完成海量債務消解、具備編譯期絕對約束力後的理想目標狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DocumentDriven": {
+    "zh": "文件驅動",
+    "en": [
+      "Document-Driven"
+    ],
+    "description": "高度仰賴人工撰寫與維護的文字規格，常因缺乏編譯與執行期物理邊界而失效的傳統開發思維。",
+    "forbidden": [],
+    "level": 2
+  },
+  "LegacySystems": {
+    "zh": "遺留系統",
+    "en": [
+      "Legacy Systems"
+    ],
+    "description": "既有存在、缺乏完整測試或規格定義，但仍承載核心業務運作的舊有系統軟體。",
+    "forbidden": [],
+    "level": 3
+  },
+  "PrematureUnification": {
+    "zh": "過早統一",
+    "en": [
+      "Premature Unification"
+    ],
+    "description": "在對系統現狀與未來需求理解不足時，過早強行統一概念或命名所引發的系統癱瘓現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AnalysisParalysis": {
+    "zh": "分析癱瘓",
+    "en": [
+      "Analysis Paralysis"
+    ],
+    "description": "因過度追求完美規格或陷入無止盡討論，導致開發動能喪失、無法實際推進的停滯狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Jargon": {
+    "zh": "自鑄新詞",
+    "en": [
+      "Jargon"
+    ],
+    "description": "團隊自行發明或非通用的特定技術與業務術語。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StrongConsistency": {
+    "zh": "強一致性",
+    "en": [
+      "Strong Consistency"
+    ],
+    "description": "分散式系統或數據管理中的一種一致性模型，要求所有讀取操作都能立即獲取到最新寫入的數據，以確保所有節點看到的數據狀態完全一致。",
+    "forbidden": [],
+    "level": 2
+  },
+  "InstructionBloat": {
+    "zh": "指引膨脹",
+    "en": [
+      "Instruction Bloat"
+    ],
+    "description": "指在 AI 代理的設定檔中堆疊過多、過於瑣碎或不必要的自然語言規則，進而消耗上下文 Token 並稀釋 AI 注意力的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SemanticPollution": {
+    "zh": "語意污染",
+    "en": [
+      "Semantic Pollution"
+    ],
+    "description": "指在共享上下文或設定檔中引入無關、混亂或具備多義性的指令，導致 AI 代理理解與推論精確度下降的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Gateway": {
+    "zh": "入口網關",
+    "en": [
+      "Gateway"
+    ],
+    "description": "作為 AI 代理降落專案時最先讀取的輕量化原生配置檔，負責指引 AI 代理至統一的知識地圖。",
+    "forbidden": [],
+    "level": 2
+  },
+  "KnowledgeSovereignty": {
+    "zh": "知識主權",
+    "en": [
+      "Knowledge Sovereignty"
+    ],
+    "description": "指專案的架構約束與核心知識地圖，應獨立於任何第三方 AI 工具，始終由人類開發者與開源標準牢牢掌握的主導權。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SourceCriticism": {
+    "zh": "源泉批判",
+    "en": [
+      "Source Criticism"
+    ],
+    "description": "史學研究中評估史料來源可信度、真實性與離歷史事件核心距離的方法論，在 AI 協作中用以評估輸入資訊的信任等級。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CoChannelInterference": {
+    "zh": "同頻干擾",
+    "en": [
+      "Co-Channel Interference"
+    ],
+    "description": "無線電通信中多個電台使用相同頻率導致訊號無法分離的干擾現象，在 AI 協作中指同形 Token 在 Attention 機制中相互吸引拉扯造成行為偏移。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PositiveDescription": {
+    "zh": "正面描述",
+    "en": [
+      "Positive Description"
+    ],
+    "description": "在引導 AI 時採用正面列舉允許集合的描述方式，避免使用排除清單將被排除項目的 Token 意外引入注意力空間。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ContentRouting": {
+    "zh": "內容路由",
+    "en": [
+      "Content Routing"
+    ],
+    "description": "依據內容服務的不同目的與更新頻率，將其分配遷移至符合其屬性之專屬文件類型的資訊架構調整策略。",
+    "forbidden": [],
+    "level": 1
+  },
+  "FieldSplitting": {
+    "zh": "欄位拆分",
+    "en": [
+      "Field Splitting"
+    ],
+    "description": "當單一資料欄位混合了不同時效性或目的之內容時，將其拆分為多個有類型欄位以恢復心理模型清晰度與可維護性。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TypeLabel": {
+    "zh": "類型標籤",
+    "en": [
+      "Type Label"
+    ],
+    "description": "對程式碼元件或函式呼叫進行機械式分類的識別標記（如 validation、auth、syscall 等），用以輔助自動化靜態分析。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ErrorSurface": {
+    "zh": "錯誤表面",
+    "en": [
+      "Error Surface"
+    ],
+    "description": "系統中 AI 代理人或開發者可能引入錯誤或偏離設計意圖的自由度與決策空間範圍。",
+    "forbidden": [],
+    "level": 1
+  },
+  "StructuralConstraint": {
+    "zh": "結構約束",
+    "en": [
+      "Structural Constraint"
+    ],
+    "description": "限制開發自由度與變體形狀的程式碼結構設計，用以消除非法操作空間、收窄錯誤表面。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TerminologyDrift": {
+    "zh": "術語漂移",
+    "en": [
+      "Terminology Drift"
+    ],
+    "description": "在概念消解或變更的場景下，AI 代理人因對話上下文中舊術語高頻出現而沿用舊稱呼的預設行為。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DecoratorChain": {
+    "zh": "裝飾器鏈",
+    "en": [
+      "Decorator Chain"
+    ],
+    "description": "GoF 裝飾器模式的鏈式部署結構，同時處理水平分類與垂直行為組合時易造成語意斷裂。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SemanticCollapse": {
+    "zh": "語意坍塌",
+    "en": [
+      "Semantic Collapse"
+    ],
+    "description": "大型語言模型在推理時，其認知機制因為指令與資料邊界模糊而導致對架構與內容產出失焦的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StateConfusion": {
+    "zh": "狀態混淆",
+    "en": [
+      "State Confusion"
+    ],
+    "description": "多代理系統中不同元件或腳本在資料流轉中失去明確的狀態邊界，導致操作對象與內容重疊的混亂狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Schema": {
+    "zh": "結構合約",
+    "en": [
+      "Schema"
+    ],
+    "description": "定義資料欄位、型別與排版限制的強型別規格定義，用於強制約束模型產出的格式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SemanticIsolation": {
+    "zh": "語意隔離",
+    "en": [
+      "Semantic Isolation"
+    ],
+    "description": "在 LLM 上下文中，建立無法被自然語言穿透的實體邊界，防止模型因理解多餘資訊而引發語意坍塌。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProvenanceMarker": {
+    "zh": "溯源標記",
+    "en": [
+      "Provenance Marker"
+    ],
+    "description": "為多世代或多模型協作的產出，記錄其原始生成源頭與當前精煉環境的遙測後設資料標籤。",
+    "forbidden": [],
+    "level": 2
+  },
+  "FaradayCage": {
+    "zh": "法拉第籠",
+    "en": [
+      "Faraday Cage"
+    ],
+    "description": "比喻在語意層面使用強型別、結構化的資料（如 YAML）來封裝 LLM 的輸入，阻絕其不必要聯想的防禦機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "VocabularyAnchoring": {
+    "zh": "詞彙錨定",
+    "en": [
+      "Vocabulary Anchoring"
+    ],
+    "description": "在文件自動化處理中，基於單一事實來源（SSOT）在文本特定位置一次性下錨插入術語連結的處理機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PhysicalIsolation": {
+    "zh": "物理隔離",
+    "en": [
+      "Physical Isolation"
+    ],
+    "description": "在多代理環境中，將資料庫、結構定義與認知規範區隔至獨立的實體資料夾或文件路徑中，以杜絕越權理解或覆寫。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HarvardArchitecture": {
+    "zh": "哈佛架構",
+    "en": [
+      "Harvard Architecture"
+    ],
+    "description": "指令與資料分屬不同儲存空間的計算機架構，此處比喻將指令流程（Workflow）與資料合約（Schema）在物理上強制分離的架構設計。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AnalyticalEssay": {
+    "zh": "分析論文",
+    "en": [
+      "Analytical Essay"
+    ],
+    "description": "一種著重於深度剖析、邏輯推導與系統性論證的寫作結構與文體。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DomainEntity": {
+    "zh": "領域實體",
+    "en": [
+      "Domain Entity"
+    ],
+    "description": "領域驅動設計中具有唯一識別標識，且其生命週期與狀態變化在業務邏輯中至關重要的領域物件。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CognitiveCompression": {
+    "zh": "認知壓縮",
+    "en": [
+      "Cognitive Compression"
+    ],
+    "description": "透過抽象化、封裝與語意簡化，降低 AI Agent 或開發者理解與維護程式碼所需的認知負荷。",
+    "forbidden": [],
+    "level": 2
+  },
+  "BehavioralSafeguards": {
+    "zh": "行為護攔",
+    "en": [
+      "Behavioral Safeguards"
+    ],
+    "description": "在軟體架構或 AI 協作設計中，為限制或約束 AI Agent 操作邊界而建立的防禦性機制與實體規則。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CausalRelease": {
+    "zh": "因果發布",
+    "en": [
+      "Causal Release"
+    ],
+    "description": "當系統或 AI Agent 發布新規範時，依循明確的因果鏈同步更新所有相關狀態，確保依賴步驟即時感知的機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SelfDescriptive": {
+    "zh": "自描述性",
+    "en": [
+      "Self-Descriptive"
+    ],
+    "description": "程式碼、架構或後設資料本身即包含其設計意圖、約束與操作說明，使 AI Agent 無需外部文件即可理解其語意。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CognitiveEfficiency": {
+    "zh": "認知效率",
+    "en": [
+      "Cognitive Efficiency"
+    ],
+    "description": "AI Agent 或人類在理解、分析或執行系統任務時的思維轉換效率與速度。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ConfirmationBias": {
+    "zh": "確認偏誤",
+    "en": [
+      "Confirmation Bias"
+    ],
+    "description": "開發或審查人員因程式碼外觀專業而傾向尋找支持其正確的證據，忽略潛在邏輯漏洞的認知偏差。",
+    "forbidden": [],
+    "level": 2
+  },
+  "VersionDrift": {
+    "zh": "版本漂移",
+    "en": [
+      "Version Drift"
+    ],
+    "description": "同一段程式碼在不同的 runtime 環境或依賴庫版本下運作時，因底層行為改變而產生的語意或執行差異。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ImplicitContract": {
+    "zh": "隱含契約",
+    "en": [
+      "Implicit Contract"
+    ],
+    "description": "軟體設計模式中未在型別系統或介面定義中明示，但實作者與呼叫者必須共同遵循的時序、前置條件或狀態假設。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Observability": {
+    "zh": "可觀測性",
+    "en": [
+      "Observability"
+    ],
+    "description": "軟體系統或程式邏輯的運作狀態被外部工具或監控機制感知、偵測與度量的難易程度。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TechnicalSkill": {
+    "zh": "技術技能",
+    "en": [
+      "Technical Skill"
+    ],
+    "description": "與工具、語法或具體操作程序相關的硬實力，其正確答案在不同情境下通常是穩定且標準化的。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CognitiveThreshold": {
+    "zh": "認知門檻",
+    "en": [
+      "Cognitive Threshold"
+    ],
+    "description": "理解與評估複雜技術決策、架構隱含假設或非同步狀態時所需跨越的累積性知識與經驗邊界。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PairCollaboration": {
+    "zh": "配對模式",
+    "en": [
+      "Pair Collaboration"
+    ],
+    "description": "複數開發者協同工作（如配對程式設計），藉由即時對話與思維外顯化來傳遞與培育情境判斷力的模式。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HumanSkill": {
+    "zh": "人際技能",
+    "en": [
+      "Human Skill"
+    ],
+    "description": "Katz 管理技能模型中的核心能力之一，指協調他人、溝通說服及建立團隊合作的能力；在人機協作中代表引導與協調各成員使用 AI 介質的溝通與理解力。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CoupledSystem": {
+    "zh": "耦合系統",
+    "en": [
+      "Coupled System"
+    ],
+    "description": "由程式碼與規格文件等相互依賴、協同演化的元件所構成的系統，其特點是任何局部變更或回滾皆可能引發全局或關聯性的語意衝突。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Archive": {
+    "zh": "衝突封存",
+    "en": [
+      "Archive"
+    ],
+    "description": "這是 SDD 治理框架中的三層防禦之一，旨在記錄版本歷史與衝突狀態，但在底層模型發生無聲漂移時，由於缺乏清晰分界點，難以有效捕捉連續的品質滑坡。",
+    "forbidden": [],
+    "level": 2
+  },
+  "FeedbackLoop": {
+    "zh": "回饋迴路",
+    "en": [
+      "Feedback Loop"
+    ],
+    "description": "用於持續觀測治理機制運營效能的閉環系統，通常包含規則遵守率、規則有效性與治理摩擦成本三個觀測層次，藉以驅動治理規則的動態調整。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DifferentModels": {
+    "zh": "不同模型",
+    "en": [
+      "Different Models"
+    ],
+    "description": "在 1:N 協作拓撲中，指使用具備不同權重、上下文或隨機種子的模型進行交叉 Review，以利用其注意力分佈的差異來展開單一模型可能遺漏的盲區。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DifferentRoles": {
+    "zh": "不同角色",
+    "en": [
+      "Different Roles"
+    ],
+    "description": "在 1:N 協作拓撲中，將 Agent 分配為生成者與審查者等不同職責角色進行協作，藉由職能分工與視角差異來發現設計缺陷。",
+    "forbidden": [],
+    "level": 3
+  },
+  "KnowledgeBlindSpot": {
+    "zh": "知識盲區",
+    "en": [
+      "Knowledge Blind Spot"
+    ],
+    "description": "模型訓練資料之外的私有知識範疇（如私有產品架構、團隊設計慣例與隱含約束），這類盲區無法透過多 Agent 交叉審查等拓撲多樣性來彌補。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SkillIllusion": {
+    "zh": "技能幻覺",
+    "en": [
+      "Skill Illusion"
+    ],
+    "description": "指 AI 賦能讓開發者產生自身具備相應能力的錯覺，實質上相關能力從未在組織或個人中真正存在，並在 Skill 堆積文化中自我強化。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SpeedTrap": {
+    "zh": "速度陷阱",
+    "en": [
+      "Speed Trap"
+    ],
+    "description": "指 AI 生成程式碼或規格書的速度遠超人類的驗證容量，導致在多層 Artifact 機制下未經檢驗的語意債務以人無法消化的速度高速堆積。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TopologyCompensation": {
+    "zh": "拓撲補償",
+    "en": [
+      "Topology Compensation"
+    ],
+    "description": "指在人機協作中，利用多個不同 Agent、不同 Session 或不同模型（1:N 拓撲）進行交叉 Review 的結構多樣性，以彌補單一視角注意力盲區的緩衝機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SunkCost": {
+    "zh": "沉沒成本",
+    "en": [
+      "Sunk Cost"
+    ],
+    "description": "指已經付出且無法收回的成本（如時間、精力或 token 費用）。在決策中，人們常因不願浪費已投入的資源而繼續追加投入，導致非理性決策。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CapacityPlanning": {
+    "zh": "產能規劃",
+    "en": [
+      "Capacity Planning"
+    ],
+    "description": "組織評估與配置生產資源（如人力、工期與技術工具產出）的決策過程，在 AI 導入中常因過於樂觀的平均值而錯估實際產能增益。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TheoryOfConstraints": {
+    "zh": "瓶頸理論",
+    "en": [
+      "Theory Of Constraints"
+    ],
+    "description": "指出任何串聯系統的整體吞吐量必然受限於產能最低的瓶頸工站，非瓶頸工站的局部最佳化只會增加庫存的系統工程理論。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TypeAnnotation": {
+    "zh": "型別標註",
+    "en": [
+      "Type Annotation"
+    ],
+    "description": "在程式碼中顯式宣告變數或函式參數之資料結構形狀，以降低靜態追蹤與跳轉成本",
+    "forbidden": [],
+    "level": 2
+  },
+  "InputBindings": {
+    "zh": "輸入繫結",
+    "en": [
+      "Input Bindings"
+    ],
+    "description": "在 UI 或語意合約中，被嚴格限定只接收特定型別或欄位內容的輸入映射關係。",
+    "forbidden": [],
+    "level": 2
+  },
+  "EdgeCases": {
+    "zh": "邊界狀況",
+    "en": [
+      "Edge Cases"
+    ],
+    "description": "流程中的極端情境（如節點處理途中崩潰、暫存目錄被手動清理）；無狀態設計可藉冪等重試自然化解。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CovertSynchronization": {
+    "zh": "暗中同步",
+    "en": [
+      "Covert Synchronization"
+    ],
+    "description": "需要在背景偷偷維持多份狀態一致的設計傾向，最終會累積成難以償還的技術債。",
+    "forbidden": [],
+    "level": 2
+  },
+  "OversteppingBoundaries": {
+    "zh": "越俎代庖",
+    "en": [
+      "Overstepping Boundaries"
+    ],
+    "description": "元件承擔超出自身職責範圍工作的反模式，例如排程器親自進行領域層的屬性賦值與標籤萃取。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SinglePassMinting": {
+    "zh": "即時鑄造",
+    "en": [
+      "Single-Pass Minting"
+    ],
+    "description": "在產出某份文件的當下順手把一個概念命名、定型並收進共享術語庫的做法；其窗口先天缺乏驗證精確所需的跨語料與跨時間視角。",
+    "forbidden": [],
+    "level": 2
+  },
+  "LeastPrivilege": {
+    "zh": "最小權限",
+    "en": [
+      "Least Privilege"
+    ],
+    "description": "讓 process 在每個生命週期階段只保留必要能力的設計原則，透過 capabilities、namespace、seccomp、LSM 與 cgroup 等層共同收斂權限邊界。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ModelDistillation": {
+    "zh": "模型蒸餾",
+    "en": [
+      "Model Distillation"
+    ],
+    "description": "把大型模型的行為壓縮到小型模型中的訓練技術，與對話蒸餾不同，後者不涉及模型訓練。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ExternalArbitration": {
+    "zh": "外部裁決",
+    "en": [
+      "External Arbitration"
+    ],
+    "description": "由非同源機制（人類、測試、policy engine、權限邊界或獨立 verifier）授權信任狀態，而非讓生成系統自我批准。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ConversationDistillation": {
+    "zh": "對話蒸餾",
+    "en": [
+      "Conversation Distillation"
+    ],
+    "description": "把一段探索、追問與臨時理解整理成可閱讀報告、表格與圖解的轉換過程；它組織理解，但不訓練模型，也不自動授權內容為真。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ClosedLoopSelfConsistency": {
+    "zh": "閉環自洽",
+    "en": [
+      "Closed-Loop Self-Consistency"
+    ],
+    "description": "LLM 自己生成、解釋、檢查並批准行動，使防禦退化成同源語境內的自我說服，缺乏可打斷流暢性的外部阻力。",
+    "forbidden": [],
+    "level": 1
+  },
+  "KnowledgeHallucination": {
+    "zh": "知識幻覺",
+    "en": [
+      "Knowledge Hallucination"
+    ],
+    "description": "蒸餾產出的流暢結構讓未驗證推論看起來像已成立結論，使讀者誤以為自己已掌握知識。",
+    "forbidden": [],
+    "level": 1
+  },
+  "NamingPollution": {
+    "zh": "命名污染",
+    "en": [
+      "Naming Pollution"
+    ],
+    "description": "目錄名、檔名、工作流名稱與範例標題等字串本身挾帶意圖暗示；即使內容已消失，名稱仍保留指令形狀，被模型誤讀為待辦任務或格式要求。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TrustBoundary": {
+    "zh": "信任邊界",
+    "en": [
+      "Trust Boundary"
+    ],
+    "description": "可信狀態成立的分界：輸出穿過驗證流程、權責邊界與非同源裁決後才取得「可信」狀態，可信並非文字本身的屬性，而是被授權後的結果。",
+    "forbidden": [],
+    "level": 2
+  },
+  "VerificationBottleneck": {
+    "zh": "驗證瓶頸",
+    "en": [
+      "Verification Bottleneck"
+    ],
+    "description": "AI 協作的主要稀缺資源已從「能否生成」轉移到「能否驗證與授權」：生成速度擴張而人的判斷力、確定性檢查與外部裁決容量沒有同步擴張，成為核心瓶頸。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DrivingModel": {
+    "zh": "驅動模型",
+    "en": [
+      "Driving Model"
+    ],
+    "description": "專案決策權威的分配方式：當團隊對「行為是否正確」分歧時，最終會查閱並服從何種媒介（程式碼、測試、技能、準則或規格），而非工具或文件格式的分類。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DecisionAuthority": {
+    "zh": "決策權威",
+    "en": [
+      "Decision Authority"
+    ],
+    "description": "爭議發生時能裁決答案的媒介；驅動模型即由決策權威落在何處來定義，權威隨專案演化在程式碼、測試、技能、準則與規格之間轉移。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CapabilityBoundary": {
+    "zh": "能力邊界",
+    "en": [
+      "Capability Boundary"
+    ],
+    "description": "某個驅動媒介能穩定保證什麼、以及不能保證什麼的界線；典型失敗來自把決策權威過度延伸到能力邊界之外，要求媒介回答它回答不了的問題。",
+    "forbidden": [],
+    "level": 2
+  },
+  "KnowledgeManagement": {
+    "zh": "知識管理",
+    "en": [
+      "Knowledge Management"
+    ],
+    "description": "依耐久性、可見性與消費者把專案知識分層治理，讓每種知識停在能被正確消費、驗證與退場的位置，而非全部塞進單一入口。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AuthorityDrift": {
+    "zh": "權威漂移",
+    "en": [
+      "Authority Drift"
+    ],
+    "description": "治理文件複製外部權威、或後設資料殘留舊術語，使文件逐漸偏離系統實際行為、讓讀者誤信過期內容的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ReversibleProjection": {
+    "zh": "可逆投影",
+    "en": [
+      "Reversible Projection"
+    ],
+    "description": "讓產物以穩定鍵引用術語庫的可重算呈現而非凍結快照，使術語合併、降級或改名能在源頭修一次並機械重貼到所有產物。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HumanAiCollaboration": {
+    "zh": "人機協作",
+    "en": [
+      "Human-AI Collaboration"
+    ],
+    "description": "人與 AI 共同完成工作的分工模式：AI 負責放大產出與展開候選方案，人負責對邊界、失敗模式、成本與系統物理性做出判斷與裁決。其可持續性取決於人類判斷力的培育，而非 AI 採用率。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TeamDiffusion": {
+    "zh": "團隊擴散",
+    "en": [
+      "Team Diffusion"
+    ],
+    "description": "AI 協作能力從少數個人擴展到整個團隊的過程。統一的工具與培訓無法消除個體起點差異，品質方差會從可見的產出轉移到不可見的判斷品質，因此需要配對模式、受控任務與制度設計來保護判斷力的形成。",
+    "forbidden": [],
+    "level": 2
+  },
+  "VerificationSkill": {
+    "zh": "驗證能力",
+    "en": [
+      "Verification Skill"
+    ],
+    "description": "分辨 AI 產出是自洽、正確、可信或仍不確定的能力。可被工具輔助，但核心仍依賴領域經驗；它是人機協作真正的產能瓶頸，因為 AI 擴充的是生成產能而非驗證產能。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TwoTierSeparation": {
+    "zh": "兩層分離",
+    "en": [
+      "Two-Tier Separation"
+    ],
+    "description": "品牌名稱與 API 領域語彙應在架構上分離，使得產品改名等行銷行為具備零 API 成本。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SemanticTransparency": {
+    "zh": "名實貼合",
+    "en": [
+      "Semantic Transparency"
+    ],
+    "description": "產品命名直接反映其核心本質，以降低認知與解釋成本的評估標準。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PronunciationCost": {
+    "zh": "讀音成本",
+    "en": [
+      "Pronunciation Cost"
+    ],
+    "description": "當名稱的拼寫對目標讀者不夠透明時，在日常溝通與傳播中所產生的隱性摩擦。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Litmus": {
+    "zh": "分流準則",
+    "en": [
+      "Litmus"
+    ],
+    "description": "用於判斷一項新功能應屬於治理引擎還是獨立產品的邊界測試標準。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TerminalResult": {
+    "zh": "終局結果",
+    "en": [
+      "Terminal Result"
+    ],
+    "description": "系統執行完一系列狀態變更後的最終穩定一致狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ResidualPlanning": {
+    "zh": "殘差規劃",
+    "en": [
+      "Residual Planning"
+    ],
+    "description": "將複雜問題拆解，由核心解決主幹，其餘邊角案例交由上層或周邊處理的策略。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DeadOnArrival": {
+    "zh": "空缺測試",
+    "en": [
+      "Dead On Arrival"
+    ],
+    "description": "用以檢驗一個薄產品若無消費者採用，其核心價值是否將立即歸零的判斷標準。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ReferenceImplementation": {
+    "zh": "參考實作",
+    "en": [
+      "Reference Implementation"
+    ],
+    "description": "提供架構樣板與基礎建設設定，供後續專案複製並依循的標準範例。",
+    "forbidden": [],
+    "level": 2
+  },
+  "OrphanProse": {
+    "zh": "孤兒散文",
+    "en": [
+      "Orphan Prose"
+    ],
+    "description": "寫在文件上卻沒有程式碼強制力對應的規範，極易隨時間腐敗而被忽視。",
+    "forbidden": [],
+    "level": 2
+  },
+  "EncapsulationBoundary": {
+    "zh": "封裝邊界",
+    "en": [
+      "Encapsulation Boundary"
+    ],
+    "description": "一個元件對某件事有最終發言權、又刻意不擁有周邊職責的那條劃分線。",
+    "forbidden": [],
+    "level": 2
+  },
+  "OverGeneration": {
+    "zh": "過度生成",
+    "en": [
+      "Over-Generation"
+    ],
+    "description": "生成端把一個薄需求自動補全成生態系裡最典型的重平台的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PromptGap": {
+    "zh": "提示空缺",
+    "en": [
+      "Prompt Gap"
+    ],
+    "description": "需求中未被明確指定、於是被生成端以生態慣例補滿的空白處。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DecisionFunnel": {
+    "zh": "決策漏斗",
+    "en": [
+      "Decision Funnel"
+    ],
+    "description": "用真實消費者的關鍵路徑，依序切出核心形狀（範圍、能力或產品、產品或 pattern）的決策序列。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PostHocRewrite": {
+    "zh": "事後重寫",
+    "en": [
+      "Post-Hoc Rewrite"
+    ],
+    "description": "因生成端無法即時煞車，改以事後重寫把已漂移長肥的核心收回薄形態的防線。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DiffusionModel": {
+    "zh": "擴散模型",
+    "en": [
+      "Diffusion Model"
+    ],
+    "description": "以前向加噪與反向去噪的多步轉移建立生成程序的模型族。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ModeCollapse": {
+    "zh": "模式坍縮",
+    "en": [
+      "Mode Collapse"
+    ],
+    "description": "生成器只覆蓋資料分佈中少數模式，導致樣本多樣性不足的失效現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GradientDescent": {
+    "zh": "梯度下降",
+    "en": [
+      "Gradient Descent"
+    ],
+    "description": "沿損失函數負梯度方向反覆更新參數的最佳化方法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Backpropagation": {
+    "zh": "反向傳播",
+    "en": [
+      "Backpropagation"
+    ],
+    "description": "以連鎖律沿計算圖回傳誤差，有效求得各層參數梯度的演算法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "MachineLearning": {
+    "zh": "機器學習",
+    "en": [
+      "Machine Learning"
+    ],
+    "description": "先界定可選函數的範圍，再以資料估計其中參數的建模方法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "LossFunction": {
+    "zh": "損失函數",
+    "en": [
+      "Loss Function"
+    ],
+    "description": "把模型輸出與目標之間的差距量化為單一數值的評分函數。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PositionalEncoding": {
+    "zh": "位置編碼",
+    "en": [
+      "Positional Encoding"
+    ],
+    "description": "為本身不含順序資訊的注意力模型補入序列位置的表示方法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "EvidenceLowerBound": {
+    "zh": "證據下界",
+    "en": [
+      "Evidence Lower Bound"
+    ],
+    "description": "對數邊際似然的可最佳化下界，由重建項與 KL 正則項組成。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PosteriorCollapse": {
+    "zh": "後驗坍縮",
+    "en": [
+      "Posterior Collapse"
+    ],
+    "description": "近似後驗退化為先驗、潛在變數不再攜帶輸入資訊的失效現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GradientInterference": {
+    "zh": "梯度干涉",
+    "en": [
+      "Gradient Interference"
+    ],
+    "description": "不同任務的梯度方向相衝，使一方的更新提高另一方損失的情形。",
+    "forbidden": [],
+    "level": 2
+  },
+  "KnowledgeDistillation": {
+    "zh": "知識蒸餾",
+    "en": [
+      "Knowledge Distillation"
+    ],
+    "description": "以較大模型的輸出分佈為目標，訓練較小模型重新估計其行為的壓縮方法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DistributionShift": {
+    "zh": "分佈漂移",
+    "en": [
+      "Distribution Shift"
+    ],
+    "description": "部署資料的分佈偏離訓練分佈，使模型在參數不變下失去效用的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CreditAssignment": {
+    "zh": "信用分配",
+    "en": [
+      "Credit Assignment"
+    ],
+    "description": "判定某個結果應歸因於哪些參數或決策步驟的問題。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DataNoise": {
+    "zh": "資料雜訊",
+    "en": [
+      "Data Noise"
+    ],
+    "description": "標註錯誤或量測誤差造成的標籤與特徵偏差。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HumanCompensation": {
+    "zh": "人工補償",
+    "en": [
+      "Human Compensation"
+    ],
+    "description": "以人力審核與例外處理填補模型不可靠之處，使系統整體達到可交付品質的做法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ContributionMargin": {
+    "zh": "貢獻利益",
+    "en": [
+      "Contribution Margin"
+    ],
+    "description": "收入扣除隨使用量變動的成本後，可用以覆蓋固定支出的餘額。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StatisticalLearning": {
+    "zh": "統計學習",
+    "en": [
+      "Statistical Learning"
+    ],
+    "description": "把學習寫成資料生成分佈、假設空間與選擇準則三者關係的理論框架。",
+    "forbidden": [],
+    "level": 2
+  },
+  "EmpiricalRisk": {
+    "zh": "經驗風險",
+    "en": [
+      "Empirical Risk"
+    ],
+    "description": "模型在有限訓練樣本上的平均損失，是目標分佈期望風險的間接替代量。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HypothesisSpace": {
+    "zh": "假設空間",
+    "en": [
+      "Hypothesis Space"
+    ],
+    "description": "學習演算法可選函數所構成的集合，其大小決定泛化保證的鬆緊。",
+    "forbidden": [],
+    "level": 1
+  },
+  "StructuralBias": {
+    "zh": "結構偏置",
+    "en": [
+      "Structural Bias"
+    ],
+    "description": "架構預先宣告的關係假設，用限制自由度換取樣本效率。",
+    "forbidden": [],
+    "level": 1
+  },
+  "NoiseSchedule": {
+    "zh": "噪聲排程",
+    "en": [
+      "Noise Schedule"
+    ],
+    "description": "前向過程中各時間步噪聲強度的設定，決定訓練與採樣的尺度分佈。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ShortcutLearning": {
+    "zh": "捷徑學習",
+    "en": [
+      "Shortcut Learning"
+    ],
+    "description": "模型採用在標準基準有效、卻無法轉移到更具挑戰條件的決策規則。",
+    "forbidden": [],
+    "level": 2
+  },
+  "MeasurementContract": {
+    "zh": "測量契約",
+    "en": [
+      "Measurement Contract"
+    ],
+    "description": "固定評測資料、指標定義與計分程式的約定，用來讓不同版本的分數可以互相比較。",
+    "forbidden": [],
+    "level": 1
+  },
+  "VanishingGradient": {
+    "zh": "梯度消失",
+    "en": [
+      "Vanishing Gradient"
+    ],
+    "description": "梯度沿深度或時間反向傳播時逐層衰減，使早期參數幾乎收不到更新訊號的現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DistributionCoverage": {
+    "zh": "分佈覆蓋",
+    "en": [
+      "Distribution Coverage"
+    ],
+    "description": "生成分佈涵蓋目標分佈中各個模式的程度，與單一樣本的品質是不同的觀察量。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ModelCompression": {
+    "zh": "模型壓縮",
+    "en": [
+      "Model Compression"
+    ],
+    "description": "以量化、剪枝或蒸餾等方式縮減模型資源需求的近似手段。",
+    "forbidden": [],
+    "level": 1
+  },
+  "BehavioralSlice": {
+    "zh": "行為切片",
+    "en": [
+      "Behavioral Slice"
+    ],
+    "description": "依輸入屬性切出的評測子集，用來揭露被整體平均掩蓋的局部損失。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Uncertainty": {
+    "zh": "不確定性",
+    "en": [
+      "Uncertainty"
+    ],
+    "description": "估計值因抽樣與執行變異而帶有的波動範圍，是判定分數差異是否顯著的前提。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DegradationDiagnosis": {
+    "zh": "退化診斷",
+    "en": [
+      "Degradation Diagnosis"
+    ],
+    "description": "把能力下降的警報轉成可反駁機制歸因的程序。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ReboundEffect": {
+    "zh": "反彈效應",
+    "en": [
+      "Rebound Effect"
+    ],
+    "description": "單位成本下降刺激用量上升，使總成本不降反增的現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "MediatingVariable": {
+    "zh": "中介變數",
+    "en": [
+      "Mediating Variable"
+    ],
+    "description": "位於原因與結果之間、承載並使該段因果得以被觀察的可測量變數。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DataFeedbackLoop": {
+    "zh": "資料回流",
+    "en": [
+      "Data Feedback Loop"
+    ],
+    "description": "使用者接受、修改或拒絕的紀錄回到產品與流程更新，進而改變後續系統行為的循環。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SelectionBias": {
+    "zh": "選擇偏差",
+    "en": [
+      "Selection Bias"
+    ],
+    "description": "從多個候選中挑出表現最好者時，該讀數同時包含真實能力與抽樣噪聲，使其系統性地優於真值的偏差。",
+    "forbidden": [],
+    "level": 2
+  },
+  "MediatorMisreading": {
+    "zh": "中介誤認",
+    "en": [
+      "Mediator Misreading"
+    ],
+    "description": "把因果鏈上可觀察的中介變數當成成因本身，因而以觀察性讀數回答只有干預才能回答的問題。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProxyReadout": {
+    "zh": "代理讀數",
+    "en": [
+      "Proxy Readout"
+    ],
+    "description": "以可計算的純量指標替代無法直接觀測之真實能力的量測結果，其有效性取決於替代關係是否成立。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ExtremumBias": {
+    "zh": "極值偏差",
+    "en": [
+      "Extremum Bias"
+    ],
+    "description": "從大量候選中取出最大值時，該讀數同時吸收了真實訊號與抽樣噪聲的高端尾部，因而系統性高於真值。",
+    "forbidden": [],
+    "level": 1
+  },
+  "FalseDiscoveryRate": {
+    "zh": "假發現率",
+    "en": [
+      "False Discovery Rate"
+    ],
+    "description": "在所有被宣告為顯著的結果中，實際為偽陽性者所佔的期望比例，是多重檢定下的主要控制目標。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GradientClipping": {
+    "zh": "梯度裁剪",
+    "en": [
+      "Gradient Clipping"
+    ],
+    "description": "在參數更新前將梯度範數截斷至上限，用以抑制數值爆炸，但不改變損失曲面本身的病態幾何。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StrideAliasing": {
+    "zh": "步幅混疊",
+    "en": [
+      "Stride Aliasing"
+    ],
+    "description": "跨步下採樣使取樣率低於訊號頻寬時，高頻成分摺疊進低頻而使特徵隨位移相位跳變的現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "RepresentationProbing": {
+    "zh": "表徵探測",
+    "en": [
+      "Representation Probing"
+    ],
+    "description": "以輔助分類器從中間表徵讀取特定屬性的分析手法，只能證明資訊存在，不能證明該資訊參與決策。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ResidualBypass": {
+    "zh": "殘差旁路",
+    "en": [
+      "Residual Bypass"
+    ],
+    "description": "殘差連接提供的直通路徑，使決策訊號可以繞過注意力或特定子模組，讓該模組的讀數失去因果代表性。",
+    "forbidden": [],
+    "level": 1
+  },
+  "LinearProbe": {
+    "zh": "線性探針",
+    "en": [
+      "Linear Probe"
+    ],
+    "description": "在凍結的表徵上訓練線性分類器，用以量測該層是否線性可讀出目標屬性的診斷工具。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ActivationPatching": {
+    "zh": "激活補丁",
+    "en": [
+      "Activation Patching"
+    ],
+    "description": "將某次前向傳播的中間激活替換為另一次執行的對應值，以定位特定成分對輸出的實際貢獻。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Preregistration": {
+    "zh": "事前註冊",
+    "en": [
+      "Preregistration"
+    ],
+    "description": "在接觸評估資料之前凍結假設、指標、樣本規模與成功判準的制度，用以阻斷事後合理化。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Falsifiability": {
+    "zh": "可證偽性",
+    "en": [
+      "Falsifiability"
+    ],
+    "description": "宣稱必須事先指明何種觀測結果會推翻它；缺乏反駁條件的評估無法構成證據。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TemporalContamination": {
+    "zh": "時序污染",
+    "en": [
+      "Temporal Contamination"
+    ],
+    "description": "評估資料中混入了決策時點之後才存在的資訊，使離線讀數無法代表部署時的可得條件。",
+    "forbidden": [],
+    "level": 2
+  },
+  "OptionalStopping": {
+    "zh": "任意停止",
+    "en": [
+      "Optional Stopping"
+    ],
+    "description": "邊觀察結果邊決定是否繼續收集資料或訓練，使名目顯著水準失效的取樣行為。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ConceptDrift": {
+    "zh": "概念漂移",
+    "en": [
+      "Concept Drift"
+    ],
+    "description": "輸入與標籤之間的條件關係隨時間改變的現象，即使模型權重完全凍結，線上表現仍會持續退化。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ModeDropping": {
+    "zh": "模式遺失",
+    "en": [
+      "Mode Dropping"
+    ],
+    "description": "生成分佈只覆蓋目標分佈的少數模式，單點樣本品質仍高，整體覆蓋率卻已崩塌的失效型態。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PrdPrecision": {
+    "zh": "分佈精度",
+    "en": [
+      "Prd Precision"
+    ],
+    "description": "生成分佈落在真實分佈支援集內的比例，衡量樣本的逼真程度，與覆蓋率是兩個獨立軸。",
+    "forbidden": [],
+    "level": 2
+  },
+  "IntrinsicDimension": {
+    "zh": "內在維度",
+    "en": [
+      "Intrinsic Dimension"
+    ],
+    "description": "資料流形實際所需的最小座標數，決定表徵壓縮在不撕裂幾何結構下的下限。",
+    "forbidden": [],
+    "level": 2
+  },
+  "AlertFatigue": {
+    "zh": "警報疲勞",
+    "en": [
+      "Alert Fatigue"
+    ],
+    "description": "過細切片或過低門檻造成大量假陽性告警，使團隊逐漸忽略真實訊號的失效狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GradientSurgery": {
+    "zh": "梯度手術",
+    "en": [
+      "Gradient Surgery"
+    ],
+    "description": "偵測任務梯度之間的負向內積，並把衝突分量投影到正交切空間的更新修正法，PCGrad 為其代表。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Verificationism": {
+    "zh": "驗證主義",
+    "en": [
+      "Verificationism"
+    ],
+    "description": "以「能被觀測證實」為意義判準的立場，對全稱命題無法提供有限步驟的確證。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Falsificationism": {
+    "zh": "證偽主義",
+    "en": [
+      "Falsificationism"
+    ],
+    "description": "以「能被觀測推翻」取代確證作為科學判準的立場，是可反駁契約的認識論基礎。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SequentialTest": {
+    "zh": "序貫檢定",
+    "en": [
+      "Sequential Test"
+    ],
+    "description": "每到達一筆新觀測即更新決策的統計檢定，可在控制兩類錯誤率的前提下，以較少樣本作出判定。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Misattribution": {
+    "zh": "錯誤歸因",
+    "en": [
+      "Misattribution"
+    ],
+    "description": "在因果尚不可識別時強行指派根因，導致錯誤處置並延誤真實故障排除的治理失效。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Ablation": {
+    "zh": "特徵消融",
+    "en": [
+      "Ablation"
+    ],
+    "description": "移除或置換特定特徵後觀察輸出變化，用以檢驗該特徵是否具備因果貢獻。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PartialIdentification": {
+    "zh": "部分識別",
+    "en": [
+      "Partial Identification"
+    ],
+    "description": "在資料不足以唯一確定目標量時，改為推導其所有可能取值的界限，而非給出單點估計。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DualTrackSeparation": {
+    "zh": "雙軌分離",
+    "en": [
+      "Dual-Track Separation"
+    ],
+    "description": "把追求低延遲的異常告警與追求高信賴度的因果歸因拆成兩條獨立軌道，各自最佳化不同的損失函數。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Reproducibility": {
+    "zh": "可重現性",
+    "en": [
+      "Reproducibility"
+    ],
+    "description": "相同輸入與設定下重跑系統得到相同輸出的程度，在含非確定性核心的硬體上只能以容差界定。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CognitiveManipulation": {
+    "zh": "認知操縱",
+    "en": [
+      "Cognitive Manipulation"
+    ],
+    "description": "以界面語氣、人格化措辭或資訊落差影響使用者判斷，使其在未被充分告知的情況下做出決定。",
+    "forbidden": [],
+    "level": 2
+  },
+  "BlastRadius": {
+    "zh": "爆炸半徑",
+    "en": [
+      "Blast Radius"
+    ],
+    "description": "單次或累積操作在失控時所能造成的最大損害範圍，是授權閘門必須先行界定的硬上限。",
+    "forbidden": [],
+    "level": 1
+  },
+  "StoppingTime": {
+    "zh": "停止時間",
+    "en": [
+      "Stopping Time"
+    ],
+    "description": "只依賴當前與過去觀測即可判定是否到達的時刻，用以把熔斷條件寫成不需預知未來的判準。",
+    "forbidden": [],
+    "level": 2
+  },
+  "FailSafe": {
+    "zh": "安全失效",
+    "en": [
+      "Fail-Safe"
+    ],
+    "description": "系統偵測到異常時主動進入已知安全的終止狀態，而非嘗試繼續運轉。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CrashLoop": {
+    "zh": "毒丸循環",
+    "en": [
+      "Crash Loop"
+    ],
+    "description": "崩潰後自動重啟又再次執行同一致命輸入，使故障在重試中被無限放大的循環。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SituationAwareness": {
+    "zh": "狀況警覺",
+    "en": [
+      "Situation Awareness"
+    ],
+    "description": "操作員對系統當前狀態、變化趨勢與可用處置選項的即時掌握程度。",
+    "forbidden": [],
+    "level": 2
+  },
+  "OutOfTheLoop": {
+    "zh": "迴路外部",
+    "en": [
+      "Out-Of-The-Loop"
+    ],
+    "description": "人被移出常態控制迴路後，對系統狀態失去體感與預判能力的位置。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RubberStamping": {
+    "zh": "盲目放行",
+    "en": [
+      "Rubber-Stamping"
+    ],
+    "description": "覆核流程退化為形式確認，審核者不再實際判讀內容即予通過。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HumanInTheLoop": {
+    "zh": "人在迴路",
+    "en": [
+      "Human-In-The-Loop"
+    ],
+    "description": "人類節點對自動化決策保留實質否決與阻尼的控制條件，而非形式性的一鍵通過。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Interlock": {
+    "zh": "物理聯鎖",
+    "en": [
+      "Interlock"
+    ],
+    "description": "以硬體條件強制阻斷不安全動作的機制，不依賴軟體判斷或人員反應。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HypothesisGeneration": {
+    "zh": "假說生成",
+    "en": [
+      "Hypothesis Generation"
+    ],
+    "description": "探索階段自由提出候選解釋與指標的活動，其產出本身不構成效用證據。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HypothesisTesting": {
+    "zh": "假說驗證",
+    "en": [
+      "Hypothesis Testing"
+    ],
+    "description": "以事前鎖定的指標與否定條件檢驗既有假說的活動，期間不得更動判準。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RegressionToTheMean": {
+    "zh": "均值回歸",
+    "en": [
+      "Regression To The Mean"
+    ],
+    "description": "極端觀測值在重複量測時傾向回到母體平均的統計現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CapitalExpenditure": {
+    "zh": "資本支出",
+    "en": [
+      "Capital Expenditure"
+    ],
+    "description": "用於基礎設施與長期資產的資本性投入。",
+    "forbidden": [
+      "資本開支"
+    ],
+    "level": 2
+  },
+  "MarketForLemons": {
+    "zh": "檸檬市場",
+    "en": [
+      "Market For Lemons"
+    ],
+    "description": "因買方無法辨識品質而按平均價值交易，進而排擠高品質供給的資訊不對稱市場。",
+    "forbidden": [],
+    "level": 1
+  },
+  "VerificationCoverage": {
+    "zh": "驗證覆蓋",
+    "en": [
+      "Verification Coverage"
+    ],
+    "description": "產物中已有獨立、可重複檢查機制保護的範圍與程度。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CostShifting": {
+    "zh": "成本轉嫁",
+    "en": [
+      "Cost Shifting"
+    ],
+    "description": "工作從產生端移往理解端後，由其他人或未來時點承擔的成本移轉。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SelfSealingClaim": {
+    "zh": "自我封閉",
+    "en": [
+      "Self-Sealing Claim"
+    ],
+    "description": "能吸收反例而不修改自身主張，因而逃避外部反駁的論證結構。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CorrelatedFailure": {
+    "zh": "相關失效",
+    "en": [
+      "Correlated Failure"
+    ],
+    "description": "多個看似獨立的系統因共享成因或分布，而在相同位置共同失敗的現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ScenarioBinding": {
+    "zh": "場景綁定",
+    "en": [
+      "Scenario Binding"
+    ],
+    "description": "將自然語言場景步驟對應到可執行函式或測試程式碼的連接機制。",
+    "forbidden": [],
+    "level": 1
+  },
+  "LocalPlausibility": {
+    "zh": "局部似真",
+    "en": [
+      "Local Plausibility"
+    ],
+    "description": "每個局部接續看似合理，但全域一致性與外部真實性未被保證的生成性質。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Distinguishability": {
+    "zh": "可區分性",
+    "en": [
+      "Distinguishability"
+    ],
+    "description": "觀察者能否依可見訊號辨別不同品質、狀態或來源之產物的性質。",
+    "forbidden": [],
+    "level": 1
+  },
+  "IntegrationCost": {
+    "zh": "導入成本",
+    "en": [
+      "Integration Cost"
+    ],
+    "description": "讓新增產物與既有系統的命名、抽象、行為及假設相容所需的成本。",
+    "forbidden": [],
+    "level": 1
+  },
+  "QueueLength": {
+    "zh": "佇列長度",
+    "en": [
+      "Queue Length"
+    ],
+    "description": "在處理工站前等待服務的工作項目數量。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Auditability": {
+    "zh": "可稽核性",
+    "en": [
+      "Auditability"
+    ],
+    "description": "動作與狀態留下可供事後驗證之證據的性質。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Desuetude": {
+    "zh": "廢止效力",
+    "en": [
+      "Desuetude"
+    ],
+    "description": "法規因長期未被執行而逐漸喪失實際效力的法理概念。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Rejector": {
+    "zh": "拒絕算子",
+    "en": [
+      "Rejector"
+    ],
+    "description": "將產物空間映射為接受或拒絕二元判定的一種形式化映射或工程閘門，其拒絕判定所對應之輸入原像構成拒絕集。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SpecificationEfficacy": {
+    "zh": "規格效力",
+    "en": [
+      "Specification Efficacy"
+    ],
+    "description": "一份規格透過其實際部署之拒絕算子對違規產物空間產生的實質約束能力，形式上等價於約束覆蓋率。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Typestate": {
+    "zh": "型別狀態",
+    "en": [
+      "Typestate"
+    ],
+    "description": "將物件的執行期狀態與生命週期約束編碼至靜態型別系統中，使非法狀態轉移在編譯期即被攔截的技術。",
+    "forbidden": [],
+    "level": 1
+  },
+  "StochasticApproximation": {
+    "zh": "隨機逼近",
+    "en": [
+      "Stochastic Approximation"
+    ],
+    "description": "在帶有隨機噪聲的觀測與誤差訊號下，逐步迭代逼近極值點或根的隨機過程演算法架構。",
+    "forbidden": [],
+    "level": 1
+  },
+  "QualityDrift": {
+    "zh": "品質漂移",
+    "en": [
+      "Quality Drift"
+    ],
+    "description": "當負回饋與誤差梯度歸零時，系統狀態並非單調劣化，而是方差隨時間線性發散的無方向隨機遊走。",
+    "forbidden": [],
+    "level": 1
+  },
+  "FrictionDiscriminator": {
+    "zh": "摩擦判別",
+    "en": [
+      "Friction Discriminator"
+    ],
+    "description": "以拒絕集是否為空，區分流程阻礙是純粹耗時成本或具備攔截違規產物之有效失效點的操作型準則。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ProductionCost": {
+    "zh": "生產成本",
+    "en": [
+      "Production Cost"
+    ],
+    "description": "將單一功能或模組在隔離環境下單獨實作出來的成本，複雜度通常與全系統規模無關。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TechnicalRunway": {
+    "zh": "技術跑道",
+    "en": [
+      "Technical Runway"
+    ],
+    "description": "系統在可修改半徑收縮至臨界安全閾值以下前，所剩餘的可持續安全修改時間跨度或變更次數。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DiscountingBias": {
+    "zh": "折現偏誤",
+    "en": [
+      "Discounting Bias"
+    ],
+    "description": "決策過度偏重眼前可見收益而低估未來維護與對帳成本的時間偏好扭曲（技術債的核心動力）。",
+    "forbidden": [],
+    "level": 1
+  },
+  "OneSidedEfficacy": {
+    "zh": "單邊效力",
+    "en": [
+      "One-Sided Efficacy"
+    ],
+    "description": "在高相關性審查中，多個審查者的一致結論不攜帶資訊，而分歧結論高度指示規格欠指定的非對稱性判準。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PreRegistration": {
+    "zh": "事前登記",
+    "en": [
+      "Pre-Registration"
+    ],
+    "description": "在觀測或實驗執行前預先凍結假設、度量指標與反駁門檻，防止事後調整假說以符合資料的科學契約。",
+    "forbidden": [],
+    "level": 1
+  },
+  "InformationGain": {
+    "zh": "資訊增益",
+    "en": [
+      "Information Gain"
+    ],
+    "description": "系統在觀測到新資料或實驗結果後，不確定性（熵）減少的程度；變異為零意味著無法從中取得任何資訊增益。",
+    "forbidden": [],
+    "level": 1
+  },
+  "RDProcess": {
+    "zh": "研發流程",
+    "en": [
+      "R&D Process"
+    ],
+    "description": "研發工程中從需求探索、概念構思、架構設計到實作驗證的端到端活動序列。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MetricDesign": {
+    "zh": "度量設計",
+    "en": [
+      "Metric Design"
+    ],
+    "description": "為了反映系統運作狀態與引導組織行為，定義觀測維度、採樣方式與彙整邏輯的架構過程。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ObjectiveFunction": {
+    "zh": "目標函數",
+    "en": [
+      "Objective Function"
+    ],
+    "description": "最佳化演算法或管理決策所試圖最大化或最小化的定量目標；未進入讀數的維度在目標函數中梯度分量恆為零。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ProjectedGradient": {
+    "zh": "投影梯度",
+    "en": [
+      "Projected Gradient"
+    ],
+    "description": "在受限最佳化問題中，將目標函數的無約束梯度投影至可行域切空間的方向向量；不可觀測維度的無約束梯度為零時，其解完全由可行域邊界決定。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MetricGovernance": {
+    "zh": "度量治理",
+    "en": [
+      "Metric Governance"
+    ],
+    "description": "針對組織指標的採集口徑、失真風險、反轉效應與退化機制所建立的審計、對帳與防禦性規範體系。",
+    "forbidden": [],
+    "level": 1
+  },
+  "InformationTheory": {
+    "zh": "資訊理論",
+    "en": [
+      "Information Theory"
+    ],
+    "description": "研究訊號傳輸、資訊量化、熵與通道容量的應用數學分支，用以分析系統在不確定性下的觀測與編碼邊界。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ControlSignal": {
+    "zh": "控制訊號",
+    "en": [
+      "Control Signal"
+    ],
+    "description": "控制系統中用以調整執行機構狀態的即時回饋輸入；必須具備可及時反應偏差且敏感度不致發散之特性。",
+    "forbidden": [],
+    "level": 1
+  },
+  "FlowGovernance": {
+    "zh": "流動治理",
+    "en": [
+      "Flow Governance"
+    ],
+    "description": "聚焦於交付前置時間、在製品數量與阻塞節點的系統性流動最佳化機制，而非個別資源的稼動率。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ThroughputConservation": {
+    "zh": "吞吐守恆",
+    "en": [
+      "Throughput Conservation"
+    ],
+    "description": "穩態串聯系統各工站的有效產出率受限於瓶頸工站處理能力的物理定律。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PerformanceClaim": {
+    "zh": "效能宣告",
+    "en": [
+      "Performance Claim"
+    ],
+    "description": "對系統局部或整體改善成果所作出的量化評估陳述，需嚴格界定其有效範圍與觀測尺度。",
+    "forbidden": [],
+    "level": 1
+  },
+  "BatchEconomics": {
+    "zh": "批量經濟",
+    "en": [
+      "Batch Economics"
+    ],
+    "description": "研究交付與生產批量大小如何透過固定交易成本與持有延遲成本之折衝決定系統總成本的經濟學模型。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TransactionCost": {
+    "zh": "交易成本",
+    "en": [
+      "Transaction Cost"
+    ],
+    "description": "啟動一次交付或批次處理所需投入的固定開銷（如設定、審查、會議、儀式等），與該批次包含的工作量無關。",
+    "forbidden": [],
+    "level": 1
+  },
+  "FeedbackDelay": {
+    "zh": "回饋延遲",
+    "en": [
+      "Feedback Delay"
+    ],
+    "description": "從某個動作或決策被執行，到系統產生可觀測結果並被決策者感知之間的時間差。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ProcessDesign": {
+    "zh": "流程設計",
+    "en": [
+      "Process Design"
+    ],
+    "description": "規劃組織活動的流轉順序、產出標準、驗證關卡與責任劃界的架構工程。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SquareRootLaw": {
+    "zh": "平方根律",
+    "en": [
+      "Square Root Law"
+    ],
+    "description": "經濟訂購量（EOQ）模型中最佳批量與固定開銷與持有成本比值之平方根成正比的數學關係。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ResponsibilityBoundary": {
+    "zh": "職責劃界",
+    "en": [
+      "Responsibility Boundary"
+    ],
+    "description": "在架構設計或團隊協作中明確劃分由誰持有決策、決策客體為何以及其可判定範圍的邊界契約。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SpecificationDesign": {
+    "zh": "規格設計",
+    "en": [
+      "Specification Design"
+    ],
+    "description": "定義系統外部契約、前置條件、後置條件與狀態不變式的正規化表達過程。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MechanismDesign": {
+    "zh": "機制設計",
+    "en": [
+      "Mechanism Design"
+    ],
+    "description": "博弈論的一個分支，研究如何設定規則與誘因結構，使得理性個體在追求自利時能達成系統期望的集體結果。",
+    "forbidden": [],
+    "level": 1
+  },
+  "IncentiveCompatibility": {
+    "zh": "誘因相容",
+    "en": [
+      "Incentive Compatibility"
+    ],
+    "description": "機制設計中的關鍵性質，要求參與者誠實揭露資訊或遵守規則的預期效益高於隱瞞或違規的預期效益。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MetricInversion": {
+    "zh": "指標反轉",
+    "en": [
+      "Metric Inversion"
+    ],
+    "description": "古德哈特定律的具體表現：當原本作為診斷用途的訊號被納入考核指標時，其誘因結構改變導致訊號失真甚至產生相反效果的現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "StateConstraint": {
+    "zh": "狀態約束",
+    "en": [
+      "State Constraint"
+    ],
+    "description": "系統資料層或執行環境中強制要求狀態轉換必須滿足的先決條件與客觀留痕契約。",
+    "forbidden": [],
+    "level": 1
+  },
+  "RuleEfficacy": {
+    "zh": "規則效力",
+    "en": [
+      "Rule Efficacy"
+    ],
+    "description": "條款規範能夠真實約束執行者行為並被理性遵守的程度，取決於違反行為的可偵測性與代價。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SignalingGame": {
+    "zh": "訊號賽局",
+    "en": [
+      "Signaling Game"
+    ],
+    "description": "資訊不對稱環境下，擁有私有資訊之參與者發出訊號、接收者依據訊號推斷其類型並採取行動的動態賽局模型。",
+    "forbidden": [],
+    "level": 1
+  },
+  "InertClause": {
+    "zh": "惰性條文",
+    "en": [
+      "Inert Clause"
+    ],
+    "description": "缺乏客觀檢查手段、從未產生可觀測違反紀錄但仍存在於規範手冊中的強制性文字要求。",
+    "forbidden": [],
+    "level": 1
+  },
+  "GovernanceDiagnostics": {
+    "zh": "治理診斷",
+    "en": [
+      "Governance Diagnostics"
+    ],
+    "description": "檢驗組織規範、制度條款與執行機制之間的落差與失真，並定位機制缺口位置的分析方法。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TypeMisidentification": {
+    "zh": "型別誤認",
+    "en": [
+      "Type Misidentification"
+    ],
+    "description": "指將生成模型產出之流暢候選句，誤認為已具備適用範圍、反例、真值來源與處置規範的工程主張。",
+    "forbidden": [],
+    "level": 1
+  },
+  "EngineeringContainment": {
+    "zh": "工程圍籬",
+    "en": [
+      "Engineering Containment"
+    ],
+    "description": "藉由能力邊界、升格邊界、風險預算與撤銷機制，將機率輸出工具之潛在故障截斷在可承受範圍內的控制架構。",
+    "forbidden": [],
+    "level": 1
+  },
+  "RiskBoundary": {
+    "zh": "風險邊界",
+    "en": [
+      "Risk Boundary"
+    ],
+    "description": "限制自動化或生成系統單次執行失敗時之最大影響半徑與損失上限的硬性防線。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProvenanceBoundary": {
+    "zh": "來源邊界",
+    "en": [
+      "Provenance Boundary"
+    ],
+    "description": "將建議產生者與動作執行者的責任主體進行物理分立，確保系統可追溯與不可否認性的安全邊界。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DiverseSourceVerification": {
+    "zh": "異源驗證",
+    "en": [
+      "Diverse-Source Verification"
+    ],
+    "description": "透過引入具備不同失敗模式之獨立觀察源或外部客觀事實，打破同源模型相互驗證盲區的驗證方法。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ResidualIntent": {
+    "zh": "剩餘意圖",
+    "en": [
+      "Residual Intent"
+    ],
+    "description": "指規格未能承載、尚未承載或不應預先封死的決策空間，包含未知情境、價值衝突與現場例外裁量。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SelfConsistentFailure": {
+    "zh": "自洽失敗",
+    "en": [
+      "Self-Consistent Failure"
+    ],
+    "description": "指多個驗證節點或模型因共用相同假設或生成脈絡，產出彼此吻合卻共同偏離外部真實世界的失誤模式。",
+    "forbidden": [],
+    "level": 1
+  },
+  "EscalationBoundary": {
+    "zh": "升格邊界",
+    "en": [
+      "Escalation Boundary"
+    ],
+    "description": "在工程控制中，規範需要何種獨立證據與具名授權角色，方可將機率候選轉換為可執行憑證的結構門檻。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RevocationBoundary": {
+    "zh": "撤銷邊界",
+    "en": [
+      "Revocation Boundary"
+    ],
+    "description": "定義授權憑證的自動過期、手動收回與異常條件下立即中斷執行的撤銷機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ClaimTyping": {
+    "zh": "主張型別",
+    "en": [
+      "Claim Typing"
+    ],
+    "description": "將規格與工程文件中的自然語言陳述依語意與責任邊界劃分為觀察、意圖、假說、規範、決策與完成等範疇的型別系統，要求各範疇提供獨立的來源、反駁條件與授權主體，防止未經證驗的假設被自動升格為事實。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SpecificationCollapse": {
+    "zh": "規格坍縮",
+    "en": [
+      "Specification Collapse"
+    ],
+    "description": "指提案、規格、設計與工作清單等各層文件形式上各自獨立，但其認識論角色均源自同一個未經外部檢驗的假設或誤解，導致內部一致性掩蓋外部無效性的系統性失效現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ClaimPromotion": {
+    "zh": "主張升格",
+    "en": [
+      "Claim Promotion"
+    ],
+    "description": "在指定的適用範圍、證據強度與有效期限下，允許某個陳述或技術決定暫時驅動系統行為的狀態轉移機制；若執行觀測與預期不符，系統必須具備明確的撤銷或修訂路徑。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ClosedLoopVerification": {
+    "zh": "封閉驗證",
+    "en": [
+      "Closed-Loop Verification"
+    ],
+    "description": "驗證套件與被驗證系統共用相同的世界模型或錯誤前提，僅能證明實作與內部文件高度自洽，而無法提供能反駁前提的外部有效性資訊的迴圈驗證結構。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ChangeLedger": {
+    "zh": "變更帳本",
+    "en": [
+      "Change Ledger"
+    ],
+    "description": "將變更規格視為承諾與責任的審計記錄器，負責保存提案、差量、證據鏈、授權範圍與撤銷條件，而非將文件自身視為能無中生有創造正當性的真理來源。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Irreversibility": {
+    "zh": "不可逆性",
+    "en": [
+      "Irreversibility"
+    ],
+    "description": "評估系統變更或主張升格風險的核心維度，指狀態改變或操作執行後無法透過反向操作完全復原的程度，決定了准入閘門所需的最小外部證據與授權層級。",
+    "forbidden": [],
+    "level": 1
+  },
+  "HeterogeneousEvidence": {
+    "zh": "異源證據",
+    "en": [
+      "Heterogeneous Evidence"
+    ],
+    "description": "來自與待驗系統及其規格生成過程相互獨立的真實觀測、政策約束或外部裁決來源，能打破封閉迴圈並提供具備反駁能力的新資訊。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Defeater": {
+    "zh": "反駁條件",
+    "en": [
+      "Defeater"
+    ],
+    "description": "在主張契約中明確定義的證偽觀測或環境條件，一旦在系統執行或審計中被觸發，即強制宣告該主張失效並啟動修訂或撤銷程序。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AgencyTheory": {
+    "zh": "代理理論",
+    "en": [
+      "Agency Theory"
+    ],
+    "description": "以委託人與代理人間的利益衝突為核心，解釋經理人誘因如何偏離組織長期存續。",
+    "forbidden": [],
+    "level": 1
+  },
+  "StockOptions": {
+    "zh": "股票期權",
+    "en": [
+      "Stock Options"
+    ],
+    "description": "將經理人薪酬與股價綁定的激勵工具；當歸屬週期短於系統崩潰潛伏期時，會打開跨期套現空間。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Contestability": {
+    "zh": "可抗辯性",
+    "en": [
+      "Contestability"
+    ],
+    "description": "一項指控或評級取得拘束力前，受影響相對人必須能夠提出反證的制度條件。",
+    "forbidden": [],
+    "level": 1
+  },
+  "OrganizationalSilence": {
+    "zh": "組織沉默",
+    "en": [
+      "Organizational Silence"
+    ],
+    "description": "第一線知情無法轉化為系統修正時，由制度性恐懼所維繫的發聲停滯。",
+    "forbidden": [],
+    "level": 1
+  },
+  "StateOfException": {
+    "zh": "例外狀態",
+    "en": [
+      "State Of Exception"
+    ],
+    "description": "主權者中止常態規範的決斷時刻；在組織內用來架空架構審查與合規煞車。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DunningKrugerEffect": {
+    "zh": "達克效應",
+    "en": [
+      "Dunning-Kruger Effect"
+    ],
+    "description": "對複雜現實不知其不知、同時對粗糙模型過度自信的雙重認知盲區。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AdverseSelection": {
+    "zh": "逆向選擇",
+    "en": [
+      "Adverse Selection"
+    ],
+    "description": "資訊優勢方把瑕疵標的賣給定價失靈的買方，使資產組合系統性惡化。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AdversarialPrinciple": {
+    "zh": "對席辯論",
+    "en": [
+      "Adversarial Principle"
+    ],
+    "description": "訴訟或組織程序中雙方得對等提出證據與質疑的辯論結構。",
+    "forbidden": [],
+    "level": 2
+  },
+  "WorkerVoice": {
+    "zh": "獨立發聲",
+    "en": [
+      "Worker Voice"
+    ],
+    "description": "第一線人員經由免於報復的獨立通道向上傳遞負面真實的發聲機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "BayesianInference": {
+    "zh": "貝氏推論",
+    "en": [
+      "Bayesian Inference"
+    ],
+    "description": "以條件機率更新信念的推論框架；此處用來說明舉證似然比如何被制度扭曲。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TestimonialInjustice": {
+    "zh": "證言不公",
+    "en": [
+      "Testimonial Injustice"
+    ],
+    "description": "說話者因制度偏見而被系統性降低信用權重的認識論傷害。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Cybernetics": {
+    "zh": "控制理論",
+    "en": [
+      "Cybernetics"
+    ],
+    "description": "以反饋、阻抗與穩定性描述控制系統行為的理論。",
+    "forbidden": [],
+    "level": 2
+  },
+  "FeedbackImpedance": {
+    "zh": "反饋阻抗",
+    "en": [
+      "Feedback Impedance"
+    ],
+    "description": "吸收噪聲、約束極端輸出的審查阻力；被切除後系統易進入共振。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GrossNegligence": {
+    "zh": "重大過失",
+    "en": [
+      "Gross Negligence"
+    ],
+    "description": "盲目切除防護機制、將資本無阻尼交付未驗證黑箱，不受商業判斷法則庇護的過失。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PonziFinancing": {
+    "zh": "龐氏融資",
+    "en": [
+      "Ponzi Financing"
+    ],
+    "description": "營運現金流不足以支付利息，存續完全依賴資產價格上漲或外部信貸。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RoundTripping": {
+    "zh": "迴圈交易",
+    "en": [
+      "Round-Tripping"
+    ],
+    "description": "同一筆資本在關聯實體間來回認列、製造虛增營收的交易結構。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProofOfConcept": {
+    "zh": "概念驗證",
+    "en": [
+      "Proof Of Concept"
+    ],
+    "description": "在規模化採購前驗證技術可行性與邊界條件的試驗。",
+    "forbidden": [],
+    "level": 2
+  },
+  "GhostSeats": {
+    "zh": "幽靈座位",
+    "en": [
+      "Ghost Seats"
+    ],
+    "description": "已付費但基層停用、只存在於授權看板的帳號。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DutyOfCare": {
+    "zh": "注意義務",
+    "en": [
+      "Duty Of Care"
+    ],
+    "description": "受託人須以合理謹慎作成知情決策的義務。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DutyOfLoyalty": {
+    "zh": "忠實義務",
+    "en": [
+      "Duty Of Loyalty"
+    ],
+    "description": "受託人不得將個人利益置於公司利益之上的義務。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Slack": {
+    "zh": "糾錯緩衝",
+    "en": [
+      "Slack"
+    ],
+    "description": "用以吸收極端風險的安全冗餘與隱性工藝存量。",
+    "forbidden": [],
+    "level": 2
+  },
+  "LimitedLiability": {
+    "zh": "有限責任",
+    "en": [
+      "Limited Liability"
+    ],
+    "description": "將個人賠償上限隔離於企業破產損失之外的法人制度。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DebuggingReflex": {
+    "zh": "調試反射",
+    "en": [
+      "Debugging Reflex"
+    ],
+    "description": "長期直面編譯失敗與物理異常所形成的身體化本能，能在噪聲中穿透抽象屏障並定位底層因果。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TacitKnowledge": {
+    "zh": "默會知識",
+    "en": [
+      "Tacit Knowledge"
+    ],
+    "description": "無法完全言傳、只能在學徒制實踐與痛感反饋中內化的工程判斷。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CognitiveAtrophy": {
+    "zh": "認知萎縮",
+    "en": [
+      "Cognitive Atrophy"
+    ],
+    "description": "因代理黑箱隔離而失去高低層因果連通，心智對底層機制的掌握力全面衰退。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SynapticPruning": {
+    "zh": "突觸修剪",
+    "en": [
+      "Synaptic Pruning"
+    ],
+    "description": "長期缺乏電訊號刺激後，連通高低維度的因果邊被剪除，知識圖譜退化為孤立點。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ScalarMetrics": {
+    "zh": "純量指標",
+    "en": [
+      "Scalar Metrics"
+    ],
+    "description": "將無限維社會脈絡強制投影到一維可排序實數，以便科層機器消化的度量形式。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CommonModeFailure": {
+    "zh": "共模故障",
+    "en": [
+      "Common-Mode Failure"
+    ],
+    "description": "看似隔離的節點共用同一控制平面或軟體堆疊，因而同時休克的故障模式。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ThunderingHerd": {
+    "zh": "驚群效應",
+    "en": [
+      "Thundering Herd"
+    ],
+    "description": "自動擴展在局部抖動時同步搶資源，把暫態故障擴散為跨地域雪崩。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ModelCollapse": {
+    "zh": "模型坍塌",
+    "en": [
+      "Model Collapse"
+    ],
+    "description": "遞歸訓練合成數據導致長尾滅絕、方差發散，分佈不可逆退化為奇異點或噪聲。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SyntheticData": {
+    "zh": "合成數據",
+    "en": [
+      "Synthetic Data"
+    ],
+    "description": "由模型推論產生、用以替代真實物理經驗的訓練或程式碼產物。",
+    "forbidden": [],
+    "level": 1
+  },
+  "OrganizationalAutophagy": {
+    "zh": "組織自噬",
+    "en": [
+      "Organizational Autophagy"
+    ],
+    "description": "企業以機器生成物自我投餵並裁撤人類專家，從而消耗自身認識論根基。",
+    "forbidden": [],
+    "level": 1
+  },
+  "HallucinatedDependencies": {
+    "zh": "幻覺依賴",
+    "en": [
+      "Hallucinated Dependencies"
+    ],
+    "description": "模型自信呼叫不存在的套件名稱，為幽靈包搶註與供應鏈投毒打開入口。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ScalingLaws": {
+    "zh": "擴展法則",
+    "en": [
+      "Scaling Laws"
+    ],
+    "description": "以資料、參數與算力同步放大來換取能力的經驗規律；並不能免除真實負熵耗盡。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PlausibleLookingText": {
+    "zh": "似真文本",
+    "en": [
+      "Plausible-Looking Text"
+    ],
+    "description": "條件機率生成、表面合法卻未經因果證偽的合成文字或程式碼。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PhantomSafeguards": {
+    "zh": "假性防護",
+    "en": [
+      "Phantom Safeguards"
+    ],
+    "description": "看似嚴密、實則可被繞過或自身成為攻擊面的校驗與防護程式。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CognitiveLadder": {
+    "zh": "認知階梯",
+    "en": [
+      "Cognitive Ladder"
+    ],
+    "description": "從低階除錯到高階架構決斷的學徒傳承結構，底層梯級被抽空即無法養成大師。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Monoculture": {
+    "zh": "單一栽培",
+    "en": [
+      "Monoculture"
+    ],
+    "description": "程式碼風格、依賴與軟體堆疊趨同後，抗病力與多樣性同時枯竭的生態狀態。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AdversarialPairDebugging": {
+    "zh": "結對除錯",
+    "en": [
+      "Adversarial Pair Debugging"
+    ],
+    "description": "資深與學徒現場共查故障，把即時思維鏈當作默會知識傳承儀式。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DimensionalityReductionProjection": {
+    "zh": "降維映射",
+    "en": [
+      "Dimensionality Reduction Projection"
+    ],
+    "description": "把無限維生活流形投影到一維分數，造成不可逆資訊熵損失的官僚操作。",
+    "forbidden": [],
+    "level": 1
+  },
+  "BullwhipEffect": {
+    "zh": "牛鞭效應",
+    "en": [
+      "Bullwhip Effect"
+    ],
+    "description": "下游微小波動沿供應鏈逐級放大；在零時延自動化下相變為超音速共振。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ModalCompletion": {
+    "zh": "眾數補全",
+    "en": [
+      "Modal Completion"
+    ],
+    "description": "補全引擎在未指定的規格空缺處，填入訓練語料條件分佈中頻率最高（眾數）形狀的行為模式；它與薄意圖在形式上互不相關，因此不對齊是結構性的。",
+    "forbidden": [],
+    "level": 1
+  },
+  "VariationTest": {
+    "zh": "變異測試",
+    "en": [
+      "Variation Test"
+    ],
+    "description": "判定行為擁有權歸屬的操作程序：列出兩個以上真實消費者，逐項詢問各消費者對該行為的取值，再檢查不同取值是否破壞核心的不變式。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ActionSet": {
+    "zh": "動作集合",
+    "en": [
+      "Action Set"
+    ],
+    "description": "一項行為可能採取之動作的集合。動作集合無上界的行為沒有正確的預設值，修法是從核心移除該行為本身，而非把它移給別人。",
+    "forbidden": [],
+    "level": 1
+  },
+  "LocalCoherence": {
+    "zh": "局部自洽",
+    "en": [
+      "Local Coherence"
+    ],
+    "description": "在一組假設、一個目標與一條邊界之內，一個決定可以被推出的性質；它是條件性的，不等於局部正確，更不等於整體有效。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ConvenienceGradient": {
+    "zh": "方便梯度",
+    "en": [
+      "Convenience Gradient"
+    ],
+    "description": "一連串各自局部合理的省事步驟累積成的方向，每一步都省掉機器不好處理的活動，最終使人的活動被收進工具的輸入輸出邊界。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CognitiveThickness": {
+    "zh": "認知厚度",
+    "en": [
+      "Cognitive Thickness"
+    ],
+    "description": "形成不全由當前提案生成之獨立判斷所需的認知儲備，包括問題定義、語義整合與反例搜尋的可用程度。",
+    "forbidden": [],
+    "level": 1
+  },
+  "LivenessSignal": {
+    "zh": "活性訊號",
+    "en": [
+      "Liveness Signal"
+    ],
+    "description": "只證明某個參與者仍在回應的訊號；為真時只表示等待被滿足，不表示等待期間發生過判斷。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ConsequenceTest": {
+    "zh": "後果測試",
+    "en": [
+      "Consequence Test"
+    ],
+    "description": "檢查一個局部所做的合理決策，其主要後果是否也由該局部承受的判準；未通過時，局部評價為正只證明成本已移出其評價函數。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CoChangeCriterion": {
+    "zh": "共變判準",
+    "en": [
+      "Co-Change Criterion"
+    ],
+    "description": "依概念是否因同一類變化而一起修改來劃定邊界的判準，用來決定哪些概念應留在同一個局部。",
+    "forbidden": [],
+    "level": 1
+  },
+  "EvaluationFunction": {
+    "zh": "評價函數",
+    "en": [
+      "Evaluation Function"
+    ],
+    "description": "局部或整體用來判定一個決策是否可接受的函數；其定義域決定哪些後果會被計入，哪些會被排除在外。",
+    "forbidden": [],
+    "level": 1
+  },
+  "GlobalReview": {
+    "zh": "全局審視",
+    "en": [
+      "Global Review"
+    ],
+    "description": "針對整體而非單一局部所做的評價；若其材料仍只是各局部通過紀錄的彙總，它與局部通過是同一種通過。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ImpactScope": {
+    "zh": "波及範圍",
+    "en": [
+      "Impact Scope"
+    ],
+    "description": "一個節點變更或失效時實際波及下游的範圍。它由整棵相依樹決定，而非單層相依清單；資料流圖的箭頭數不包含這項資訊。",
+    "forbidden": [],
+    "level": 1
+  },
+  "HumanReview": {
+    "zh": "人工覆核",
+    "en": [
+      "Human Review"
+    ],
+    "description": "在自動化流程中保留人類確認環節；其有效性取決於該人是否仍具備判讀能力、權限與時間。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PsychologicalSafety": {
+    "zh": "心理安全",
+    "en": [
+      "Psychological Safety"
+    ],
+    "description": "團隊成員相信承擔人際風險、提出異議或回報錯誤不會遭羞辱的共同預期。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Challenger": {
+    "zh": "挑戰者號",
+    "en": [
+      "Challenger"
+    ],
+    "description": "1986 年發射失事的太空梭；其調查紀錄用於檢視豁免、摘要與資訊回報的失效。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ClimateOfSilence": {
+    "zh": "沉默氛圍",
+    "en": [
+      "Climate of Silence"
+    ],
+    "description": "組織成員共享的信念：談論問題徒勞無功，或可能帶來負面後果。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProxyMetric": {
+    "zh": "代理指標",
+    "en": [
+      "Proxy Metric"
+    ],
+    "description": "用可觀察的量或摘要代替無法直接觀察的真實狀態，可能在被用於控制後與狀態脫鉤。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ProceduralJustice": {
+    "zh": "程序正義",
+    "en": [
+      "Procedural Justice"
+    ],
+    "description": "決策程序納入意見、保持一致且可修正，使提出異議的人相信意見會受到公平處理。",
+    "forbidden": [],
+    "level": 1
+  },
+  "InteractionalJustice": {
+    "zh": "互動正義",
+    "en": [
+      "Interactional Justice"
+    ],
+    "description": "執行決策時以尊重對待當事人，並提供充分的資訊與解釋。",
+    "forbidden": [],
+    "level": 1
+  },
+  "InformationCompression": {
+    "zh": "資訊壓縮",
+    "en": [
+      "Information Compression"
+    ],
+    "description": "跨層級傳遞或建立指標時，將現場高維度的脈絡、判斷與預測消減為低維度摘要或數據的過程。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Artifact": {
+    "zh": "規格產物",
+    "en": [
+      "Artifact"
+    ],
+    "description": "在規格工作流中用於承載、版本化並傳遞主張的結構化文件或紀錄容器。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DesignDecision": {
+    "zh": "設計決定",
+    "en": [
+      "Design Decision"
+    ],
+    "description": "在技術限制與方案取捨下經負責者審查並接受的具體架構或實作選擇。",
+    "forbidden": [],
+    "level": 2
+  },
+  "CompletionClaim": {
+    "zh": "完成主張",
+    "en": [
+      "Completion Claim"
+    ],
+    "description": "宣告特定任務或工作已滿足相稱證據、測試、部署與執行觀察的終態陳述。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Authentication": {
+    "zh": "身分驗證",
+    "en": [
+      "Authentication"
+    ],
+    "description": "核實操作者、代理人或系統元件所宣告身分真實性的安全控制機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Authorization": {
+    "zh": "存取授權",
+    "en": [
+      "Authorization"
+    ],
+    "description": "根據有效政策與已核實身分，判定其對特定資源或操作之許可權限的邊界控制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Provenance": {
+    "zh": "來源追蹤",
+    "en": [
+      "Provenance"
+    ],
+    "description": "記錄實體、主張、版本與責任主體的演化歷史與依賴鏈條的稽核軌跡。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Oracle": {
+    "zh": "測試判準",
+    "en": [
+      "Oracle"
+    ],
+    "description": "在軟體測試中用於獨立判定受測系統執行結果是否正確的依據或機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Observed": {
+    "zh": "觀察狀態",
+    "en": [
+      "Observed"
+    ],
+    "description": "系統在目標環境中已被實際觀測到的執行數據或行為狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Canonical": {
+    "zh": "主要紀錄",
+    "en": [
+      "Canonical"
+    ],
+    "description": "在多重複本或視圖中作為單一真理來源（SSOT）的正式權威紀錄。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Normative": {
+    "zh": "規範狀態",
+    "en": [
+      "Normative"
+    ],
+    "description": "具備強制約束力、作為合規或查核依據之規格內容的法律性狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Authorized": {
+    "zh": "授權狀態",
+    "en": [
+      "Authorized"
+    ],
+    "description": "經具權角色核准並在有效範圍與期限內允許驅動行動的許可狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RoundTrip": {
+    "zh": "往返轉換",
+    "en": [
+      "Round-Trip"
+    ],
+    "description": "資料在不同表示模型或序列化格式之間互相轉換且不遺失關鍵語義的雙向映射能力。",
+    "forbidden": [],
+    "level": 2
+  },
+  "FeatureFlag": {
+    "zh": "功能旗標",
+    "en": [
+      "Feature Flag"
+    ],
+    "description": "在不重新部署程式碼的前提下動態控制系統功能開啟或關閉的執行期開關。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Clawback": {
+    "zh": "追回條款",
+    "en": [
+      "Clawback"
+    ],
+    "description": "薪酬契約或法規中的條款，規定在事後發現財務重編、重大過失或系統性風險造成損害時，組織有權追回先前發放給高階經理人之績效獎金或股權。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DistortionBudget": {
+    "zh": "失真預算",
+    "en": [
+      "Distortion Budget"
+    ],
+    "description": "文字介質在承載與重建人類判斷時所能容忍的累積損耗上限；超過負荷拐點後，增加規則僅會擴大解釋空間與優先序衝突，無法提升系統可靠性。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RefusalCompetence": {
+    "zh": "拒絕能力",
+    "en": [
+      "Refusal Competence"
+    ],
+    "description": "專業人員基於成本結構與系統風險，辨識何時應停止使用 AI、切換為人工實作、縮小任務範圍或要求證據的心智裁決能力。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Requirements": {
+    "zh": "需求層",
+    "en": [
+      "Requirements"
+    ],
+    "description": "規格文件中用以定義系統「應該做什麼」的行為契約與設計意圖層。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ReCrystallization": {
+    "zh": "重結晶",
+    "en": [
+      "Re-Crystallization"
+    ],
+    "description": "使用既有報告作為素材生成新的獨立報告的過程",
+    "forbidden": [],
+    "level": 2
+  },
+  "HandoffPoints": {
+    "zh": "銜接點",
+    "en": [
+      "Handoff Points"
+    ],
+    "description": "確保一份報告的結論自然連接到下一份報告起始條件的銜接點",
+    "forbidden": [],
+    "level": 2
+  },
+  "Automation": {
+    "zh": "自動化",
+    "en": [
+      "Automation"
+    ],
+    "description": "利用指令碼或工具替代人工執行重複性工程任務的過程。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Orthogonality": {
+    "zh": "正交性",
+    "en": [
+      "Orthogonality"
+    ],
+    "description": "兩個設計維度或系統特質之間互不干涉、獨立運作的結構關係。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Descriptive": {
+    "zh": "描述性",
+    "en": [
+      "Descriptive"
+    ],
+    "description": "用於記錄系統「實際如何運作」的知識屬性，代表逆向工程的客觀觀察事實，不具備強制的行為契約效力。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Prescriptive": {
+    "zh": "規範性",
+    "en": [
+      "Prescriptive"
+    ],
+    "description": "用於定義系統「應該如何運作」的契約屬性，代表團隊經過審查的設計意圖，對後續開發與測試具備絕對約束力。",
+    "forbidden": [],
+    "level": 3
+  },
+  "DependencyGraph": {
+    "zh": "依賴圖",
+    "en": [
+      "Dependency Graph"
+    ],
+    "description": "追溯各項治理規則與機制之建立緣由所構成的依賴網路，用以評估該機制的存續價值與拆除時機。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Untracked": {
+    "zh": "未追蹤",
+    "en": [
+      "Untracked"
+    ],
+    "description": "版本控制系統中尚未被納入追蹤管理的新檔案狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Staged": {
+    "zh": "已暫存",
+    "en": [
+      "Staged"
+    ],
+    "description": "版本控制系統中已被標記為準備提交的修改檔案狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ConversationContext": {
+    "zh": "對話層",
+    "en": [
+      "Conversation Context"
+    ],
+    "description": "對話上下文在三層知識模型中所處的即時、短暫的資訊暫存層。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Visibility": {
+    "zh": "可見性",
+    "en": [
+      "Visibility"
+    ],
+    "description": "知識在開發團隊或 AI 代理人之間的公開與可存取程度。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RepoCommitted": {
+    "zh": "倉庫層",
+    "en": [
+      "Repo-Committed"
+    ],
+    "description": "提交至版本控制系統之專案倉庫的耐久知識，如程式碼、規格與規則。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TechnicalDebt": {
+    "zh": "技術債",
+    "en": [
+      "Technical Debt"
+    ],
+    "description": "程式碼中為求快速交付而妥協、待重構與修復的設計或品質缺陷。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SpecDebt": {
+    "zh": "規格債",
+    "en": [
+      "Spec Debt"
+    ],
+    "description": "系統中已實作但尚未被明確規格文件定義或記錄的行為所累積的驗證風險。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ArchitectureLayer": {
+    "zh": "架構層",
+    "en": [
+      "Architecture Layer"
+    ],
+    "description": "規格文件中用以客觀記錄系統「實際在做什麼」的事實陳述層。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PerDomain": {
+    "zh": "逐領域",
+    "en": [
+      "Per-Domain"
+    ],
+    "description": "以特定業務或技術領域為單位進行治理或轉換，而非一刀切的全域做法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TrackB": {
+    "zh": "觀察期",
+    "en": [
+      "Track B"
+    ],
+    "description": "當發現新欄位或規格衝突時，採取默默記錄債務並寫入觀察性綱要的非阻斷式軌道。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Repository": {
+    "zh": "資源庫",
+    "en": [
+      "Repository"
+    ],
+    "description": "存放專案原始碼、版本歷史紀錄與配置文件的中心儲存庫。",
+    "forbidden": [],
+    "level": 2
+  },
+  "WorkspaceBoundary": {
+    "zh": "硬邊界",
+    "en": [
+      "Workspace Boundary"
+    ],
+    "description": "在專案或系統治理中，用於約束 AI Agent 操作權限或限制其可訪問目錄的強制性範圍界限。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Camelcase": {
+    "zh": "小駝峰",
+    "en": [
+      "Camelcase"
+    ],
+    "description": "一種變數或標識符的命名風格，首個單字小寫，後續單字首字母大寫（如 camelCase）。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ExtensionPoint": {
+    "zh": "擴充點",
+    "en": [
+      "Extension Point"
+    ],
+    "description": "系統架構中預留供新增變體或功能的結構化介面，通常為收斂性任務的承載體。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MultiAgent": {
+    "zh": "多代理",
+    "en": [
+      "Multi-Agent"
+    ],
+    "description": "多個智慧代理程式協同運作，共同完成複雜任務的系統架構。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Workflow": {
+    "zh": "工作流",
+    "en": [
+      "Workflow"
+    ],
+    "description": "定義系統中各項任務執行順序、資料流向與角色職責的結構化流程規範。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Deterministic": {
+    "zh": "決定性",
+    "en": [
+      "Deterministic"
+    ],
+    "description": "保證在相同的輸入與控制下，自動化管線每次執行所產出的文件結構與內容完全收斂一致的特性。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Presentation": {
+    "zh": "呈現層",
+    "en": [
+      "Presentation"
+    ],
+    "description": "系統架構中負責將資料以特定排版或視覺格式（如 Markdown 樣式）展示給使用者觀看的層級。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ArchitecturalEntropy": {
+    "zh": "架構熵",
+    "en": [
+      "Architectural Entropy"
+    ],
+    "description": "隨著系統功能增加與重複修改，軟體架構逐漸走向無序、混亂且認知成本增加的狀態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SearchEntropy": {
+    "zh": "搜尋熵",
+    "en": [
+      "Search Entropy"
+    ],
+    "description": "AI Agent 或開發者在不確定或散亂的程式碼庫中搜尋定位特定邏輯或行為時面臨的無序度。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Imperative": {
+    "zh": "命令式",
+    "en": [
+      "Imperative"
+    ],
+    "description": "一種編程或治理正規，強調明確指定執行步驟與控制流來達到目標。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Declarative": {
+    "zh": "宣告式",
+    "en": [
+      "Declarative"
+    ],
+    "description": "一種編程或治理正規，僅描述預期達成的狀態或目標，將具體執行與自癒細節委派給底層實體或系統。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Attribution": {
+    "zh": "歸屬感",
+    "en": [
+      "Attribution"
+    ],
+    "description": "在多代理管線中，確立資料、規約與腳本等資源隸屬於特定消費者或元件的防禦性設計關係。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Stateless": {
+    "zh": "無狀態",
+    "en": [
+      "Stateless"
+    ],
+    "description": "不依賴任何中介追蹤檔、任務完成與否完全由輸出目錄的實體檔案決定的設計，帶來冪等性與韌性。",
+    "forbidden": [],
+    "level": 2
+  },
+  "NoOp": {
+    "zh": "無變更",
+    "en": [
+      "No-Op"
+    ],
+    "description": "重新推導套用在已同步產物上時不產生任何實際改動的結果；但帶孤兒的不動點同樣無變更，故無變更不等於正確。",
+    "forbidden": [],
+    "level": 2
+  },
+  "PolyEtymology": {
+    "zh": "多語源",
+    "en": [
+      "Poly-Etymology"
+    ],
+    "description": "在產品家族命名中刻意使用不同的語源系統，以打破「同一世界觀」的錯覺，維持各產品的獨立辨識度。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Ownership": {
+    "zh": "擁有權",
+    "en": [
+      "Ownership"
+    ],
+    "description": "系統元件對資料、狀態或生命週期的絕對控制權。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ThinProduct": {
+    "zh": "薄產品",
+    "en": [
+      "Thin Product"
+    ],
+    "description": "對某件事保有權威、但刻意不擁有周邊職責的克制型核心。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Anthropomorphism": {
+    "zh": "擬人化",
+    "en": [
+      "Anthropomorphism"
+    ],
+    "description": "以人的意圖、知識或意志描述系統行為的傾向，不必然預設使用者相信系統具有人格。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Reflexivity": {
+    "zh": "反身性",
+    "en": [
+      "Reflexivity"
+    ],
+    "description": "描述未來的敘事改變參與者行動，行動再改變被描述的現實，形成互相決定的迴圈。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Autoregressive": {
+    "zh": "自回歸",
+    "en": [
+      "Autoregressive"
+    ],
+    "description": "逐步以先前輸出作為後續輸入條件的生成方式，使完成時間與輸出長度相關。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ConditionNumber": {
+    "zh": "條件數",
+    "en": [
+      "Condition Number"
+    ],
+    "description": "損失曲面各方向曲率的比值，決定固定學習率下梯度下降的收斂速度。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ReceptiveField": {
+    "zh": "感受野",
+    "en": [
+      "Receptive Field"
+    ],
+    "description": "輸出單元實際可見的輸入區域範圍，隨層數與步幅累積擴張。",
+    "forbidden": [],
+    "level": 1
+  },
+  "MutualInformation": {
+    "zh": "互資訊",
+    "en": [
+      "Mutual Information"
+    ],
+    "description": "兩個隨機變數之間共享的資訊量，用來量化潛在變數是否攜帶輸入資訊。",
+    "forbidden": [],
+    "level": 1
+  },
+  "SpuriousCorrelation": {
+    "zh": "偽相關",
+    "en": [
+      "Spurious Correlation"
+    ],
+    "description": "在訓練分佈中與標籤同時出現、但不具因果支撐的統計關聯。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Optimization": {
+    "zh": "最佳化",
+    "en": [
+      "Optimization"
+    ],
+    "description": "在給定約束下調整參數或結構，以改善某個目標量測值的過程。",
+    "forbidden": [
+      "優化"
+    ],
+    "level": 3
+  },
+  "Code": {
+    "zh": "程式碼",
+    "en": [
+      "Code"
+    ],
+    "description": "以程式語言撰寫、可被編譯或直譯執行的文字。",
+    "forbidden": [
+      "代碼"
+    ],
+    "level": 3
+  },
+  "ZeroPadding": {
+    "zh": "零填充",
+    "en": [
+      "Zero Padding"
+    ],
+    "description": "在輸入邊界補零以維持空間尺寸的作法，會在邊界引入原訊號不存在的內容而破壞等變前提。",
+    "forbidden": [],
+    "level": 2
+  },
+  "SoftLabels": {
+    "zh": "軟標籤",
+    "en": [
+      "Soft Labels"
+    ],
+    "description": "教師模型輸出的完整機率分佈，知識蒸餾以它取代單一硬標籤來傳遞類別之間的相對關係。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Support": {
+    "zh": "支援集",
+    "en": [
+      "Support"
+    ],
+    "description": "機率分佈中密度非零的區域，是判定生成樣本是否落在真實流形上的依據。",
+    "forbidden": [],
+    "level": 2
+  },
+  "FlipRate": {
+    "zh": "翻轉率",
+    "en": [
+      "Flip Rate"
+    ],
+    "description": "兩個模型版本之間逐樣本預測改變的比例，用來捕捉平均值所掩蓋的個案不穩定。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Invariant": {
+    "zh": "不變式",
+    "en": [
+      "Invariant"
+    ],
+    "description": "系統在任何合法狀態下都必須成立的斷言，是把評估規則寫成可執行檢查的基本單位。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ComputationalGraph": {
+    "zh": "計算圖",
+    "en": [
+      "Computational Graph"
+    ],
+    "description": "把前向運算展開成節點與邊的表示，反向傳播沿其反向鏈式求導。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Subgroup": {
+    "zh": "子群體",
+    "en": [
+      "Subgroup"
+    ],
+    "description": "依特徵切片劃分出的樣本子集合，是檢驗聚合讀數是否掩蓋局部失效的最小觀測單位。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Counterfactual": {
+    "zh": "反事實",
+    "en": [
+      "Counterfactual"
+    ],
+    "description": "在未實際發生的處置下本應出現的結果，是因果宣稱的基準，也是觀測資料中永遠缺失的那一半。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Microarchitecture": {
+    "zh": "微架構",
+    "en": [
+      "Microarchitecture"
+    ],
+    "description": "處理器實作層級的組織方式（如批次排程、向量指令與浮點累加順序），是位元級結果差異的常見來源。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Prevalence": {
+    "zh": "盛行率",
+    "en": [
+      "Prevalence"
+    ],
+    "description": "母體中實際為陽性的比例，決定同一模型在不同場域的陽性預測值。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Friction": {
+    "zh": "摩擦力",
+    "en": [
+      "Friction"
+    ],
+    "description": "流程中的阻力或成本；在約束系統中也可能是失敗點正在生效的可感知表現。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Externality": {
+    "zh": "外部性",
+    "en": [
+      "Externality"
+    ],
+    "description": "行動成本或效益由交易之外的其他人或團隊承擔的經濟現象。",
+    "forbidden": [],
+    "level": 1
+  },
+  "FailurePoint": {
+    "zh": "失敗點",
+    "en": [
+      "Failure Point"
+    ],
+    "description": "能在產物偏離約束時產生拒絕、錯誤或負回饋的具體檢查位置。",
+    "forbidden": [],
+    "level": 1
+  },
+  "NegativeFeedback": {
+    "zh": "負回饋",
+    "en": [
+      "Negative Feedback"
+    ],
+    "description": "系統偏離目標時產生反向修正壓力，使行為能夠收斂的回饋機制。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Nonstationarity": {
+    "zh": "非定常",
+    "en": [
+      "Nonstationarity"
+    ],
+    "description": "資料分布、介入方式或系統性質隨時間改變，使不同時點結果不可直接視為同一母體的狀態。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ViolationSet": {
+    "zh": "違規集",
+    "en": [
+      "Violation Set"
+    ],
+    "description": "在產物空間中不滿足規格語意所界定之合法集合的非法產物補集。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Soundness": {
+    "zh": "健全性",
+    "en": [
+      "Soundness"
+    ],
+    "description": "拒絕算子絕不誤判合法產物的性質，即算子之拒絕集必為違規集之子集。",
+    "forbidden": [],
+    "level": 1
+  },
+  "LikelihoodRatio": {
+    "zh": "似然比",
+    "en": [
+      "Likelihood Ratio"
+    ],
+    "description": "在特定假設成立與不成立下觀測到同一徵候的條件機率之比，決定貝氏後驗更新的幅度。",
+    "forbidden": [],
+    "level": 1
+  },
+  "QueueingTheory": {
+    "zh": "排隊論",
+    "en": [
+      "Queueing Theory"
+    ],
+    "description": "研究服務系統中等待佇列形成、延遲分佈與擁塞動力學的應用數學分支。",
+    "forbidden": [],
+    "level": 1
+  },
+  "WorkInProgress": {
+    "zh": "在製品",
+    "en": [
+      "Work In Progress"
+    ],
+    "description": "已進入生產流程但尚未交付完成的所有工作項目總和（簡稱 WIP）；在研發流程中多以未合併程式碼或未驗證構思等無形資訊形式存在。",
+    "forbidden": [],
+    "level": 1
+  },
+  "PartialFunction": {
+    "zh": "偏函數",
+    "en": [
+      "Partial Function"
+    ],
+    "description": "僅在輸入定義域的某個真子集上有定義的函數；當面對未定義的輸入時將產生未定義行為或靜默錯誤。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TotalFunction": {
+    "zh": "全函數",
+    "en": [
+      "Total Function"
+    ],
+    "description": "在其定義域的所有可能輸入上皆有明確定義與輸出之函數。",
+    "forbidden": [],
+    "level": 1
+  },
+  "DiscountFactor": {
+    "zh": "折扣率",
+    "en": [
+      "Discount Factor"
+    ],
+    "description": "理性讀者在面對可能失效或缺乏強制的文字條款時，在事前評估與執行投入上所打折的心理折現比例。",
+    "forbidden": [],
+    "level": 1
+  },
+  "TruthLayer": {
+    "zh": "真值層",
+    "en": [
+      "Truth Layer"
+    ],
+    "description": "將軟體工程中的真值狀態解耦為觀測值、基線值、規範值與授權值四個維度，嚴禁由單一資料欄位或主要文件位置推導出規範正當性或授權狀態，以精確捕捉並暴露各層間的漂移。",
+    "forbidden": [],
+    "level": 1
+  },
+  "AbsorbingBarrier": {
+    "zh": "吸收壁",
+    "en": [
+      "Absorbing Barrier"
+    ],
+    "description": "一旦觸及即無法返回的破產或流動性終態。",
+    "forbidden": [],
+    "level": 2
+  },
+  "StructuralHoles": {
+    "zh": "結構洞",
+    "en": [
+      "Structural Holes"
+    ],
+    "description": "兩個孤立群落之間的資訊斷層，佔位者可抽取話語權租金。",
+    "forbidden": [],
+    "level": 2
+  },
+  "RightToContest": {
+    "zh": "反證權",
+    "en": [
+      "Right To Contest"
+    ],
+    "description": "第一線以獨立路徑阻斷非理性冒進、否定錯誤系統輸出的權利。",
+    "forbidden": [],
+    "level": 2
+  },
+  "HyperFragility": {
+    "zh": "超脆性",
+    "en": [
+      "Hyper-Fragility"
+    ],
+    "description": "消滅緩衝與冗餘後，系統對任何微小擾動的耐受力歸零的拓樸狀態。",
+    "forbidden": [],
+    "level": 1
+  },
+  "JustInTime": {
+    "zh": "及時制",
+    "en": [
+      "Just-In-Time"
+    ],
+    "description": "以零庫存與移動中庫存極大化資本回報，同時剝除吸收衝擊的物理阻尼。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Reachable": {
+    "zh": "碰得到",
+    "en": [
+      "Reachable"
+    ],
+    "description": "與核心相鄰、沿著相鄰性可以一路列舉出來的能力。碰得到的清單會自己成長且每一項都能講出理由，是薄核界定裡最難執行的一刀。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ThinIntent": {
+    "zh": "薄意圖",
+    "en": [
+      "Thin Intent"
+    ],
+    "description": "由「沒說出口的那些不要」所定義的需求意圖。補全引擎讀不到沉默，只能讀到這種東西通常怎麼做，因此薄意圖在生成管線裡會被系統性補肥。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ConfirmationLayer": {
+    "zh": "確認層",
+    "en": [
+      "Confirmation Layer"
+    ],
+    "description": "自動化流程中等待人類簽核才放行的節點；它能觀測確認者是否在場，卻不能單憑通過證明確認者理解了提案。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Misclassification": {
+    "zh": "誤分類",
+    "en": [
+      "Misclassification"
+    ],
+    "description": "把一類事物歸入錯誤範疇的判斷，例如把不易被機器處理的認知形式記成應該消除的摩擦。",
+    "forbidden": [],
+    "level": 1
+  },
+  "CrossTerm": {
+    "zh": "交叉項",
+    "en": [
+      "Cross Term"
+    ],
+    "description": "整體評價中只在兩個以上決策交會時才出現的項；各局部評價只計算自身項，因此交叉項不會出現在任何單一局部的函數裡。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Digest": {
+    "zh": "摘要值",
+    "en": [
+      "Digest"
+    ],
+    "description": "透過密碼學雜湊演算法計算得出、用於驗證內容完整性與識別變更的固定長度數值。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Quarantine": {
+    "zh": "隔離區",
+    "en": [
+      "Quarantine"
+    ],
+    "description": "將未通過驗證或行為異常的資料與元件與生產環境物理或邏輯隔離的安全防護邊界。",
+    "forbidden": [],
+    "level": 2
+  },
+  "TightCoupling": {
+    "zh": "緊耦合",
+    "en": [
+      "Tight Coupling"
+    ],
+    "description": "系統各部分之間缺乏時間、序列或資源緩衝，導致局部失效會迅速且不可逆地向外蔓延的強依賴架構。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Quantization": {
+    "zh": "量化",
+    "en": [
+      "Quantization"
+    ],
+    "description": "以較少位元表示權重或啟動值，改變數值格點以降低記憶體與計算成本的近似方法。",
+    "forbidden": [],
+    "level": 2,
+    "not_within": [
+      "量化寬鬆",
+      "輕量化",
+      "可量化",
+      "被量化"
+    ]
+  },
+  "Data": {
+    "zh": "數據",
+    "en": [
+      "Data"
+    ],
+    "description": "系統處理的原始資訊、狀態或資料結構，通常與行為分開存儲或封裝於實體內。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Error": {
+    "zh": "錯誤",
+    "en": [
+      "Error"
+    ],
+    "description": "術語審計中指出的明確錯誤",
+    "forbidden": [],
+    "level": 3
+  },
+  "Warning": {
+    "zh": "警告",
+    "en": [
+      "Warning"
+    ],
+    "description": "術語審計中指出的潛在問題或警告",
+    "forbidden": [],
+    "level": 3
+  },
+  "Guidelines": {
+    "zh": "準則",
+    "en": [
+      "Guidelines"
+    ],
+    "description": "強制性的專案準則，指導如何正確地做事",
+    "forbidden": [],
+    "level": 2
+  },
+  "ReadingGuide": {
+    "zh": "導讀",
+    "en": [
+      "Reading Guide"
+    ],
+    "description": "幫助讀者了解閱讀順序與跨報告連結的導讀文件",
+    "forbidden": [],
+    "level": 2
+  },
+  "Specification": {
+    "zh": "規格",
+    "en": [
+      "Specification"
+    ],
+    "description": "定義系統「應該建造什麼」以保證結果正確性的規範性文件。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Brownfield": {
+    "zh": "棕地",
+    "en": [
+      "Brownfield"
+    ],
+    "description": "指已經存在既有程式碼與歷史行為、且缺乏完整規格或面臨架構債務的遺留專案開發環境。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Scaffolding": {
+    "zh": "鷹架",
+    "en": [
+      "Scaffolding"
+    ],
+    "description": "專案在過渡或重構階段所建立的臨時性治理機制，其生命週期與特定過渡性問題綁定，問題解決後即應予以拆除。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DataShape": {
+    "zh": "形狀",
+    "en": [
+      "Data Shape"
+    ],
+    "description": "資料結構或物件所包含的屬性與型別定義，通常由型別系統來描述",
+    "forbidden": [],
+    "level": 3
+  },
+  "Distill": {
+    "zh": "蒸餾",
+    "en": [
+      "Distill"
+    ],
+    "description": "從長對話或大量開發脈絡中萃取關鍵資訊的處理過程。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Crystallize": {
+    "zh": "結晶",
+    "en": [
+      "Crystallize"
+    ],
+    "description": "將蒸餾後的關鍵知識沉澱並結構化為正式報告或規格的過程。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Delta": {
+    "zh": "差異",
+    "en": [
+      "Delta"
+    ],
+    "description": "特定變更的契約，用於驅動實作並作為驗證實作的基準對象。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Background": {
+    "zh": "背景",
+    "en": [
+      "Background"
+    ],
+    "description": "系統或架構設計所處的脈絡資訊與歷史由來。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Findings": {
+    "zh": "發現",
+    "en": [
+      "Findings"
+    ],
+    "description": "在分析或探勘遺留系統過程中，整理出的實務發現與觀察結果。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Conclusion": {
+    "zh": "結論",
+    "en": [
+      "Conclusion"
+    ],
+    "description": "文章或論述最終凝聚的核心觀點與總結。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Reflection": {
+    "zh": "反思",
+    "en": [
+      "Reflection"
+    ],
+    "description": "對現行架構與工程盲點進行的深層檢討與批判。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Hallucination": {
+    "zh": "幻覺",
+    "en": [
+      "Hallucination"
+    ],
+    "description": "大型語言模型在面對不實或矛盾資訊時，生成不符合客觀現實或超出脈絡之回應的錯誤現象。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Offloading": {
+    "zh": "卸載",
+    "en": [
+      "Offloading"
+    ],
+    "description": "將自然語言描述的機械式規則（如命名規範）重新交還給靜態分析工具或傳統編譯器鏈處理，以減輕 AI 指引負擔的實踐。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Introduction": {
+    "zh": "導言",
+    "en": [
+      "Introduction"
+    ],
+    "description": "文章或報告的開頭部分，用於引入背景、核心問題與寫作脈絡。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Analysis": {
+    "zh": "分析",
+    "en": [
+      "Analysis"
+    ],
+    "description": "對複雜系統或問題進行分解，以探究其內部組成結構與相互關係的研究方法。",
+    "forbidden": [],
+    "level": 3
+  },
+  "StopLoss": {
+    "zh": "止損",
+    "en": [
+      "Stop-Loss"
+    ],
+    "description": "源自投資的風險控制機制，指在損失達到預設閾值時自動退出或切換策略，以防止因沉沒成本效應而導致無限制的資源浪費。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Behavior": {
+    "zh": "行為",
+    "en": [
+      "Behavior"
+    ],
+    "description": "在物件導向或領域驅動架構中，物件或實體所具備的方法與邏輯運算。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Desynchronization": {
+    "zh": "脫鉤",
+    "en": [
+      "Desynchronization"
+    ],
+    "description": "中介索引檔與真實檔案系統狀態不再一致的現象，是雙重狀態同步最典型的故障表現。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Ratchet": {
+    "zh": "棘輪",
+    "en": [
+      "Ratchet"
+    ],
+    "description": "噪音一旦寫入全域可變、長期保留的儲存層便只進不退、複利累積的現象；能被洗掉的短暫噪音無害，出不去的噪音才致命。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Projection": {
+    "zh": "投影",
+    "en": [
+      "Projection"
+    ],
+    "description": "產物透過穩定鍵間接引用共享庫時，它不再是凍結快照，而是共享庫當前狀態一個可隨時重算的呈現。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Idempotent": {
+    "zh": "冪等",
+    "en": [
+      "Idempotent"
+    ],
+    "description": "一個步驟可反覆執行而結果穩定的性質；對已是最新狀態的產物再跑一次，應為無變更。",
+    "forbidden": [],
+    "level": 2
+  },
+  "DryRun": {
+    "zh": "乾跑",
+    "en": [
+      "Dry-Run"
+    ],
+    "description": "在實際套用跨產物變更之前，先檢視其影響範圍的預演步驟；是回寫已發佈產物這類治理行為的必要前置防護。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Subject": {
+    "zh": "主體",
+    "en": [
+      "Subject"
+    ],
+    "description": "權限檢查中發起操作的一方，在 Linux 中由 process credentials（UID、GID、capabilities 等）描述其身分與當下能力。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Object": {
+    "zh": "客體",
+    "en": [
+      "Object"
+    ],
+    "description": "權限檢查中被存取的目標，例如檔案、目錄、Unix socket、device 等 kernel object，其類型決定 kernel 走哪一條檢查路徑。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Identity": {
+    "zh": "身分",
+    "en": [
+      "Identity"
+    ],
+    "description": "系統元件在架構中宣告的核心職責與自我定位。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Compose": {
+    "zh": "組合",
+    "en": [
+      "Compose"
+    ],
+    "description": "將多個獨立元件串聯運作的方式，強調資料流轉而非直接相依。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Depend": {
+    "zh": "相依",
+    "en": [
+      "Depend"
+    ],
+    "description": "元件之間產生的耦合關係，一方改動會強制影響另一方。",
+    "forbidden": [],
+    "level": 3
+  },
+  "Generalization": {
+    "zh": "泛化",
+    "en": [
+      "Generalization"
+    ],
+    "description": "模型在訓練樣本以外的資料上維持表現的能力。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Pruning": {
+    "zh": "剪枝",
+    "en": [
+      "Pruning"
+    ],
+    "description": "移除模型中影響較小的連接或結構，以縮減規模的壓縮方法。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Calibration": {
+    "zh": "校準",
+    "en": [
+      "Calibration"
+    ],
+    "description": "模型輸出機率與實際正確率的一致程度。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Injective": {
+    "zh": "單射",
+    "en": [
+      "Injective"
+    ],
+    "description": "一對一的映射性質：不同的輸入必對應不同的輸出。聚合讀數與產生它的機制之間不具此性質，因此無法從讀數回推機制。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Network": {
+    "zh": "網路",
+    "en": [
+      "Network"
+    ],
+    "description": "由節點與節點間連結構成、可傳遞資料或訊號的結構。",
+    "forbidden": [
+      "網絡"
+    ],
+    "level": 3
+  },
+  "Default": {
+    "zh": "預設",
+    "en": [
+      "Default"
+    ],
+    "description": "使用者未明確指定時，系統所採用的值或行為。",
+    "forbidden": [
+      "默認"
+    ],
+    "level": 3
+  },
+  "SaddlePoint": {
+    "zh": "鞍點",
+    "en": [
+      "Saddle Point"
+    ],
+    "description": "梯度為零但 Hessian 同時具備正負特徵值的臨界點，在高維非凸景觀中遠多於局部極小值。",
+    "forbidden": [],
+    "level": 2
+  },
+  "ReliabilityTell": {
+    "zh": "徵候",
+    "en": [
+      "Reliability Tell"
+    ],
+    "description": "洩漏產物製作過程狀態、供讀者間接估計可靠度的外觀或行為痕跡。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Screening": {
+    "zh": "篩選",
+    "en": [
+      "Screening"
+    ],
+    "description": "在訊號機制失效時，由驗證方主動設計具分離特性的測試或契約以檢驗產物真實能力的機制。",
+    "forbidden": [],
+    "level": 1,
+    "not_within": [
+      "政策篩選",
+      "特徵篩選",
+      "篩選閾值",
+      "篩選規則",
+      "演化篩選",
+      "多指標篩選",
+      "篩選準則",
+      "篩選階段"
+    ]
+  },
+  "CutVertex": {
+    "zh": "割點",
+    "en": [
+      "Cut Vertex"
+    ],
+    "description": "資訊與責任傳遞網路中一旦被插入或破壞，即導致子圖孤立、反饋中斷的關鍵節點。",
+    "forbidden": [],
+    "level": 1
+  },
+  "ThinCore": {
+    "zh": "薄核",
+    "en": [
+      "Thin Core"
+    ],
+    "description": "對單一職責握有最終發言權、且克制擁有權的核心元件。薄不是規模小，而是擁有權的克制：核心只承載承重且歸屬於它的少數幾項行為。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Attachment": {
+    "zh": "附掛",
+    "en": [
+      "Attachment"
+    ],
+    "description": "受治理的附掛：差集能力不由核心供應，而由呼叫者以受治理的形式自行決定並掛在核心之外的機制；核心不供應，也不阻擋。",
+    "forbidden": [],
+    "level": 1
+  },
+  "LoadBearing": {
+    "zh": "承重",
+    "en": [
+      "Load-Bearing"
+    ],
+    "description": "缺了它核心承諾就當場不成立的能力。與「碰得到」相對：後者與核心相鄰、可被想到且每項都有用，但缺席並不致命。",
+    "forbidden": [],
+    "level": 1
+  },
+  "Compliance": {
+    "zh": "合規",
+    "en": [
+      "Compliance"
+    ],
+    "description": "決定或行動符合明文規則與程序的狀態，不等於實質上正確。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Judgment": {
+    "zh": "判斷",
+    "en": [
+      "Judgment"
+    ],
+    "description": "面對規則未覆蓋或情境已改變時，根據脈絡評估決定的實質後果。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Waiver": {
+    "zh": "豁免",
+    "en": [
+      "Waiver"
+    ],
+    "description": "經批准而不適用特定限制的例外處置；形式上的批准不代表原本的風險已消失。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Claim": {
+    "zh": "主張",
+    "en": [
+      "Claim"
+    ],
+    "description": "一項可被支持、質疑、接受或撤回的陳述，為後續工程實作或治理行動提供形式理由。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Observation": {
+    "zh": "觀察",
+    "en": [
+      "Observation"
+    ],
+    "description": "規格工作流中對指定環境、介面或系統版本現況進行檢查所獲得的事實紀錄。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Intent": {
+    "zh": "意圖",
+    "en": [
+      "Intent"
+    ],
+    "description": "具名需求來源對系統預期功能或業務價值所表達的主觀期待與目標。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Hypothesis": {
+    "zh": "假說",
+    "en": [
+      "Hypothesis"
+    ],
+    "description": "關於系統變更所能帶來的效益或後果的推測性陳述，需透過實驗或對照檢驗。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Norm": {
+    "zh": "規範",
+    "en": [
+      "Norm"
+    ],
+    "description": "由具約束力的有效政策或權威所設定的系統行為限制與必須滿足之要求。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Validation": {
+    "zh": "確效",
+    "en": [
+      "Validation"
+    ],
+    "description": "評估系統或規格是否符合預定用途、利害關係人真實期望與實際使用情境的確效過程。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Coherent": {
+    "zh": "自洽",
+    "en": [
+      "Coherent"
+    ],
+    "description": "指輸出內部在自身脈絡中邏輯連貫、說得通的狀態；自洽僅為局部語意品質，不蘊含符合真實狀態之正確性，亦不等於具備外部授權之可信。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Nvidia": {
+    "zh": "輝達",
+    "en": [
+      "Nvidia"
+    ],
+    "description": "全球領先的圖形處理器與人工智慧硬體加速晶片設計製造商。",
+    "forbidden": [],
+    "level": 2
+  },
+  "Amd": {
+    "zh": "超微",
+    "en": [
+      "Amd"
+    ],
+    "description": "全球高階微處理器與圖形處理器半導體設計製造商。",
+    "forbidden": [],
+    "level": 2
+  }
+}

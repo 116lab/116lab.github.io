@@ -1,0 +1,46 @@
+{{- /* Reuse the shared card shape, then layer the single-page-only fields. */ -}}
+{{- $card := partial "func/card-data.html" . -}}
+{{- /* Series navigation: sibling posts in this post's first series (reading order). */ -}}
+{{- $seriesNav := dict -}}
+{{- with .GetTerms "series" -}}
+  {{- $term := index . 0 -}}
+  {{- $items := slice -}}
+  {{- range $term.Pages.ByDate -}}
+    {{- $items = $items | append (dict "title" .Title "url" (partial "func/route-path.html" .RelPermalink) "current" (eq .Path $.Path)) -}}
+  {{- end -}}
+  {{- $seriesNav = dict "name" $term.Title "url" (partial "func/route-path.html" $term.RelPermalink) "posts" $items -}}
+{{- end -}}
+{{- /* Calculate if content is outdated (3 years) */ -}}
+{{- $three_years := 94608000 -}}
+{{- $is_outdated := false -}}
+{{- if lt .Date.Unix (sub now.Unix $three_years) -}}
+  {{- $is_outdated = true -}}
+{{- end -}}
+{{- /* Resolve the stable author id from config; display names are not slugs. */ -}}
+{{- $authorName := .Params.author | default site.Params.author -}}
+{{- $authorID := "" -}}
+{{- $aboutConfig := site.Params.about | default dict -}}
+{{- $authorConfigs := index $aboutConfig "authors" | default slice -}}
+{{- range $authorConfigs -}}
+  {{- $byline := index . "byline" | default (index . "name") -}}
+  {{- if eq $byline $authorName -}}
+    {{- $authorID = index . "id" -}}
+  {{- end -}}
+{{- end -}}
+{{- $authorURL := "" -}}
+{{- with $authorID -}}
+  {{- $authorURL = printf "/about/#%s" . -}}
+{{- end -}}
+{{- $extra := dict
+  "author" $authorName
+  "authorId" $authorID
+  "authorUrl" $authorURL
+  "readingTime" .ReadingTime
+  "wordCount" .WordCount
+  "content" .Content
+  "seriesNav" $seriesNav
+  "ai_info" .Params.ai_info
+  "is_outdated" $is_outdated
+  "layout_check" "single"
+-}}
+{{- merge $card $extra | jsonify (dict "indent" "  ") -}}

@@ -1,0 +1,142 @@
+import os
+import sys
+import json
+import shutil
+import tempfile
+
+# Add scripts root to path
+scripts_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if scripts_root not in sys.path:
+    sys.path.append(scripts_root)
+
+from lexicon import Lexicon, DEFAULT_DB_DIR
+from manager import LexiconManager
+
+# Definitions for testing (mirroring what was in config)
+TERMINOLOGY_JSON = os.path.join(DEFAULT_DB_DIR, "terminology.json")
+TERMINOLOGY_DRAFT_JSON = os.path.join(DEFAULT_DB_DIR, "terminology.draft.json")
+
+def test_json_loading():
+    print("Testing JSON Loading...")
+    lexicon = Lexicon()
+    print(f"  Loaded {len(lexicon.mapping)} terms.")
+    assert len(lexicon.mapping) >= 0, "Should have loaded terms"
+    return lexicon
+
+def _load(path):
+    with open(path, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+def _dump(path, data):
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def test_replenish_and_promote():
+    """The quality gate is the contract, so both of its directions are asserted.
+
+    This used to assert that a freshly drafted term reaches the Core SSOT. It does
+    not, and should not: replenish stamps a term with no description as
+    `TODO: 需人工精煉描述`, and promote_all_drafts lints the result and aborts. The
+    gate is the point — GUIDE §3.1 requires refinement before promotion — so the old
+    assertion was testing a contract that predates it, and failed for the right
+    reason. It also ran against the live terminology.json and cleaned up only on the
+    path where it passed, which is why a failing run left `TestTerm` behind in the
+    draft and broke §10.1's empty-draft rule.
+
+    It now runs in a temporary database directory seeded from the real Core SSOT, so
+    the lint sees realistic neighbours while nothing here can touch the SSOT itself.
+    """
+    print("Testing Replenish and Promote...")
+    with tempfile.TemporaryDirectory() as tmp:
+        core_path = os.path.join(tmp, "terminology.json")
+        draft_path = os.path.join(tmp, "terminology.draft.json")
+        shutil.copyfile(TERMINOLOGY_JSON, core_path)
+        _dump(draft_path, {})
+
+        mgr = LexiconManager(db_dir=tmp)
+        mgr.replenish([{
+            "zh": "測試術語",
+            "en": "Test Term",
+            "session_id": "test-session-999",
+        }])
+
+        drafts = _load(draft_path)
+        assert any(d["zh"] == "測試術語" for d in drafts.values()), "Term should be in draft"
+        print("  Replenished successfully to draft.")
+
+        # Direction 1: unrefined must not pass. replenish fills the description with a
+        # placeholder, and the lint in promote_all_drafts must refuse the batch.
+        assert mgr.promote_all_drafts() == 0, \
+            "A draft carrying a placeholder description must not be promoted"
+        assert not any(c["zh"] == "測試術語" for c in _load(core_path).values()), \
+            "The quality gate must keep an unrefined term out of the Core SSOT"
+        assert _load(draft_path), \
+            "An aborted promotion must leave the draft intact, not silently clear it"
+        print("  Unrefined draft correctly refused by the quality gate.")
+
+        # Direction 2: refined must pass, or the gate would be indistinguishable from
+        # a promotion path that never works.
+        drafts = _load(draft_path)
+        for entry in drafts.values():
+            if entry["zh"] == "測試術語":
+                entry["description"] = "測試用術語，用於驗證晉升流程的品質閘門。"
+        _dump(draft_path, drafts)
+
+        assert mgr.promote_all_drafts() == 1, "A refined draft must be promoted"
+        assert any(c["zh"] == "測試術語" for c in _load(core_path).values()), \
+            "Term should be promoted to core"
+        assert not _load(draft_path), "A successful promotion must clear the draft"
+        print("  Refined draft promoted successfully to core.")
+
+
+def test_promote_refuses_key_collision():
+    """A draft whose English name keys onto an existing core term with a different zh
+    (人類在迴路中 vs 人在迴路, both HumanInTheLoop) must not overwrite that term."""
+    print("Testing Promote Key Collision...")
+    with tempfile.TemporaryDirectory() as tmp:
+        core_path = os.path.join(tmp, "terminology.json")
+        draft_path = os.path.join(tmp, "terminology.draft.json")
+        shutil.copyfile(TERMINOLOGY_JSON, core_path)
+        core = _load(core_path)
+        key, original = next(iter(core.items()))
+        _dump(draft_path, {key: {
+            "zh": original["zh"] + "變體", "en": original["en"],
+            "description": "測試用術語，用於驗證鍵衝突不會覆蓋核心術語。",
+            "forbidden": [], "level": 2,
+        }})
+
+        assert LexiconManager(db_dir=tmp).promote_all_drafts() == 0, \
+            "A colliding draft must not be promoted"
+        assert _load(core_path)[key]["zh"] == original["zh"], \
+            "Promotion overwrote an existing core term that shares its key"
+        assert key in _load(draft_path), \
+            "The colliding draft must stay in the draft so the empty-draft gate blocks submission"
+        print("  Colliding draft left in draft; core term intact.")
+
+
+def test_lint_aliases_and_boundaries():
+    """An alias may name one term only, and a not_within entry must be a longer string
+    containing the term; otherwise the boundary can never fire or fires on the wrong term."""
+    print("Testing alias / not_within lint...")
+    base = {"zh": "甲乙丙", "en": ["Foo Bar"], "description": "測試定義。", "forbidden": [], "level": 1}
+    lx = Lexicon(json_path=os.devnull)
+    assert lx.lint([dict(base, aliases=["丁戊己"], not_within=["庚甲乙丙"])]), "a valid entry must pass"
+    assert not lx.lint([dict(base, aliases=["壬癸"]), dict(base, zh="壬癸", en=["Baz"])]), \
+        "an alias that is another term's zh must fail"
+    assert not lx.lint([dict(base, not_within=["庚辛"])]), \
+        "a not_within entry that does not contain the term must fail"
+    print("  Alias and boundary lint enforced.")
+
+
+if __name__ == "__main__":
+    try:
+        lexicon = test_json_loading()
+        test_replenish_and_promote()
+        test_promote_refuses_key_collision()
+        test_lint_aliases_and_boundaries()
+        print("\nALL TESTS PASSED!")
+    except Exception as e:
+        print(f"\nTEST FAILED: {e}")
+        sys.exit(1)

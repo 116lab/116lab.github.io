@@ -1,0 +1,410 @@
+# -*- coding: utf-8 -*-
+## Authored by Schema: ../../../schemas/terminology.schema.yaml
+## Reference Workflow: ../../../workflows/reanchor-posts.md
+## Role: Regression harness for TerminologyInjector.apply_lexicon(mode="anchor_first").
+##       Pins three documented re-anchoring gaps as assertions of the CORRECT behavior:
+##       they FAIL on the current implementation (reproducing each gap) and turn GREEN
+##       once the injector is fixed. A positive idempotency control must stay GREEN throughout.
+##
+## RED-TO-GREEN IS WITHIN ONE COMMIT, NOT ACROSS. audit_kb.py discovers these suites and
+## runs them as a GOVERNANCE check, and a failing one makes the mandatory audit exit
+## non-zero — which GUIDE §10.3 treats as blocking. Writing the failing assertion first is
+## the point of this file; leaving it failing at commit time blocks everyone.
+##
+## Convention: mirrors lexicon_tester.py (plain asserts + __main__ runner, no pytest dependency).
+## Run: python .agent/scripts/domain/terminology/injector_tester.py
+
+import os
+import sys
+import io
+import json
+import tempfile
+
+# UTF-8 stdout so Traditional-Chinese fixtures print correctly on Windows consoles.
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+SCRIPTS_ROOT = os.path.dirname(os.path.dirname(HERE))          # .agent/scripts
+LEXICON_CORE_SCRIPTS = os.path.abspath(                        # .agent/lexicon-core/scripts
+    os.path.join(SCRIPTS_ROOT, "..", "lexicon-core", "scripts")
+)
+for p in (SCRIPTS_ROOT, LEXICON_CORE_SCRIPTS):
+    if p not in sys.path:
+        sys.path.insert(0, p)
+
+from lexicon import Lexicon
+from domain.post.post import HugoPost
+from domain.terminology.injector import TerminologyInjector
+from domain.terminology.tag_anchor import TagAnchorer
+
+LEXICON = Lexicon()
+
+# Hermetic fixture for the boundary/alias contracts: synthetic strings that no live
+# term contains, so the assertions cannot depend on the state of the real lexicon.
+_FIXTURE = {"FooBar": {"zh": "甲乙丙", "en": ["Foo Bar"], "description": "測試定義。",
+                       "forbidden": [], "level": 1, "aliases": ["丁戊己"],
+                       "not_within": ["庚甲乙丙"]}}
+with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as _f:
+    json.dump(_FIXTURE, _f, ensure_ascii=False)
+FIXTURE = Lexicon(json_path=_f.name, include_draft=False)
+os.unlink(_f.name)
+
+
+def _pick_anchorable_term():
+    """Returns a real level<3 ZH term (so anchoring is exercised) from the live lexicon."""
+    for zh, level in LEXICON.levels.items():
+        if level < 3 and LEXICON.zh_to_ens.get(zh):
+            return zh
+    raise RuntimeError("No level<3 term available in the lexicon to drive the tests.")
+
+
+def _pick_l3_term():
+    """Returns a real level>=3 (IGNORE_LIST) ZH term that contains no other live term
+    as a substring (so the fixture is unambiguous)."""
+    for zh, level in LEXICON.levels.items():
+        if level >= 3 and 2 <= len(zh) <= 4 and not any(
+            k != zh and k in zh for k in LEXICON.mapping
+        ):
+            return zh
+    raise RuntimeError("No clean level>=3 term available to drive the bold-strip test.")
+
+
+def _reanchor(body, lexicon=None, exclude_keys=None):
+    post = HugoPost()
+    post.body = body
+    TerminologyInjector().apply_lexicon(post, lexicon or LEXICON, mode="anchor_first",
+                                        exclude_keys=exclude_keys)
+    return post.body
+
+
+def _preview_of(text):
+    """The summary region: everything before the <!--more--> separator."""
+    return text.split("<!--more-->", 1)[0] if "<!--more-->" in text else text
+
+
+# --- Gap 1: author-written annotation blocks must survive --------------------
+# An author's `> [!IMPORTANT]` callout carries NO machine anchor markers
+# (<!-- term: --> / <!-- anchor: -->). Re-anchoring must not delete it.
+def test_gap1_author_important_block_survives():
+    term = _pick_anchorable_term()
+    body = (
+        f"正文提到{term}。\n\n"
+        "> [!IMPORTANT]\n"
+        "> **作者提醒**：這是人工撰寫的內容警示，並非術語定義框。\n\n"
+        "結尾段落。\n"
+    )
+    out = _reanchor(body)
+    assert "作者提醒" in out, (
+        "Gap 1: author-authored [!IMPORTANT] block was deleted by re-anchoring "
+        "(removal regex over-matches; it should require an anchor/term marker)."
+    )
+
+
+# --- Gap 2: orphan inline anchors of removed/archived terms must be cleared ---
+# A term no longer in the lexicon leaves a stale `（EN） <!-- term:Key -->` in the
+# body. anchor_first claims a full clean-then-reapply, so the orphan must go.
+def test_gap2_orphan_anchor_of_removed_term_is_cleaned():
+    orphan_zh = "甲乙丙丁戊己庚辛"   # synthetic: guaranteed absent from the lexicon
+    assert orphan_zh not in LEXICON.mapping, "fixture invalid: orphan term must not be a real term"
+    assert not any(k in orphan_zh for k in LEXICON.mapping), (
+        "fixture invalid: orphan term must not contain any live term as a substring"
+    )
+    body = (
+        f"段落引用了一個已被移除的術語 **{orphan_zh}**（Foo Bar Baz） "
+        "<!-- term:ZzObsoleteKey -->，其錨點應被清除。\n"
+    )
+    out = _reanchor(body)
+    assert "<!-- term:ZzObsoleteKey -->" not in out, (
+        "Gap 2: orphan inline anchor of a removed term survived "
+        "(cleanup is driven by the current term list instead of the anchor marker)."
+    )
+    assert f"**{orphan_zh}**" not in out and orphan_zh in out, (
+        "Gap 2: the orphan's first-occurrence bold survived de-anchoring; like L3 "
+        "demotion, a term that is no longer anchored must not stay emphasised."
+    )
+
+
+# --- Gap 3': the summary/preview area must not be anchored --------------------
+# Anchors and definition callouts belong AFTER <!--more--> (GUIDE §5.111).
+# In anchor_first the <!--more--> is placeholder-ized before split_by_more, so
+# preview protection is bypassed and the summary gets anchored.
+def test_gap3_preview_area_is_not_anchored():
+    term = _pick_anchorable_term()
+    body = (
+        f"這是前言，提到了{term}這個概念。\n\n"
+        "<!--more-->\n\n"
+        f"正文第一段再次討論{term}的細節。\n\n"
+        "正文第二段做總結。\n"
+    )
+    out = _reanchor(body)
+    assert "<!--more-->" in out, "the <!--more--> separator must be preserved"
+    preview = _preview_of(out)
+    assert "<!-- term:" not in preview, (
+        "Gap 3': summary area was anchored (inline <!-- term --> appears before <!--more-->)."
+    )
+    assert "[!IMPORTANT]" not in preview, (
+        "Gap 3': a terminology definition box was placed before <!--more-->, polluting the summary/RSS."
+    )
+
+
+# --- Gap 4: orphan first-occurrence bold of a de-anchored (L3) term is stripped ---
+# When a term is demoted to level 3 (IGNORE_LIST), de-anchoring removes its
+# anchor/gloss but historically LEFT the **bold** behind. L3 terms are never
+# anchored, so that emphasis is residue and must be cleared — but only when the
+# term is a SYMMETRIC standalone **詞**; an L3 word at the edge of a longer author
+# bold must not break that span.
+def test_gap4_orphan_l3_bold_is_stripped():
+    l3 = _pick_l3_term()
+    out = _reanchor(f"前段文字**{l3}**後段文字。\n")
+    assert f"**{l3}**" not in out, (
+        f"Gap 4: standalone **{l3}** (level-3 orphan first-occurrence bold) must be stripped."
+    )
+    assert l3 in out, "Gap 4: the L3 term text itself must survive (only its bold removed)."
+    # L3 term as the leading edge of a longer author bold — must stay intact.
+    out2 = _reanchor(f"這是一個**{l3}示例**的說明。\n")
+    assert f"**{l3}示例**" in out2, (
+        f"Gap 4: '**{l3}示例**' (L3 word as edge of a longer bold) must be preserved, not broken."
+    )
+
+
+# --- Gap 5: an author gloss with no anchor marker must survive de-anchoring -----
+# anchor_first's global cleanup consumes an optional （bilingual） suffix whether or
+# not an anchor marker follows it. A machine anchor always carries the marker; a bare
+# `**詞**（English）` is authored text, and stripping it is what removes the author's
+# own gloss — and, inside a callout, what drops the line out of
+# rules.json protected_alert_patterns so the next pass anchors it.
+def test_gap5_author_gloss_without_marker_survives():
+    term = _pick_anchorable_term()
+    en = LEXICON.zh_to_ens[term][0]
+    body = (
+        "前段。\n\n"
+        "> [!IMPORTANT]\n"
+        f"> **{term}**（{en}）：作者手寫的定義，沒有機器標記。\n\n"
+        "後段。\n"
+    )
+    out = _reanchor(body)
+    author_line = next((ln for ln in out.splitlines() if "作者手寫的定義" in ln), "")
+    assert author_line, "Gap 5: the author's definition line disappeared entirely"
+    assert "<!-- term:" not in author_line and "<!-- anchor:" not in author_line, (
+        "Gap 5: the author's callout line acquired a machine marker. Its （bilingual） "
+        "gloss is consumed by the global cleanup even with no marker attached, which "
+        "drops the line out of protected_alert_patterns and exposes it to anchoring — "
+        "and a marker is what makes the removal regex delete the whole callout next pass."
+    )
+    assert f"（{en}）" in author_line, (
+        "Gap 5: the author's （bilingual） gloss was stripped although no anchor marker "
+        "followed it; only a marker-terminated suffix is machine output."
+    )
+
+
+# --- Gap 6: re-anchoring must not reorder lines within a block -----------------
+# _process_paragraph splits a block into heading/protected lines and everything else,
+# then emits the headings FIRST. A heading that followed a paragraph is hoisted in
+# front of it and glued to its text.
+def test_gap6_line_order_is_preserved():
+    term = _pick_anchorable_term()
+    body = f"段落提到{term}。\n### 後面的標題\n"
+    out = _reanchor(body)
+    assert out.index("段落提到") < out.index("### 後面的標題"), (
+        "Gap 6: a heading that came after a paragraph was hoisted in front of it."
+    )
+
+
+# --- Gap 7: idempotency with an author definition block present ----------------
+# The existing control uses a body with no author callout, so the destructive path
+# is untested: once the author's line loses protection it gains a term marker, and
+# the removal regex then classifies the whole callout as machine output and deletes
+# it — author text included.
+def test_gap7_idempotent_with_author_definition_block():
+    term = _pick_anchorable_term()
+    en = LEXICON.zh_to_ens[term][0]
+    body = (
+        f"正文提到{term}，需要錨定。\n\n"
+        "> [!IMPORTANT]\n"
+        f"> **{term}**（{en}）：作者手寫的定義。\n\n"
+        "### 後續章節\n\n"
+        "結尾。\n"
+    )
+    once = _reanchor(body)
+    twice = _reanchor(once)
+    assert "作者手寫的定義" in once, "Gap 7: author definition lost on the first pass"
+    assert "作者手寫的定義" in twice, (
+        "Gap 7: author definition deleted on the second pass — this is the published-content "
+        "data loss that blocks reanchor --apply."
+    )
+    assert once == twice, "Gap 7: re-anchoring is not idempotent when an author callout exists"
+
+
+# --- Positive control: idempotency must hold (and keep holding after fixes) ---
+def test_control_idempotent_on_clean_body():
+    term = _pick_anchorable_term()
+    body = (
+        f"開頭討論{term}。\n\n"
+        f"後段再次提到{term}與其他內容。\n\n"
+        "收尾段落。\n"
+    )
+    once = _reanchor(body)
+    twice = _reanchor(once)
+    assert once == twice, "control: re-anchoring an already-anchored body must be a no-op"
+
+
+# --- Gap 8: math spans must not be anchored -----------------------------------
+# zh keys are matched by plain substring, so a term inside \text{…} used to get an
+# anchor comment injected into the formula — `\text{術語 <!-- term:Foo -->}` — which
+# corrupts the LaTeX. BlockProtector guards the assembly path, but reanchor.py calls
+# apply_lexicon directly and bypasses it, so the injector needs its own guard.
+def test_gap8_math_is_not_anchored():
+    term = _pick_anchorable_term()
+    display = f"$$\n\\text{{{term}}} = x\n$$"
+    inline = f"$\\alpha_{{{term}}}$"
+    body = (
+        f"正文首次提到{term}，建立首錨。\n\n"
+        f"{display}\n\n"
+        f"行內公式 {inline} 也必須原樣保留。\n\n"
+        f"結尾再次提到{term}。\n"
+    )
+    out = _reanchor(body)
+    assert display in out, (
+        "Gap 8: display math was rewritten (an anchor was injected inside $$…$$)."
+    )
+    assert inline in out, (
+        "Gap 8: inline math was rewritten (an anchor was injected inside $…$)."
+    )
+    assert "<!-- term:" in out, (
+        "Gap 8: guard over-reached — prose outside the math spans lost its anchor."
+    )
+
+
+# --- Gap 9: inline code spans must not be anchored ----------------------------
+# A zh key is matched by plain substring, so a term quoted inside `…` used to be
+# rewritten in place: the rustc diagnostic `…found for struct 'Spec<Ungated>'` came
+# back as '**約束性規格**（Spec） <!-- term:Spec -->', which both falsifies the quoted
+# tool output and leaks the marker as literal text, since Hugo does not process
+# comments inside a code span. Fences were already guarded; inline spans were not.
+def test_gap9_inline_code_is_not_anchored():
+    term = _pick_anchorable_term()
+    span = f"`錯誤訊息：{term}違反，請改用既有單元`"
+    body = (
+        f"正文首次提到{term}，建立首錨。\n\n"
+        f"執行後中止訊息為 {span}，必須逐字保留。\n\n"
+        f"結尾再次提到{term}。\n"
+    )
+    out = _reanchor(body)
+    assert span in out, (
+        "Gap 9: an inline code span was rewritten (an anchor was injected inside `…`)."
+    )
+    assert "<!-- term:" in out, (
+        "Gap 9: guard over-reached — prose outside the code span lost its anchor."
+    )
+
+
+# --- Gap 10: variant spellings in mermaid labels must be corrected ------------
+# Fences are protected wholesale, so a mermaid label kept its regional variant
+# (惡意代碼) while the surrounding prose was corrected. Labels render as prose; other
+# fences quote code and must stay verbatim, and no marker may enter either.
+def test_gap10_mermaid_labels_are_corrected():
+    variant, canonical = next(iter(LEXICON.forbidden.items()))
+    mermaid = f"```mermaid\nflowchart TD\n    A[\"{variant}節點\"] --> B\n```"
+    code = f"```text\n{variant}逐字輸出\n```"
+    out = _reanchor(f"正文。\n\n{mermaid}\n\n{code}\n")
+    assert f"{canonical}節點" in out, "Gap 10: a variant spelling survived inside a mermaid label."
+    assert code in out, "Gap 10: a non-mermaid fence was rewritten; only mermaid labels are prose."
+    assert "<!-- term:" not in out.split("```mermaid", 1)[1].split("```", 1)[0], (
+        "Gap 10: an anchor marker was injected into a mermaid diagram."
+    )
+
+
+# --- Gap 11: a term inside a declared longer word is not the term -------------
+# Chinese has no word boundary, so 篩選 anchored inside 政策篩選 and 量化 inside
+# 輕量化. `not_within` is the human-written boundary; a standalone use still anchors.
+def test_gap11_not_within_is_a_boundary():
+    out = _reanchor("前段提到庚甲乙丙這個詞。\n\n後段才談甲乙丙。\n", FIXTURE)
+    assert "庚甲乙丙這個詞" in out, "Gap 11: a hit inside a not_within word was anchored."
+    assert "**甲乙丙**（Foo Bar） <!-- term:FooBar -->" in out, (
+        "Gap 11: the standalone occurrence must still take the first anchor.")
+    assert FIXTURE.find_hits("甲乙丙", "庚甲乙丙與甲乙丙") == [5], \
+        "Gap 11: find_hits must skip the shadowed occurrence and keep the standalone one."
+
+
+# --- Gap 12: anchoring never splits an author's bold span ---------------------
+# **那項能力是碰得到的** came out as **那項能力是**碰得到**（Reachable） <!-- term -->的**:
+# the first-use emphasis was nested in bold, which Markdown cannot nest.
+def test_gap12_author_bold_span_is_not_split():
+    out = _reanchor("**壬癸甲乙丙是作者強調的句子。**\n", FIXTURE)
+    assert "**壬癸甲乙丙（Foo Bar） <!-- term:FooBar -->是作者強調的句子。**" in out, (
+        "Gap 12: the term must anchor inside the span without adding emphasis.")
+    assert all(ln.count("**") % 2 == 0 for ln in out.splitlines()), "Gap 12: bold was unbalanced."
+    assert _reanchor(out, FIXTURE) == out, "Gap 12: in-bold anchoring is not idempotent."
+
+
+# --- Gap 13: the split-bold shape already published is folded back ------------
+def test_gap13_split_bold_is_repaired():
+    broken = ("**壬癸**甲乙丙**（Foo Bar） <!-- term:FooBar -->的，不是**丁戊己** <!-- term:FooBar -->的。**\n"
+              "\n> [!IMPORTANT]\n> **甲乙丙** <!-- term:FooBar --> (Foo Bar): 測試定義。 <!-- anchor:FooBar -->\n")
+    out = _reanchor(broken, FIXTURE)
+    first = out.splitlines()[0]
+    assert first.startswith("**壬癸甲乙丙（Foo Bar） <!-- term:FooBar -->的，不是丁戊己") and first.count("**") == 2, (
+        "Gap 13: the split author span was not restored to a single bold span.")
+    assert _reanchor(out, FIXTURE) == out, "Gap 13: the repair is not idempotent."
+
+
+# --- Gap 14: a post's term_exclude de-anchors and keeps it de-anchored --------
+def test_gap14_excluded_key_is_not_anchored():
+    once = _reanchor("正文提到甲乙丙。\n", FIXTURE)
+    assert "<!-- term:FooBar -->" in once, "fixture invalid: the term must anchor by default"
+    out = _reanchor(once, FIXTURE, exclude_keys={"FooBar"})
+    assert "FooBar" not in out and "甲乙丙" in out and "**甲乙丙**" not in out, (
+        "Gap 14: an excluded key kept its anchor, definition box or first-use bold.")
+
+
+# --- Gap 15: an alias anchors under the canonical key, one definition per key --
+def test_gap15_alias_shares_the_key():
+    out = _reanchor("前段提到丁戊己。\n\n後段提到甲乙丙。\n", FIXTURE)
+    assert "**丁戊己**（Foo Bar） <!-- term:FooBar -->" in out, (
+        "Gap 15: the alias must anchor as written, under the canonical key.")
+    assert out.count("<!-- anchor:FooBar -->") == 1, "Gap 15: one term must get one definition box."
+    assert FIXTURE.lookup("丁戊己")["zh"] == "甲乙丙", "Gap 15: lookup must resolve an alias to canonical."
+    assert TagAnchorer(FIXTURE).reanchor_entry("丁戊己", "FooBar") == ("甲乙丙", "FooBar"), (
+        "Gap 15: a tag displays the canonical zh, never an alias.")
+
+
+TESTS = [
+    ("Gap 1  author [!IMPORTANT] survives", test_gap1_author_important_block_survives),
+    ("Gap 2  orphan anchor cleaned",        test_gap2_orphan_anchor_of_removed_term_is_cleaned),
+    ("Gap 3' preview not anchored",         test_gap3_preview_area_is_not_anchored),
+    ("Gap 4  orphan L3 bold stripped",      test_gap4_orphan_l3_bold_is_stripped),
+    ("Gap 5  author gloss survives",        test_gap5_author_gloss_without_marker_survives),
+    ("Gap 6  line order preserved",         test_gap6_line_order_is_preserved),
+    ("Gap 7  idempotent w/ author block",   test_gap7_idempotent_with_author_definition_block),
+    ("Gap 8  math not anchored",            test_gap8_math_is_not_anchored),
+    ("Gap 9  inline code not anchored",     test_gap9_inline_code_is_not_anchored),
+    ("Gap 10 mermaid labels corrected",     test_gap10_mermaid_labels_are_corrected),
+    ("Gap 11 not_within boundary",          test_gap11_not_within_is_a_boundary),
+    ("Gap 12 author bold span kept",        test_gap12_author_bold_span_is_not_split),
+    ("Gap 13 split bold repaired",          test_gap13_split_bold_is_repaired),
+    ("Gap 14 term_exclude honored",         test_gap14_excluded_key_is_not_anchored),
+    ("Gap 15 alias shares key",             test_gap15_alias_shares_the_key),
+    ("control idempotency",                 test_control_idempotent_on_clean_body),
+]
+
+
+def main():
+    failures = 0
+    for name, fn in TESTS:
+        try:
+            fn()
+            print(f"[PASS] {name}")
+        except AssertionError as e:
+            failures += 1
+            print(f"[FAIL] {name}\n       {e}")
+        except Exception as e:
+            failures += 1
+            print(f"[ERROR] {name}: {type(e).__name__}: {e}")
+    print(f"\n{len(TESTS) - failures}/{len(TESTS)} passed.")
+    if failures:
+        print("Failing tests above reproduce the documented gaps; fix the injector to turn them green.")
+    sys.exit(1 if failures else 0)
+
+
+if __name__ == "__main__":
+    main()

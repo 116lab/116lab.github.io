@@ -1,0 +1,168 @@
+# -*- coding: utf-8 -*-
+## Authored by Schema: ../../../schemas/terminology.schema.yaml
+## Reference Workflow: ../../../workflows/reanchor-posts.md
+## Role: Regression harness for TagAnchorer (the shared tag-anchoring SSOT). Pins the
+##       KEY-DRIVEN reanchor semantics: a tag's identity is its # term:Key, the display is
+##       refreshed from the current SSOT, and tags are dropped only on removal/downgrade.
+##
+## Convention: plain asserts + __main__ runner (mirrors lexicon_tester.py / injector_tester.py).
+## Run: python .agent/scripts/domain/terminology/tag_anchor_tester.py
+
+import os
+import sys
+import io
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+SCRIPTS_ROOT = os.path.dirname(os.path.dirname(HERE))
+LEXICON_CORE_SCRIPTS = os.path.abspath(os.path.join(SCRIPTS_ROOT, "..", "lexicon-core", "scripts"))
+for p in (SCRIPTS_ROOT, LEXICON_CORE_SCRIPTS):
+    if p not in sys.path:
+        sys.path.insert(0, p)
+
+from lexicon import Lexicon
+from domain.terminology.tag_anchor import TagAnchorer
+
+LEX = Lexicon()
+ANCHORER = TagAnchorer(LEX)
+
+
+def _a_genre_key():
+    assert ANCHORER.genre_key_to_zh, "fixture: taxonomy must define genres"
+    # prefer a genre whose canonical display we can assert against
+    return next(iter(ANCHORER.genre_key_to_zh.items()))  # (key, canonical_zh)
+
+
+def _a_level_lt3_term():
+    for zh, lvl in LEX.levels.items():
+        if lvl < 3 and LEX.keys.get(zh):
+            return zh, LEX.keys[zh]
+    raise RuntimeError("fixture: need a level<3 term with a key")
+
+
+def _a_level_ge3_term():
+    for zh, lvl in LEX.levels.items():
+        if lvl >= 3 and LEX.keys.get(zh):
+            return zh, LEX.keys[zh]
+    return None  # may legitimately not exist
+
+
+# --- genre: refresh display BY KEY, never drop -------------------------------
+def test_genre_display_refreshed_by_key():
+    key, canonical = _a_genre_key()
+    out = ANCHORER.reanchor_entry("天差地遠的舊顯示值", key)
+    assert out is not None, "genre tag must never be dropped"
+    assert out == (canonical, key), f"genre display must refresh to taxonomy SSOT, got {out}"
+
+
+# --- tech term level<3: refresh display BY KEY, keep -------------------------
+def test_tech_term_refreshed_by_key():
+    zh, key = _a_level_lt3_term()
+    canonical = ANCHORER._canonical_term_display(zh)
+    out = ANCHORER.reanchor_entry("過時顯示", key)
+    assert out == (canonical, key), f"tech tag must refresh to canonical display, got {out}"
+
+
+# --- downgrade to level>=3: DROP (D2 policy = drop whole tag) -----------------
+def test_downgraded_term_dropped():
+    t = _a_level_ge3_term()
+    if t is None:
+        print("       (skipped: no level>=3 term in lexicon)")
+        return
+    zh, key = t
+    out = ANCHORER.reanchor_entry(zh, key)
+    assert out is None, f"a tag whose term is level>=3 must be dropped, got {out}"
+
+
+# --- removed term (key gone from all SSOTs): DROP ----------------------------
+def test_removed_key_dropped():
+    out = ANCHORER.reanchor_entry("已移除的術語顯示", "ZzDefinitelyRemovedKey12345")
+    assert out is None, f"a tag whose key resolves nowhere must be dropped, got {out}"
+
+
+# --- block: refresh + dedup + drop, with the rest of FM byte-identical -------
+# --- whole-set refresh: dedup by key, drop orphans, count both ---------------
+# The decision half of re-anchoring. How the result is stored is the post model's
+# concern and is pinned in post_tester.py; this only asserts which entries survive.
+def test_entries_refresh_dedup_and_drop():
+    gkey, gcanon = _a_genre_key()
+    zh, tkey = _a_level_lt3_term()
+    kept, stats = ANCHORER.reanchor_entries([
+        ("舊genre顯示", gkey),
+        ("舊tech顯示", tkey),
+        ("重複genre", gkey),
+        ("孤兒", "ZzRemovedKey99999"),
+    ])
+    keys = [k for _, k in kept]
+    assert keys.count(gkey) == 1, "duplicate genre key must be merged to one"
+    assert (gcanon, gkey) in kept, "genre display must be refreshed to canonical"
+    assert "ZzRemovedKey99999" not in keys, "orphan key must be dropped"
+    assert stats["dropped"] >= 2, f"expected >=2 drops (dup + orphan), got {stats}"
+
+
+# --- idempotency: refreshing an already-fresh set is a no-op ------------------
+def test_entries_idempotent():
+    gkey, _ = _a_genre_key()
+    _zh, tkey = _a_level_lt3_term()
+    once, _ = ANCHORER.reanchor_entries([("x", gkey), ("y", tkey)])
+    twice, _ = ANCHORER.reanchor_entries(once)
+    assert once == twice, "refreshing an already-fresh entry set must be a no-op"
+
+
+# --- nothing to refresh: empty in, empty out ---------------------------------
+def test_no_entries_untouched():
+    kept, stats = ANCHORER.reanchor_entries(None)
+    assert kept == [] and stats == {"refreshed": 0, "dropped": 0}
+
+
+# --- a tech tag shows the form its term takes in the prose, or is dropped -----
+# GUIDE's rule that a tag's term occurs in the post was task-list prose only; 44 published
+# tags had drifted from it. body_form is the single rule publish, reanchor and audit use.
+def test_body_form_follows_prose():
+    import json, tempfile
+    fx = {"FooBar": {"zh": "甲乙丙", "en": ["Foo Bar"], "description": "測試定義。",
+                     "forbidden": [], "level": 1, "aliases": ["丁戊己"], "not_within": ["庚甲乙丙"]}}
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
+        json.dump(fx, f, ensure_ascii=False)
+    a = TagAnchorer(Lexicon(json_path=f.name, include_draft=False))
+    os.unlink(f.name)
+    assert a.body_form("FooBar", "正文談甲乙丙。") == "甲乙丙", "canonical in prose -> canonical"
+    assert a.body_form("FooBar", "正文談丁戊己。") == "丁戊己", "only the alias in prose -> alias"
+    assert a.body_form("FooBar", "正文只有庚甲乙丙。") is None, "a shadowed hit is not the term"
+    assert a.body_form("FooBar", "正文談甲乙丙。", {"FooBar"}) is None, "an excluded key is dropped"
+    boxed = "正文無關。\n\n> [!IMPORTANT]\n> **別的** <!-- term:X --> (X): 提到甲乙丙。 <!-- anchor:X -->\n"
+    from domain.terminology.tag_anchor import prose_of
+    assert a.body_form("FooBar", prose_of(boxed)) is None, "a definition box does not license a tag"
+
+
+TESTS = [
+    ("body form follows prose",        test_body_form_follows_prose),
+    ("genre display refreshed by key", test_genre_display_refreshed_by_key),
+    ("tech term refreshed by key",     test_tech_term_refreshed_by_key),
+    ("downgraded term dropped",        test_downgraded_term_dropped),
+    ("removed key dropped",            test_removed_key_dropped),
+    ("entries refresh/dedup/drop",     test_entries_refresh_dedup_and_drop),
+    ("entries idempotent",             test_entries_idempotent),
+    ("no entries untouched",           test_no_entries_untouched),
+]
+
+
+def main():
+    failures = 0
+    for name, fn in TESTS:
+        try:
+            fn()
+            print(f"[PASS] {name}")
+        except AssertionError as e:
+            failures += 1
+            print(f"[FAIL] {name}\n       {e}")
+        except Exception as e:
+            failures += 1
+            print(f"[ERROR] {name}: {type(e).__name__}: {e}")
+    print(f"\n{len(TESTS) - failures}/{len(TESTS)} passed.")
+    sys.exit(1 if failures else 0)
+
+
+if __name__ == "__main__":
+    main()

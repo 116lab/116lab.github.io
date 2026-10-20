@@ -1,0 +1,108 @@
+# Handoff Posts SSOT (Single Source of Truth) Schema
+# Reference Spec: ../reference/agent-operating-guideline.md
+# 
+# 階段與流程規約 (Workflow Governance & Consumption):
+# 1. [Stage 0]: 由 `/init-handoff` 透過 AI (NLP) 根據草稿報告萃取初始化。必須寫入 `metadata` 與 `rules` 基本框架。
+# 2. [Stage 0.5]: 由 `/init-handoff` 呼叫 `.agent/scripts/workflows/generate-article/prepare_handoff.py` 鎖定物理路徑。
+# 3. [SSOT 獨佔消費]: 磁碟上的 `handoff.posts.json` 僅限由 `pipeline.py` 讀取 (消費)。
+# 4. [參數化委派]: 基於「權責對齊」原則，`baseline.py` 等子組件不得直接讀取 handoff 檔，僅接收由 pipeline 傳入之參數。
+# 5. [宏觀風格邊界 - 作者切片]: AI 在 Stage 0 生成本檔案與潤飾文章時，必須遵從「作者切片 (Author's Slice)」指導原則：
+#    - [保留銳度與情緒]: 保留原始對話中真實的決策思維銳度、主觀見解與對話語氣，拒絕死板的教科書陳述。
+#    - [破除八股文]: 嚴禁使用生硬的機器轉場（如「首先」、「總結來說」），應使用自然的承接詞（如「回過頭來看」、「這就衍生出一個問題」）。
+#    - [對話式節奏]: 鼓勵在轉折處使用反問句或假設語氣來引導思考，並在解釋抽象概念時使用日常比喻。
+#    - [拒絕冰冷結構]: 任何表格、程式碼或呼叫框 (Callouts) 之前，都必須有口語化的引言，嚴禁無敘事上下文的孤立結構。
+# Ownership:
+# - `metadata.posts[].domain_tag`: NLP-owned，由 `/init-handoff` 依巨觀主題宣告，受到 Linter 封閉枚舉與證據驗證約束。
+# - `metadata.posts[].rules`: NLP-owned，由 `/init-handoff` 寫入，pipeline 只消費。
+# - `ai_info.generation`: script-owned，由 prepare_handoff.py 以 regex 從報告頭萃取（`**Structure**`→scope / `**Model**` / `**Agent**`）並寫入（會覆蓋 AI 內容）。
+# - `metadata.posts[].date`: script-owned，由 prepare_handoff.py 產出 —— 時:分取自報告 `**Date**`，秒數槽放 session 內排序序號；AI 嚴禁手填。
+# - `ai_info.refinement`: script-owned，由 refine_handoff.py 寫入。
+
+session_id: "[必填] 格式為 YYYY-MM-DD"
+prepared_at: "[系統產出] ISO 8601 時間戳記"
+status: "initiated" # initiated | refined | completed
+
+metadata:
+  # 是否為系列文章 (布林值)
+  is_series: false
+  # 1. 必須具備高度敘事性與反思性。
+  # 2. 格式強制為：「[核心主題]：[自由發揮的敘事化副標題]」
+  # 範例：「規範治理：多作者 AI 專案的妥協與生存學」
+  series: null
+  
+  # 發佈日期基準 (YYYY-MM-DD)。由 prepare_handoff.py 依 session_id 自動帶入，AI 無需手填。
+  date: null
+  
+  # 本次產出的文章陣列
+  posts:
+    - title: "[必填] 文章標題"
+      # 發佈時間 (ISO 格式)。[script-owned] 由 prepare_handoff.py 產出：時:分取自報告 `**Date**`，
+      # 秒數槽放 session 內排序序號，補 +08:00。AI 無需手填。例: 2026-03-28T17:45:03+08:00
+      date: "[自動產出] 例: 2026-03-28T17:45:03+08:00"
+      slug: "[必填] 文章-slug-格式 (需全小寫英數字與連字號)"
+      report_rel: "[必填] 對應的原始 markdown 路徑 (例如: report.zh-TW.md)"
+      description: "[必填] SEO 描述"
+      # [1+1+6 標籤協議]: 
+      # - Tags[0]: 必須為文體分類 (如: 技術隨筆, 經驗報告, 分析論文)
+      # - Tags[1]: 必須為核心領域 (如: AI 治理, 自動化, 術語管理)
+      # - 剩餘: 最多 6 個技術細節標籤。
+      tags: ["[必填] 標籤1", "[必填] 標籤2"]
+      
+      # [SSOT] 宏觀領域標籤 (Domain Tag):
+      # 此欄位由 /init-handoff NLP 依據報告全文巨觀問題域宣告。
+      # 受到 Linter 封閉枚舉約束與雙軌證據檢驗防禦（防止 Context Bleed 幻覺與漏標）。
+      # 選項: AI 經濟與社會 (AI Economics) | AI 代理人 (AI Agent) | 機器學習 (Machine Learning) | 大型語言模型 (LLM) | 軟體工程與規格 (Software Engineering & Specifications) | 系統工程與研發治理 (Systems Governance & Operations) | AI | "" (留空)
+      domain_tag: ""
+      
+      # [script-owned 候選 + NLP 判讀] 手繪圖表候選。
+      # prepare_handoff.py 掃出「非 mermaid 圍欄內含框線字元」的區塊並填入 finding；
+      # 掃描只負責發現，不負責判斷——目錄樹與 CLI 輸出同樣會命中，而那兩者改成 Mermaid
+      # 只會更糟。/init-handoff 必須逐條填寫 disposition，說明改成了什麼或為何保留。
+      # disposition 留空會被 pipeline.py 擋下；擋的是「沒人看過」，不是某一種結論。
+      # 無候選時本欄位不存在。
+      # 範例: [{"finding": "L144 起的圍欄（18 行，lang='none'）含框線字元…",
+      #         "disposition": "已改為 flowchart TD" }]
+      review_flags: []
+
+      # [script-owned 候選 + NLP 判讀] 既有術語命中判讀。
+      # refine_handoff.py 列出該篇報告會錨定的每個「既有」術語（本 session locked 的除外）
+      # 與其首次錨點前文。/init-handoff 必須逐條將 disposition 填為「錨定」或「排除」；
+      # 留空會被 pipeline.py 擋下。「排除」的鍵寫入貼文 front matter 的 term_exclude。
+      # 範例: [{"key": "Screening", "zh": "篩選", "context": "與演化", "disposition": "排除"}]
+      term_review: []
+
+      # [NLP-owned，選填] 本篇不錨定的術語鍵（同字異義）。與 term_review 的「排除」合併後
+      # 寫入貼文 front matter，reanchor 永遠沿用。
+      term_exclude: []
+
+      ai_info:
+        # 原始輸入源：記錄最初「發明」原始報告的環境
+        generation:
+            # [script-owned] scope/model/agent 由 prepare_handoff.py 以 regex 從報告頭萃取並寫入（會覆蓋 AI 內容），AI 無需手填。
+            # [build-only] scope 僅供 pipeline 衍生文體標籤 (tags[0]) 使用，不會寫入發佈後的貼文 front matter。
+            scope: "[自動萃取] 對應 report.md 內 '**Structure**: ...' 行"
+            model: "[自動萃取] 對應 report.md 內 '**Model**: ...' 行"
+            agent: "[自動萃取] 對應 report.md 內 '**Agent**: ...' 行"
+            
+        # 精煉環境：記錄執行 /publish-article 的當前模型
+        refinement:
+            model: "[必填] 填寫當前使用的模型名稱"
+            agent: "[必填] 填寫當前代理平台 (如 Antigravity)"
+
+      rules:
+        # [標頭正規化]: 
+        # 針對 ## 與 ### 泛化標題，動態定義去除英文括號或純英文的對應，保護 TOC 不被污染。
+        # 範例: {"實作細節 (Implementation)": "實作細節", "Conclusion": "結論"}
+        # [標頭正規化]: 由 prepare_handoff.py 從 taxonomy.json 的 `header_normalization`
+        # 推導的 {變體: 標準} 對映，**非 NLP 撰寫**。標頭詞彙的 SSOT 是 taxonomy，
+        # 不是逐 session 的判斷；此處僅為 formatter 的消費副本。
+        headers: {}
+        # [脈絡脫敏 (通用化 Generalization)]: 
+        # 將專案內部的專有名詞（如特定產品名稱、內部絕對路徑、團隊名稱、未定義的內部術語）轉換為符合上下文的代名詞，
+        # 進行通用化脫敏，取代一刀切的腳本替換，讓外部讀者也能輕易理解。
+        # 範例: {".agent/scripts/workflows/generate-article/pipeline.py": "底層編譯管線", "secret-key": "API_KEY", "Antigravity 團隊": "開發團隊"}
+        redactions: {}
+        # [敘事昇華]: 
+        # 針對生硬的對話過渡句型進行自然替換，取代底層 Regex 硬編碼。
+        # 範例: {"在這份報告中我發現了": "在技術演進的觀測中顯示"}
+        sublimations: {}
